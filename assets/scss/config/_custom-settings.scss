@@ -1,0 +1,60 @@
+/*
+	My custom settings. These variables are copied from _settings.css
+	This file will only contain uncommented settings that are actually used in the theme.
+*/
+
+// colors
+$orange: #ef4b26;
+$blue: #00abc4;
+$white: #FBFBFB;
+$turquoise: #00a79d;
+$black: #515153;
+$charcoal: $black;
+// We use these to define default font stacks
+$font-family-sans-serif: "Century Gothic", Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+
+$font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
+
+// We use these to define default font weights
+$font-weight-normal: normal !default;
+$font-weight-bold: bold !default;
+
+// We use these as default colors throughout
+$primary-color: $orange;
+$secondary-color: $blue;
+// $alert-color: #f04124;
+// $success-color: #43AC6A;
+// $warning-color: #f08a24;
+// $info-color: #a0d3e8;
+
+// 34. Top Bar
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+// $include-html-top-bar-classes: $include-html-classes;
+
+// Background color for the top bar
+$topbar-bg-color: rgba(255,255,255,0.95);
+// $topbar-bg: $topbar-bg-color;
+
+// Height and margin
+$topbar-height: rem-calc(50);
+// $topbar-margin-bottom: 2em;
+
+// Controlling the styles for the title in the top bar
+// $topbar-title-weight: $font-weight-normal;
+// $topbar-title-font-size: rem-calc(17);
+
+// Set the link colors and styles for top-level nav
+$topbar-link-color: $orange;
+$topbar-link-color-hover: $blue;
+$topbar-link-color-active: $blue;
+$topbar-link-hover-lightness: -10%; // Darken by 10%
+$topbar-menu-link-transform: uppercase;
+$topbar-menu-icon-color: $black;
+
+// Media query breakpoints
+$small-breakpoint:  em-calc(640);
+$medium-breakpoint: em-calc(1024);
+$topbar-breakpoint: em-calc(820);
+$large-breakpoint:  em-calc(1440);
+$xlarge-breakpoint: em-calc(1920);
