@@ -14,14 +14,21 @@
 </section>
 
 <!-- footer -->
+
 <div class="diagonals">
   <!-- diagonals go here -->
 </div>
+
 <footer class="blue-bg">
   <div class="row footer">
     <?php do_action( 'foundationpress_before_footer' ); ?>
     <?php dynamic_sidebar( 'footer-widgets' ); ?>
     <?php do_action( 'foundationpress_after_footer' ); ?>
+
+    <div class="hide-for-small-only medium-6 columns feet">
+      <!-- chicken feet are delicious -->
+    </div>
+
   </div>
 
   <!-- copyright information -->

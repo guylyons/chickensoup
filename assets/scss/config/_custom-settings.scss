@@ -10,33 +10,28 @@ $white: #FBFBFB;
 $turquoise: #00a79d;
 $black: #515153;
 $charcoal: $black;
-// We use these to define default font stacks
 $font-family-sans-serif: "Century Gothic", Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
-
 $font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
-
-// We use these to define default font weights
 $font-weight-normal: normal !default;
 $font-weight-bold: bold !default;
-
-// We use these as default colors throughout
 $primary-color: $orange;
 $secondary-color: $blue;
-// $alert-color: #f04124;
-// $success-color: #43AC6A;
-// $warning-color: #f08a24;
-// $info-color: #a0d3e8;
 
-// 34. Top Bar
-// - - - - - - - - - - - - - - - - - - - - - - - - -
+$body-bg: $white;
+$body-font-color: $black;
+$body-font-family: $font-family-sans-serif;
+// $body-font-weight: $font-weight-normal;
+$body-font-style: normal;
 
-// $include-html-top-bar-classes: $include-html-classes;
+// We use this to control font-smoothing
+$font-smoothing: antialiased;
 
-// Background color for the top bar
+$header-font-color: $blue;
+$header-line-height: 1.4;
+
+$anchor-font-color: $primary-color;
+
 $topbar-bg-color: rgba(255,255,255,0.95);
-// $topbar-bg: $topbar-bg-color;
-
-// Height and margin
 $topbar-height: rem-calc(50);
 // $topbar-margin-bottom: 2em;
 

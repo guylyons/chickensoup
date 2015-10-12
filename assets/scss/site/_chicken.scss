@@ -2,24 +2,24 @@
 
 // APPROPRIATE BOX SIZING FOR ALL
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body,
 html {
-  height: 100%;
-  width: 100%;
+    height: 100%;
+    width: 100%;
 }
 
 .intro {
-  display: table;
-  width: 100%;
-  padding: 1em 0;
-  text-align: center;
+    display: table;
+    width: 100%;
+    padding: 1em 0;
+    text-align: center;
 }
 .intro-body {
-  display: table-cell;
-  vertical-align: middle;
+    display: table-cell;
+    vertical-align: middle;
 }
 
 // Typography
@@ -29,229 +29,239 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 700;
+    font-weight: 700;
 }
 .chicken-links {
-  box-shadow: 2px 0px 2px 0px black;
+    box-shadow: 2px 0px 2px 0px black;
 }
 .top-bar {
-  border-bottom: 1px solid #ddd;
-  box-shadow: 0 1px 32px #ddd;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 1px 32px #ddd;
 }
 .chicken-links ul li {
-  list-style-type: none;
-  text-transform: uppercase;
-  display: inline-block;
-  margin-top: 0.6em;
-  padding-right: 1em;
+    list-style-type: none;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-top: 0.6em;
+    padding-right: 1em;
 }
 .chicken-links ul {
-  word-spacing: 3em;
+    word-spacing: 3em;
 }
 .chicken-links a:hover {
-  border-bottom: 3px solid $orange;
+    border-bottom: 3px solid $orange;
 }
+
+body.modal-open {
+   overflow: hidden;
+   position: fixed;
+}
+.reveal-modal {
+   overflow-y: auto;
+   height: 100%;
+   position: fixed;
+}
+
 .chicken-modal {
-  border: 0;
-  border-radius: 0;
-  overflow-y: scroll;
-  width: 100% !important; // set the max-width
-  top: 0; // have the modal sit at the top of the screen
-  max-height: 100%; // stretch its contents to the base of the screen
+    border: 0;
+    border-radius: 0;
+    overflow-y: scroll;
+    top: 0; // have the modal sit at the top of the screen
 }
 .text-overlay {
-  position: relative;
-  margin: 0;
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
+    position: relative;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
 }
 .text-overlay figcaption {
-  position: absolute;
-  background: rgba(255, 255, 255, 0.8);
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  overflow: auto;
-  padding: 1em;
-  opacity: 0;
-  transition: opacity .5s ease;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.8);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: auto;
+    padding: 1em;
+    opacity: 0;
+    margin: 0;
+    transition: opacity .5s ease;
 }
 .text-overlay:hover figcaption {
-  opacity: 1;
+    opacity: 1;
 }
 
 blockquote {
-  color: $black;
-  font-size: 1.2em;
+    color: $black;
+    font-size: 1.2em;
 }
 .block {
-  padding-top: 3em;
-  padding-bottom: 3em;
-  margin-bottom: 2em;
+    padding-top: 3em;
+    padding-bottom: 3em;
+    margin-bottom: 2em;
 }
 ::selection {
-  background: $orange;
-  color: $white;
+    background: $orange;
+    color: $white;
 }
 .diagonals {
-  background: url("../img/footer-diagonals.svg");
-  background-repeat: no-repeat;
-  top: 16px;
-  z-index: -5;
-  width: 100%;
-  display: block;
-  background-size: cover;
-  height: 100px;
+    background: url("../img/footer-diagonals.svg");
+    background-repeat: no-repeat;
+    top: 16px;
+    z-index: -5;
+    width: 100%;
+    display: block;
+    background-size: cover;
+    height: 100px;
 }
 .buffer {
-  background: $orange url("../img/buffer-tile.png");
-  height: 258px;
+    background: $orange url("../img/buffer-tile.png");
+    height: 258px;
 }
 .buffer-2 {
-  background: #00a79d url("../img/buffer-tile-2.png");
-  h6 {
-    color: $white;
-    text-align: right;
-    padding-right: 3em;
-  }
+    background: #00a79d url("../img/buffer-tile-2.png");
+    h6 {
+	color: $white;
+	text-align: right;
+	padding-right: 3em;
+    }
 }
 .buffer-2 blockquote {
-  color: $white;
-  @media #{$large-up} {
-    font-size: 5em;
-  }
-  @media #{$medium-only} {
-    font-size: 3em;
-  }
-  font-style: italic;
-  display: block;
-  border: 0;
-  text-indent: -0.4em;
-  margin-left: 1em;
+    color: $white;
+    @media #{$large-up} {
+	font-size: 5em;
+    }
+    @media #{$medium-only} {
+	font-size: 3em;
+    }
+    font-style: italic;
+    display: block;
+    border: 0;
+    text-indent: -0.4em;
+    margin-left: 1em;
 }
 .ifyoudecidetoanimate {
-  @keyframes animatedBackground {
-    0% {
-      background-position: 0 0;
+    @keyframes animatedBackground {
+	0% {
+	    background-position: 0 0;
+	}
+	100% {
+	    background-position: -239px 0;
+	}
     }
-    100% {
-      background-position: -239px 0;
-    }
-  }
-  animation: animatedBackground 8s linear infinite;
+    animation: animatedBackground 8s linear infinite;
 }
 
 // LOGO
 .chicken-logo {
-  background-image: url("../img/chicken-logo-small.png");
-  width: 100%;
-  min-height: 371px; // height of the original image
-  background-position: center;
-  background-repeat: no-repeat;
-  margin-bottom: 2em;
+    background-image: url("../img/chicken-logo-small.png");
+    width: 100%;
+    min-height: 371px; // height of the original image
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 2em;
 }
 .blue-bg {
-  background: $blue;
-  color: $white;
+    background: $blue;
+    color: $white;
 }
 
 // TRIANGLE-OF-POWER
 .triangle-of-power h2 {
-  // first headline is black
-  color: $black;
+    // first headline is black
+    color: $black;
 }
 .triangle-of-power>div {
-  // container for the text
-  margin: 0 auto;
-  max-width: 400px;
+    // container for the text
+    margin: 0 auto;
+    max-width: 400px;
 }
 .triangle-of-power a + p {
-  // style paragraphs
-  margin-top: 1.2em;
-  font-size: 1.2em;
-  font-weight: 400;
+    // style paragraphs
+    margin-top: 1.2em;
+    font-size: 1.2em;
+    font-weight: 400;
 }
 
 .what-can-c3k-do-for-you {
-  ul h4 {
-    color: $orange;
-  }
-  ul li {
-    margin-left: 1em;
-  }
+    ul h4 {
+	color: $orange;
+    }
+    ul li {
+	margin-left: 1em;
+    }
 }
 
 // FOOTER
 .blue-bg {
-  background: $blue;
-  color: $white;
+    background: $blue;
+    color: $white;
 }
 .black-bg {
-  background: $black;
-  color: $white;
+    background: $black;
+    color: $white;
 }
 .footer {
-  position: relative;
-  height: 16em;
-  padding: 2em 0 1em;
-  ul {
-    padding: 0;
-    margin: 0;
-    list-style-type: none;
-  }
+    position: relative;
+    height: 16em;
+    padding: 2em 0 1em;
+    ul {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+    }
 }
 .footer ul + li {
-  border: 1px solid red;
+    border: 1px solid red;
 }
 .underline {
-  border-bottom: 1px solid $white;
-  width: 7em;
-  margin-bottom: 2em;
+    border-bottom: 1px solid $white;
+    width: 7em;
+    margin-bottom: 2em;
 }
 .copy {
-  padding: 1em;
-  text-align: right;
+    padding: 1em;
+    text-align: right;
 }
 
 .feet {
-  background: url("../img/feet.png");
-  background-position: right;
-  background-repeat: no-repeat;
-  min-height: 288px;
-  min-width: 387px;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  @media #{$medium-only} {
+    background: url("../img/feet.png");
+    background-position: right;
+    background-repeat: no-repeat;
+    min-height: 288px;
+    min-width: 387px;
+    position: absolute;
     right: 0;
-  }
+    bottom: 0;
+    @media #{$medium-only} {
+	right: 0;
+    }
 }
 
 // MEDIA QUERIES
 @media #{$small-only} {
 
-  // only justify for smaller paragraphs for small screens
-  p {
-    text-align: justify;
-  }
+    // only justify for smaller paragraphs for small screens
+    p {
+	text-align: justify;
+    }
 }
 
 .grid-item.w2 {
-  width: 100%;
+    width: 100%;
 }
 .grid-item {
-  width: 33.33%;
-  padding: 0.2em;
-  margin:0;
-  overflow: hidden;
-  @media #{$medium-only} {
-    width: 50%;
-  }
-  @media #{$small-only} {
-    width: 100%;
-  }
+    width: 33.33%;
+    padding: 0.2em;
+    margin:0;
+    overflow: hidden;
+    @media #{$medium-only} {
+	width: 50%;
+    }
+    @media #{$small-only} {
+	width: 100%;
+    }
 }
 
 // @media #{$small-up} { }

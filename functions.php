@@ -49,17 +49,22 @@ require_once( 'library/custom-nav.php' );
 /** Add protocol relative theme assets */
 require_once( 'library/protocol-relative-theme-assets.php' );
 
+add_theme_support( 'post-thumbnails' );
+set_post_thumbnail_size( 400, 400, true ); // Normal post thumbnails
+add_image_size( 'single-post-thumbnail', 400, 9999 ); // Permalink thumbnail size
+
 /* my custom post type: project */
 add_action( 'init', 'create_post_type' );
 function create_post_type() {
-  register_post_type( 'project_item',
+  register_post_type( 'c3k_project',
     array(
       'labels' => array(
-        'name' => __( 'Project' ),
-          'singular_name' => __( 'Project' )
+        'name' => __( 'Projects', 'c3kwordpress' ),
+          'singular_name' => __( 'Project', 'c3kwordpress' )
       ),
 	'public' => true,
 	'has_archive' => true,
+	'supports' => array( 'title', 'editor', 'excerpt', 'custom-fields', 'thumbnail' ),
     )
   );
 }

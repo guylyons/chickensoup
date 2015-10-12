@@ -7,6 +7,8 @@
   "ignore": [],
   "dependencies": {
     "foundation": "zurb/bower-foundation",
-    "fontawesome": "~4.4.0"
+    "fontawesome": "~4.4.0",
+    "packery": "~1.4.3",
+    "imagesloaded": "~3.1.8"
   }
 }
