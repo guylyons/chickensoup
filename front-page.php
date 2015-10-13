@@ -29,40 +29,41 @@ get_header(); ?>
   <div class="medium-12 columns">
     <div id="container">
 
+      <?php do_action( 'foundationpress_before_content' ); ?>
+      
       <!-- begin image grid loop -->
       <?php $loop = new WP_Query( array( 'post_type' => 'c3k_project', 'posts_per_page' => 8 ) ); ?>
       <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
 	<div class="grid-item">
-	  <a href="#" data-reveal-id="myModal">
+	  <a href="#" data-reveal-id="modal-<?php echo get_the_ID(); ?>">
 	    <figure class="text-overlay">
 	      <?php if (has_post_thumbnail( $post->ID ) ): ?>
 		<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
 		<img src="<?php echo $image[0]; ?>">
 	      <?php endif; ?>
+
 	      <figcaption>
 		<h3><?php the_title(); ?></h3>
 		<?php the_excerpt(); ?>
-		<?php the_author(); ?>
 	      </figcaption>
 	    </figure>
 	  </a>
 	</div>
-	
-	<div id="myModal" class="reveal-modal full chicken-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
-	  <div class="row">
-	    <div class="medium-12 columns">
+
+	<div id="modal-<?php echo get_the_ID(); ?>" class="reveal-modal full chicken-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
 	      <?php the_content(); ?>
-	    </div>
-	  </div>
 	  <a class="close-reveal-modal" aria-label="Close">&#215;</a>
 	</div>
-      <?php endwhile; wp_reset_query(); ?>
-      
+
+      <?php endwhile; wp_reset_postdata(); ?>
+
       <!-- end image grid loop -->
 
+      <?php do_action( 'foundationpress_after_content' ); ?>
     </div>
   </div>
 </div>
+<h1>3</h1>
 
 </div>
 <?php get_footer(); ?>
