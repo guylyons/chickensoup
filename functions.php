@@ -49,6 +49,21 @@ require_once( 'library/custom-nav.php' );
 /** Add protocol relative theme assets */
 require_once( 'library/protocol-relative-theme-assets.php' );
 
+/** Remove standard custom fields */
+add_action('admin_init','remove_custom_meta_boxes');
+function remove_custom_meta_boxes() {
+    remove_meta_box('postcustom','post','normal');
+    remove_meta_box('postcustom','page','normal');
+}
+
+/** Change 'excerpt' to 'Overlay Text' for Projects */
+add_action( 'admin_init',  'change_excerpt_box_title' );
+function change_excerpt_box_title() {
+    remove_meta_box( 'postexcerpt', 'my_custom_post_type', 'side' );
+    add_meta_box('postexcerpt', __('Overlay Text'), 'post_excerpt_meta_box', 'c3k_project', 'normal', 'high');
+}
+
+/** Thumbnail support */
 add_theme_support( 'post-thumbnails' );
 set_post_thumbnail_size( 400, 400, true ); // Normal post thumbnails
 add_image_size( 'single-post-thumbnail', 400, 9999 ); // Permalink thumbnail size
@@ -56,11 +71,11 @@ add_image_size( 'single-post-thumbnail', 400, 9999 ); // Permalink thumbnail siz
 /* my custom post type: project */
 add_action( 'init', 'create_post_type' );
 function create_post_type() {
-  register_post_type( 'c3k_project',
-    array(
-      'labels' => array(
-        'name' => __( 'Projects', 'c3kwordpress' ),
-          'singular_name' => __( 'Project', 'c3kwordpress' )
+    register_post_type( 'c3k_project',
+	array(
+	    'labels' => array(
+		'name' => __( 'Projects', 'c3kwordpress' ),
+		    'singular_name' => __( 'Project', 'c3kwordpress' )
       ),
 	'public' => true,
 	'has_archive' => true,
