@@ -46,20 +46,10 @@ h6 {
     padding-right: 1em;
 }
 .chicken-links ul {
-    word-spacing: 3em;
+    //word-spacing: .5em;
 }
 .chicken-links a:hover {
     border-bottom: 3px solid $orange;
-}
-
-body.modal-open {
-   overflow: hidden;
-   position: fixed;
-}
-.reveal-modal {
-   overflow-y: auto;
-   height: 100%;
-   position: fixed;
 }
 
 .chicken-modal {
@@ -130,10 +120,10 @@ blockquote {
 .buffer-2 blockquote {
     color: $white;
     @media #{$large-up} {
-	font-size: 5em;
+	font-size: 4em;
     }
     @media #{$medium-only} {
-	font-size: 3em;
+	font-size: 2em;
     }
     font-style: italic;
     display: block;
@@ -166,7 +156,9 @@ blockquote {
     background: $blue;
     color: $white;
 }
-
+blockquote {
+    color: $black;
+}
 // TRIANGLE-OF-POWER
 .triangle-of-power h2 {
     // first headline is black
