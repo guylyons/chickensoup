@@ -69,10 +69,11 @@ function create_post_type() {
             'labels' => array(
                 'name' => __( 'Projects', 'c3kwordpress' ),
                     'singular_name' => __( 'Project', 'c3kwordpress' )
-            ),
-                'public' => true,
-                'has_archive' => true,
-                'supports' => array( 'title', 'editor', 'excerpt', 'custom-fields', 'thumbnail' ),
-        )
+	    ),
+		'public' => true,
+		'has_archive' => true,
+		'rewrite' => array('slug' => 'projects'),
+		'supports' => array( 'title', 'editor', 'excerpt', 'custom-fields', 'thumbnail' ),
+	)
     );
 }
