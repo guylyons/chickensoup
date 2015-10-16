@@ -164,15 +164,18 @@ blockquote {
     // first headline is black
     color: $black;
 }
-.triangle-of-power>div {
+.triangle-of-power p:first-of-type {
+    color: $orange;
+}
+.triangle-of-power {
     // container for the text
     margin: 0 auto;
     max-width: 400px;
 }
-.triangle-of-power a + p {
+.triangle-of-power p {
     // style paragraphs
     margin-top: 1.2em;
-    font-size: 1.2em;
+    font-size: 1.1em;
     font-weight: 400;
 }
 
@@ -184,7 +187,9 @@ blockquote {
 	margin-left: 1em;
     }
 }
-
+.c3k-tagcloud {
+    text-align: justify;
+}
 // FOOTER
 .blue-bg {
     background: $blue;
