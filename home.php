@@ -12,7 +12,7 @@ get_header(); ?>
 <div class="row">
   
   <?php if ( function_exists( 'wp_tag_cloud' ) ) : ?>
-    <div class="medium-12 columns">
+    <div class="medium-12 columns c3k-tagcloud">
       <?php wp_tag_cloud( 'smallest=14&largest=25' ); ?>
     </div>
   <?php endif; ?>
