@@ -15,15 +15,21 @@
 
 <!-- footer -->
 
-<div class="diagonals">
-  <!-- diagonals go here -->
-</div>
 
 <footer class="blue-bg">
   <div class="row footer">
-    <?php do_action( 'foundationpress_before_footer' ); ?>
-    <?php dynamic_sidebar( 'footer-widgets' ); ?>
-    <?php do_action( 'foundationpress_after_footer' ); ?>
+    <div class="small-8 medium-4 columns">
+      <ul>
+	<li class="underline">Contact</li>
+	<?php the_field("footer_col1"); ?>
+      </ul>
+    </div>
+    <div class="small-4 medium-2 columns">
+      <ul>
+	<li class="underline">Social Media</li>
+	<?php the_field("footer_col2"); ?>
+      </ul>
+    </div>
 
     <div class="hide-for-small-only medium-6 columns feet">
       <!-- chicken feet are delicious -->

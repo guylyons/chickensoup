@@ -42,12 +42,11 @@ get_header(); ?>
     <div id="container">
 
       <?php do_action( 'foundationpress_before_content' ); ?>
-      
       <!-- begin image grid loop -->
       <?php $loop = new WP_Query( array( 'post_type' => 'c3k_project', 'posts_per_page' => 8 ) ); ?>
       <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
 	<div class="grid-item">
-	<?php if (has_post_thumbnail( $post->ID ) ): ?>
+	  <?php if (has_post_thumbnail( $post->ID ) ): ?>
 	    <a href="#" data-reveal-id="modal-<?php echo get_the_ID(); ?>">
 	      <figure class="text-overlay">
 		
@@ -57,22 +56,29 @@ get_header(); ?>
 		<figcaption>
 		  <h3><?php the_title(); ?></h3>
 		  <?php the_excerpt(); ?>
+		  <!-- insert overlay field here -->
 		</figcaption>
 	      </figure>
 	    </a>
-	  </div>
+	</div>
 
-	  <div id="modal-<?php echo get_the_ID(); ?>" class="reveal-modal full chicken-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
-	    <div class="row">
-	      <div class="medium-12 columns">
-		<?php the_content(); ?>
-	      </div>
+	<div id="modal-<?php echo get_the_ID(); ?>" class="reveal-modal full chicken-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+	  <div class="row">
+	    <div class="medium-4 columns">
+	      <?php the_field("column_1"); ?>
 	    </div>
-	    <a class="close-reveal-modal" aria-label="Close">&#215;</a>
-	    <?php else: ?>
-	    <?php the_content(); ?>
-	<?php endif; ?>
+	    <div class="medium-4 columns">
+	      <?php the_field("column_2"); ?>
+	    </div>
+	    <div class="medium-4 columns">
+	
+	    </div>
 	  </div>
+	  <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+	  <?php else: ?>
+	  <?php the_content(); ?>
+	  <?php endif; ?>
+	</div>
       <?php endwhile; wp_reset_query(); ?>
     </div>
   </div>
@@ -136,37 +142,37 @@ get_header(); ?>
 
 
 <!-- triangle of power -->
-<div class="row">
-  <div class="medium-12 columns">
-    <h2>The C3K Triangle of Power</h2>
-  </div>
-</div>
-
-<div class="row">
-  
-  <div class="small-12 large-4 columns triangle-of-power text-center">
-    <img src="<?php the_field("headshot_a"); ?>">
-    <div class="text-justify">
-      <?php the_field("bio_a"); ?>
+  <div class="row">
+    <div class="medium-12 columns">
+      <h2>The C3K Triangle of Power</h2>
     </div>
   </div>
 
+  <div class="row">
+    
+    <div class="small-12 large-4 columns triangle-of-power text-center">
+      <img src="<?php the_field("headshot_a"); ?>">
+      <div class="text-justify">
+	<?php the_field("bio_a"); ?>
+      </div>
+    </div>
 
-  <div class="small-12 large-4 columns triangle-of-power text-center">
-    <img src="<?php the_field("headshot_b"); ?>">
-    <div class="text-justify">
-      <?php the_field("bio_b"); ?>
+
+    <div class="small-12 large-4 columns triangle-of-power text-center">
+      <img src="<?php the_field("headshot_b"); ?>">
+      <div class="text-justify">
+	<?php the_field("bio_b"); ?>
+      </div>
+    </div>
+
+
+    <div class="small-12 large-4 columns triangle-of-power text-center">
+      <img src="<?php the_field("headshot_c"); ?>">
+      <div class="text-justify">
+	<?php the_field("bio_c"); ?>
+      </div>
     </div>
   </div>
-
-
-  <div class="small-12 large-4 columns triangle-of-power text-center">
-    <img src="<?php the_field("headshot_c"); ?>">
-    <div class="text-justify">
-      <?php the_field("bio_c"); ?>
-    </div>
-  </div>
-</div>
 
 <?php if(get_field("quote_3") ): ?>
   <div class="row">
