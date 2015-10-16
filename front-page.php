@@ -32,7 +32,7 @@ get_header(); ?>
 <div class="show-for-medium-up buffer block">&nbsp</div>
 
 <div class="row">
-  <div class="small-12 columns">
+  <div class="small-12 columns text-justify">
     <?php the_field("recent_projects"); ?>
   </div>
 </div>
@@ -43,7 +43,7 @@ get_header(); ?>
 
       <?php do_action( 'foundationpress_before_content' ); ?>
       <!-- begin image grid loop -->
-      <?php $loop = new WP_Query( array( 'post_type' => 'c3k_project', 'posts_per_page' => 8 ) ); ?>
+      <?php $loop = new WP_Query( array( 'post_type' => 'c3k_project', 'posts_per_page' => 6 ) ); ?>
       <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
 	<div class="grid-item">
 	  <?php if (has_post_thumbnail( $post->ID ) ): ?>
@@ -90,9 +90,9 @@ get_header(); ?>
 <?php if(get_field("attention_grabber")): ?>
   <!-- Want to see more? -->
   <div class="row">
-    <h1 class="show-for-large-up text-center block">
+    <h2 class="show-for-large-up text-center block">
       <?php the_field("attention_grabber"); ?>
-    </h1>
+    </h2>
   </div>
 <?php endif ?>
 
@@ -111,7 +111,7 @@ get_header(); ?>
   <!-- what the heck -->
   <div class="row">
     <div class="small-12 columns">
-      <h3>What the heck is Chicken 3000?</h3>
+      <h1>What the heck is Chicken 3000?</h1>
     </div>
   </div>
   <div class="blue-bg block">
@@ -124,7 +124,7 @@ get_header(); ?>
 <?php endif; ?>
 
 <?php if(get_field("big_box_2") ): ?>
-  <div class="row what-can-c3k-do-for-you show-for-large-up block">
+  <div class="row what-can-c3k-do-for-you block">
     <div class="large-12 columns">
       <?php the_field("big_box_2"); ?>
     </div>
@@ -135,7 +135,7 @@ get_header(); ?>
   <!-- c3k quote block -->
   <div class="row">
     <div class="show-for-large-up large-12 columns text-center block">
-      <blockquote><?php the_field("quote_2"); ?></blockquote>
+      <h2><?php the_field("quote_2"); ?></h2>
     </div>
   </div>
 <?php endif; ?>
@@ -150,9 +150,9 @@ get_header(); ?>
 
   <div class="row">
     
-    <div class="small-12 large-4 columns triangle-of-power text-center">
+    <div class="small-12 large-4 columns text-center">
       <img src="<?php the_field("headshot_a"); ?>">
-      <div class="text-justify">
+      <div class="text-justify triangle-of-power">
 	<?php the_field("bio_a"); ?>
       </div>
     </div>
@@ -177,7 +177,7 @@ get_header(); ?>
 <?php if(get_field("quote_3") ): ?>
   <div class="row">
     <div class="show-for-large-only large-12 columns text-center block">
-      <blockquote><?php the_field("quote_3"); ?></blockquote>
+      <h2><?php the_field("quote_3"); ?></h2>
     </div>
   </div>
 <?php endif; ?>
