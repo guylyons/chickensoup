@@ -33,7 +33,7 @@ get_header(); ?>
 
 <div class="row">
   <div class="small-12 columns text-justify">
-    <?php the_field("recent_projects"); ?>
+    <a href="/#projects"><?php the_field("recent_projects"); ?></a>
   </div>
 </div>
 
@@ -144,7 +144,7 @@ get_header(); ?>
 <!-- triangle of power -->
 <div class="row">
   <div class="medium-12 columns">
-    <h1>The C3K Triangle of Power</h1>
+    <a href="/#triangle"><h1>The C3K Triangle of Power</h1></a>
   </div>
 </div>
 
@@ -175,36 +175,39 @@ get_header(); ?>
   
 </div>
 
-<?php if(get_field("quote_3") ): ?>
-  <div class="row">
-    <div class="show-for-large-only large-12 columns text-center block">
-      <h2><?php the_field("quote_3"); ?></h2>
+<div class="blue-bg contact-form">
+  <div class="row" id="email">
+    <div class="small-12 medium-6  medium-offset-3 columns">
+
+      <h1>
+	email us
+      </h1>
+      <form method="post" action="<?php echo get_stylesheet_directory_uri(); ?>/assets/php/contact.php">
+
+	<label>name</label>
+	<input name="name" placeholder="Mr./Mrs. Client">
+	<label>email</label>
+	<input name="email" type="email" placeholder="awesomeclient@moneytoburn.com">
+
+	<label>message</label>
+	<textarea name="comments" placeholder="I must hire Chicken 3000 for my next project! Name your price!"></textarea>
+
+	<input id="submit" name="submit" type="submit" value="Submit" class="btn-default">
+
+      </form>
+
     </div>
-  </div>
-<?php endif; ?>
-
-<div class="row" id="email">
-  <div class="small-12 medium-6 medium-offset-3 columns contact-form blue-bg block">
-
-    <h1>
-      email us
-    </h1>
-    <form method="post" action="<?php echo get_stylesheet_directory_uri(); ?>/assets/php/contact.php">
-
-      <label>name</label>
-      <input name="name" placeholder="Mr./Mrs. Client">
-      <label>email</label>
-      <input name="email" type="email" placeholder="awesomeclient@moneytoburn.com">
-
-      <label>message</label>
-      <textarea name="comments" placeholder="I must hire Chicken 3000 for my next project! Name your price!"></textarea>
-
-      <input id="submit" name="submit" type="submit" value="Submit" class="btn-default">
-
-    </form>
 
   </div>
 </div>
+
+  <?php if(get_field("quote_3") ): ?>
+    <div class="row">
+      <div class="show-for-large-only large-12 columns text-center block">
+	<h2><?php the_field("quote_3"); ?></h2>
+      </div>
+    </div>
+  <?php endif; ?>
 
 </div>
 </div>

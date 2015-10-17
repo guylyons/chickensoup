@@ -21,13 +21,18 @@
     <div class="small-3 medium-3 columns">
       <ul>
 	<li class="underline">Contact</li>
-	<?php the_field("footer_col1"); ?>
+	<li>doug[at]chicken3000.com</li>
+
+	<li>anna[at]chicken3000.com</li>
+
+	<li>guylyons2[at]gmail.com</li>
       </ul>
     </div>
     <div class="small-3 medium-3 columns">
       <ul>
 	<li class="underline">Social Media</li>
-	<?php the_field("footer_col2"); ?>
+	<li>Facebook</li>
+	<li>Newsletter</li>
       </ul>
     </div>
 

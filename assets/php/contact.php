@@ -9,43 +9,32 @@ $email    = check_input($_POST['email']);
 $comments = check_input($_POST['comments'], "Write your comments");
 
 $success =
+print "<h1>Your message has been sent!</h1> <br>
+   
+    Name: $name <br>
+    E-mail: $email <br>
 
-print "<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
-fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+    Comments: <br>
+    $comments <br>
 
-<h1>Thanks for writing us!</h1>
-
-name: $name <br>
-email: $email <br>
-
-Comments: <br>
-$comments <br>
-
-<br>
-<h2>Like us on Facebook and stay up to date on all things Chicken 3000!</h2>
-<div class="fb-like" data-href="https://www.facebook.com/chicken3000design?fref=ts" data-layout="button" data-action="like" data-show-faces="true" data-share="true"></div>";
+    End of message <br>"
+;
 
 /* If e-mail is not valid show error message */
 if (!preg_match("/([\w\-]+\@[\w\-]+\.[\w\-]+)/", $email))
-    {
-        show_error("This is not a valid e-mail address. Please try again.");
-    }
+{
+    show_error("This is not a valid e-mail address. Please try again.");
+}
 
 /* Let's prepare the message for the e-mail */
 $message = "Chicken Mail:
 
-    Name: $name
+Name: $name
 E-mail: $email
 Subject: $subject
 
 Comments:
-    $comments
+$comments
 
 End of message
 ";
