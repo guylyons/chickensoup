@@ -18,13 +18,13 @@
 
 <footer class="blue-bg c3k-spacer">
   <div class="row footer">
-    <div class="small-8 medium-4 columns">
+    <div class="small-3 medium-3 columns">
       <ul>
 	<li class="underline">Contact</li>
 	<?php the_field("footer_col1"); ?>
       </ul>
     </div>
-    <div class="small-4 medium-2 columns">
+    <div class="small-3 medium-3 columns">
       <ul>
 	<li class="underline">Social Media</li>
 	<?php the_field("footer_col2"); ?>
