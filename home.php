@@ -12,7 +12,7 @@ get_header(); ?>
 <div class="blue-bg block">
   <div class="row">
     <div class="medium-12 columns">
-      <h1>Blahg</h1>
+      <h1>BLAHG</h1>
     </div>
   </div>
 </div>

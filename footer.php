@@ -18,7 +18,7 @@
 
 <footer class="blue-bg c3k-spacer">
   <div class="row footer">
-    <div class="small-5 medium-3 columns">
+    <div class="small-8 medium-3 columns">
       <ul>
 	<li class="underline">Contact</li>
 	<li>doug[at]chicken3000.com</li>
