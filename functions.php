@@ -72,8 +72,6 @@ function create_post_type() {
 	    ),
 		'public' => true,
 		'has_archive' => true,
-		'capability_type' => 'post',
-		'hierarchical' => true,
 		'rewrite' => array('slug' => 'projects'),
 		'supports' => array( 'title', 'editor', 'excerpt', 'custom-fields', 'thumbnail' ),
 	)
