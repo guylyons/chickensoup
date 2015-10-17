@@ -189,7 +189,7 @@ get_header(); ?>
     <h1>
       email us
     </h1>
-    <form method="post" action="/assets/php/contact.php">
+    <form method="post" action="<?php get_stylesheet_directory_uri(); ?>/assets/php/contact.php">
 
       <label>name</label>
       <input name="name" placeholder="Mr./Mrs. Client">
