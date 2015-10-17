@@ -207,7 +207,7 @@ get_header(); ?>
 
   <?php if(get_field("quote_3") ): ?>
     <div class="row">
-      <div class="show-for-large-up large-12 columns text-center block">
+      <div class="small-12 columns text-center block">
 	<h2><?php the_field("quote_3"); ?></h2>
       </div>
     </div>

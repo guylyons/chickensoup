@@ -24,7 +24,7 @@
           <h1><a href="<?php echo home_url(); ?>">Home</a></h1>
 	</li>
       <?php endif; ?>
-	<li class="toggle-topbar menu-icon"><a href="#"><span><img src="<?php the_field("nav_logo"); ?>"></span></a></li>
+	<li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
     </ul>
     <section class="chicken-links">
       <?php foundationpress_top_bar_l(); ?>
