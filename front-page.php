@@ -183,7 +183,29 @@ get_header(); ?>
   </div>
 <?php endif; ?>
 
+<div class="row" id="email">
+  <div class="small-12 medium-6 medium-offset-3 columns contact-form blue-bg block">
+
+    <h1>
+      email us
+    </h1>
+    <form method="post" action="/assets/php/contact.php">
+
+      <label>name</label>
+      <input name="name" placeholder="Mr./Mrs. Client">
+      <label>email</label>
+      <input name="email" type="email" placeholder="awesomeclient@moneytoburn.com">
+
+      <label>message</label>
+      <textarea name="comments" placeholder="I must hire Chicken 3000 for my next project! Name your price!"></textarea>
+
+      <input id="submit" name="submit" type="submit" value="Submit" class="btn-default">
+
+    </form>
+
+  </div>
 </div>
+
 </div>
 </div>
 </div>
