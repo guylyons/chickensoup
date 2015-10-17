@@ -31,9 +31,10 @@ get_header(); ?>
 <!-- buffer -->
 <div class="show-for-medium-up buffer block">&nbsp</div>
 
+<a name="projects"></a>
 <div class="row">
   <div class="small-12 columns text-justify">
-    <a href="/#projects"><?php the_field("recent_projects"); ?></a>
+    <?php the_field("recent_projects"); ?>
   </div>
 </div>
 
@@ -140,11 +141,11 @@ get_header(); ?>
   </div>
 <?php endif; ?>
 
-
+<a name="triangle">
 <!-- triangle of power -->
 <div class="row">
   <div class="medium-12 columns">
-    <a href="/#triangle"><h1>The C3K Triangle of Power</h1></a>
+    <h1>The C3K Triangle of Power</h1>
   </div>
 </div>
 
