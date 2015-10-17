@@ -3,5 +3,6 @@
 *.log
 node_modules/
 assets/scss/
+assets/javascript/custom/
 assets/components/
 packaged/

@@ -77,10 +77,3 @@ function create_post_type() {
 	)
     );
 }
-
-/* change the name of meta boxes */
-add_action( 'admin_init',  'change_excerpt_box_title' );
-function change_excerpt_box_title() {
-    remove_meta_box( 'postexcerpt', 'c3k_project', 'side' );
-    add_meta_box('postexcerpt', __('Overlay Text'), 'post_excerpt_meta_box', 'c3k_project', 'normal', 'high');
-}
