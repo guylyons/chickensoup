@@ -141,7 +141,7 @@ get_header(); ?>
   </div>
 <?php endif; ?>
 
-<a name="triangle">
+<a name="triangle"></a>
 <!-- triangle of power -->
 <div class="row">
   <div class="medium-12 columns">
