@@ -1,24 +1,35 @@
 <?php
 /* Set e-mail recipient */
-$myemail  = "hello@csartmaine.org";
+$myemail  = "doug@chicken3000.com";
 
 /* Check all form inputs using check_input function */
 $name = check_input($_POST['name'], "Enter your name");
-$subject  = "CSArt Maine has mail from:";
+$subject  = "You've got Chicken Mail!";
 $email    = check_input($_POST['email']);
 $comments = check_input($_POST['comments'], "Write your comments");
 
 $success =
-    print "<h4>Your message has been sent!</h4> <br>
-   
-    Name: $name <br>
-    E-mail: $email <br>
 
-    Comments: <br>
-    $comments <br>
+print "<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
-    End of message <br>"
-    ;
+<h1>Thanks for writing us!</h1>
+
+name: $name <br>
+email: $email <br>
+
+Comments: <br>
+$comments <br>
+
+<br>
+<h2>Like us on Facebook and stay up to date on all things Chicken 3000!</h2>
+<div class="fb-like" data-href="https://www.facebook.com/chicken3000design?fref=ts" data-layout="button" data-action="like" data-show-faces="true" data-share="true"></div>";
 
 /* If e-mail is not valid show error message */
 if (!preg_match("/([\w\-]+\@[\w\-]+\.[\w\-]+)/", $email))
@@ -27,14 +38,14 @@ if (!preg_match("/([\w\-]+\@[\w\-]+\.[\w\-]+)/", $email))
     }
 
 /* Let's prepare the message for the e-mail */
-$message = "CSArt Maine has a message:
+$message = "Chicken Mail:
 
-Name: $name
+    Name: $name
 E-mail: $email
 Subject: $subject
 
 Comments:
-$comments
+    $comments
 
 End of message
 ";
@@ -49,9 +60,9 @@ function check_input($data, $problem='')
     $data = stripslashes($data);
     $data = htmlspecialchars($data);
     if ($problem && strlen($data) == 0)
-        {
-            show_error($problem);
-        }
+    {
+        show_error($problem);
+    }
     else { echo $success; }
     return $data;
 }
@@ -59,16 +70,16 @@ function check_input($data, $problem='')
 function show_error($myError)
 {
 ?>
-    <html>
+  <html>
     <body>
 
-    <em>Correct the following error:</em>
-    <br>
-<?php echo $myError; ?>
+      <em>Correct the following error:</em>
+      <br>
+      <?php echo $myError; ?>
 
     </body>
-</html>
-<?php
-exit();
-}
-?>
+  </html>
+  <?php
+  exit();
+  }
+  ?>
