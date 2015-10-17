@@ -199,9 +199,12 @@ blockquote {
     background: $black;
     color: $white;
 }
+.c3k-spacer {
+    margin-top: 8em;
+}
 .footer {
     position: relative;
-    height: 16em;
+    height: 20em;
     padding: 2em 0 1em;
     ul {
 	padding: 0;

@@ -20,7 +20,7 @@ get_header(); ?>
 
 <div class="row">
   <!-- Row for main content area -->
-  TEST
+
   <div class="small-12 columns" role="main">
     <div id="container">
       <?php if ( have_posts() ) : ?>

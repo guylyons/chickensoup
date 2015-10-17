@@ -16,7 +16,7 @@
 <!-- footer -->
 
 
-<footer class="blue-bg">
+<footer class="blue-bg c3k-spacer">
   <div class="row footer">
     <div class="small-8 medium-4 columns">
       <ul>
