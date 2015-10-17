@@ -151,24 +151,24 @@ get_header(); ?>
 <div class="row">
   
   <div class="small-12 large-4 columns">
-    <img src="<?php the_field("headshot_a"); ?>">
     <div class="text-justify triangle-of-power">
+      <img src="<?php the_field("headshot_a"); ?>">
       <?php the_field("bio_a"); ?>
     </div>
   </div>
 
 
   <div class="small-12 large-4 columns">
-    <img src="<?php the_field("headshot_b"); ?>">
     <div class="text-justify triangle-of-power">
+      <img src="<?php the_field("headshot_b"); ?>">
       <?php the_field("bio_b"); ?>
     </div>
   </div>
 
 
   <div class="small-12 large-4 columns">
-    <img src="<?php the_field("headshot_c"); ?>">
     <div class="text-justify triangle-of-power">
+      <img src="<?php the_field("headshot_c"); ?>">
       <?php the_field("bio_c"); ?>
     </div>
   </div>
