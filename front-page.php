@@ -144,7 +144,7 @@ get_header(); ?>
 <!-- triangle of power -->
   <div class="row">
     <div class="medium-12 columns">
-      <h2>The C3K Triangle of Power</h2>
+      <h1>The C3K Triangle of Power</h1>
     </div>
   </div>
 
