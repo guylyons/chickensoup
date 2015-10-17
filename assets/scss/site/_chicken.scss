@@ -244,6 +244,9 @@ blockquote {
     width: 7em;
     margin-bottom: 2em;
 }
+hr {
+    margin: -6px 0;
+}
 .copy {
     padding: 1em;
     text-align: right;
@@ -336,6 +339,16 @@ blockquote {
 }
 .orange {
     color: $orange;
+}
+
+.c3k-modal-styles {
+    h1,h2,h3,h4,h5 {
+	border-bottom: 1px solid #eee;
+	color: $blue;
+    }
+    h1 + h2 {
+	color: $black;
+    }
 }
 // @media #{$small-up} { }
 // @media #{$small-only} { }

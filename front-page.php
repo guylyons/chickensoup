@@ -66,6 +66,8 @@ get_header(); ?>
 	<div id="modal-<?php echo get_the_ID(); ?>" class="reveal-modal full chicken-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
 	  <div class="row">
 	    <div class="medium-4 columns">
+	      <h3><?php the_title(); ?></h3>
+	      <hr>
 	      <?php the_field("column_1"); ?>
 	    </div>
 	    <div class="medium-4 columns">
@@ -109,6 +111,8 @@ get_header(); ?>
 <?php endif; ?>
 
 <?php if(get_field( "big_box_1" ) ): ?>
+
+  <a name="triangle"></a>
   <!-- what the heck -->
   <div class="row">
     <div class="small-12 columns">
@@ -141,7 +145,6 @@ get_header(); ?>
   </div>
 <?php endif; ?>
 
-<a name="triangle"></a>
 <!-- triangle of power -->
 <div class="row">
   <div class="medium-12 columns">
@@ -204,7 +207,7 @@ get_header(); ?>
 
   <?php if(get_field("quote_3") ): ?>
     <div class="row">
-      <div class="show-for-large-only large-12 columns text-center block">
+      <div class="show-for-large-up large-12 columns text-center block">
 	<h2><?php the_field("quote_3"); ?></h2>
       </div>
     </div>

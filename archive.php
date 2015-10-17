@@ -55,6 +55,8 @@ get_header(); ?>
 	  <div id="modal-<?php echo get_the_ID(); ?>" class="reveal-modal full chicken-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
 	    <div class="row">
 	      <div class="medium-4 columns">
+		<h3><?php the_title(); ?></h3>
+		<hr>
 		<?php the_field("column_1"); ?>
 	      </div>
 	      <div class="medium-4 columns">
