@@ -21,7 +21,7 @@
 	</li>
       <?php else: ?>
 	<li class="name">
-          <h1><a href="<?php echo home_url(); ?>"><?php bloginfo( 'name' ); ?></a></h1>
+          <h1><a href="<?php echo home_url(); ?>">Home</a></h1>
 	</li>
       <?php endif; ?>
 	<li class="toggle-topbar menu-icon"><a href="#"><span><img src="<?php the_field("nav_logo"); ?>"></span></a></li>
