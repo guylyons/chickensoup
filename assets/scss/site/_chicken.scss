@@ -31,12 +31,10 @@ h5,
 h6 {
     font-weight: 700;
 }
-.chicken-links {
-    box-shadow: 2px 0px 2px 0px black;
-}
+
 .top-bar {
     border-bottom: 1px solid #ddd;
-    box-shadow: 0 1px 32px #ddd;
+    //box-shadow: 0 1px 32px #ddd;
 }
 .chicken-links ul li {
     list-style-type: none;
@@ -197,6 +195,9 @@ blockquote {
 }
 .blue-bg h1 {
     color: $white;
+}
+.top-bar-container {
+    margin-bottom: 0;
 }
 .black-bg {
     background: $black;

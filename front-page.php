@@ -71,7 +71,7 @@ get_header(); ?>
 	      <?php the_field("column_2"); ?>
 	    </div>
 	    <div class="medium-4 columns">
-	
+	      
 	    </div>
 	  </div>
 	  <a class="close-reveal-modal" aria-label="Close">&#215;</a>
@@ -132,7 +132,7 @@ get_header(); ?>
 <?php endif; ?>
 
 <?php if(get_field("quote_2") ): ?>
-  <!-- c3k quote block -->
+<!-- c3k quote block -->
   <div class="row">
     <div class="show-for-large-up large-12 columns text-center block">
       <h2><?php the_field("quote_2"); ?></h2>
@@ -142,37 +142,38 @@ get_header(); ?>
 
 
 <!-- triangle of power -->
-  <div class="row">
-    <div class="medium-12 columns">
-      <h1>The C3K Triangle of Power</h1>
+<div class="row">
+  <div class="medium-12 columns">
+    <h1>The C3K Triangle of Power</h1>
+  </div>
+</div>
+
+<div class="row">
+  
+  <div class="small-12 large-4 columns">
+    <img src="<?php the_field("headshot_a"); ?>">
+    <div class="text-justify triangle-of-power">
+      <?php the_field("bio_a"); ?>
     </div>
   </div>
 
-  <div class="row">
-    
-    <div class="small-12 large-4 columns text-center">
-      <img src="<?php the_field("headshot_a"); ?>">
-      <div class="text-justify triangle-of-power">
-	<?php the_field("bio_a"); ?>
-      </div>
-    </div>
 
-
-    <div class="small-12 large-4 columns triangle-of-power text-center">
-      <img src="<?php the_field("headshot_b"); ?>">
-      <div class="text-justify">
-	<?php the_field("bio_b"); ?>
-      </div>
-    </div>
-
-
-    <div class="small-12 large-4 columns triangle-of-power text-center">
-      <img src="<?php the_field("headshot_c"); ?>">
-      <div class="text-justify">
-	<?php the_field("bio_c"); ?>
-      </div>
+  <div class="small-12 large-4 columns">
+    <img src="<?php the_field("headshot_b"); ?>">
+    <div class="text-justify triangle-of-power">
+      <?php the_field("bio_b"); ?>
     </div>
   </div>
+
+
+  <div class="small-12 large-4 columns">
+    <img src="<?php the_field("headshot_c"); ?>">
+    <div class="text-justify triangle-of-power">
+      <?php the_field("bio_c"); ?>
+    </div>
+  </div>
+  
+</div>
 
 <?php if(get_field("quote_3") ): ?>
   <div class="row">
