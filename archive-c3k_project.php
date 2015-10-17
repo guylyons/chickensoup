@@ -20,12 +20,19 @@ get_header(); ?>
 <div class="blue-bg block">
   <div class="row">
     <div class="medium-12 columns">
-      <h1>Tags</h1>
+      <h1>Projects</h1>
     </div>
   </div>
 </div>
 
 <div class="row">
+
+  <?php if ( function_exists( 'wp_tag_cloud' ) ) : ?>
+    <div class="medium-12 columns c3k-tagcloud">
+      <?php wp_tag_cloud( 'smallest=14&largest=25' ); ?>
+    </div>
+  <?php endif; ?>
+
   <!-- Row for main content area -->
 
   <div class="small-12 columns" role="main">
