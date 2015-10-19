@@ -29,14 +29,3 @@ $('.reveal-modal').on('open.fndtn.reveal', '[data-reveal]', function () {
 $('.reveal-modal').on('close.fndtn.reveal', '[data-reveal]', function () {
     $('body').removeClass('modal-open');
 });
-
-$(window).scroll(function() {
-    $(".navbar").offset().top > 50 ? $(".navbar-fixed-top").addClass("top-nav-collapse") : $(".navbar-fixed-top").removeClass("top-nav-collapse")
-}), $(function() {
-    $(".page-scroll a").bind("click", function(o) {
-        var a = $(this);
-        $("html, body").stop().animate({
-            scrollTop: $(a.attr("href")).offset().top
-        }, 1500, "easeInOutExpo"), o.preventDefault()
-    })
-});

@@ -14,40 +14,43 @@
 </section>
 
 <!-- footer -->
+<div id="footer-container" class="blue-bg c3k-spacer">
+  <footer id="footer">
+    <div class="row footer">
+      
+      <div class="small-8 medium-3 columns">
+	<ul>
+	  <li class="underline">Contact</li>
+	  <li>doug[at]chicken3000.com</li>
 
+	  <li>anna[at]chicken3000.com</li>
 
-<footer class="blue-bg c3k-spacer">
-  <div class="row footer">
-    <div class="small-8 medium-3 columns">
-      <ul>
-	<li class="underline">Contact</li>
-	<li>doug[at]chicken3000.com</li>
-
-	<li>anna[at]chicken3000.com</li>
-
-	<li>guylyons2[at]gmail.com</li>
-      </ul>
-    </div>
-    <div class="small-3 medium-3 columns">
-      <ul>
-	<li class="underline">Social Media</li>
-	<li>Facebook</li>
-	<li>Newsletter</li>
-      </ul>
-    </div>
-
-    <div class="hide-for-small-only medium-6 columns feet">
-      <!-- chicken feet are delicious -->
-    </div>
-
-  </div>
-
-  <!-- copyright information -->
-  <div class="black-bg">
-    <div class="row">
-      <div class="small-12 columns copy">
-	copyright © 2015 Chicken 3000
+	  <li>guylyons2[at]gmail.com</li>
+	</ul>
       </div>
+      
+      <div class="small-3 medium-3 columns">
+	<ul>
+	  <li class="underline">Social Media</li>
+	  <li>Facebook</li>
+	  <li>Newsletter</li>
+	</ul>
+      </div>
+
+      <div class="hide-for-small-only medium-6 columns feet">
+	<!-- chicken feet are delicious -->
+      </div>
+
+    </div><!-- row end -->
+    
+    
+  </footer>
+</div>
+<!-- copyright information -->
+<div class="black-bg">
+  <div class="row">
+    <div class="small-12 columns copy">
+      copyright © 2015 Chicken 3000
     </div>
   </div>
 </div>
