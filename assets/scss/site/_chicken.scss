@@ -275,21 +275,6 @@ hr {
     }
 }
 
-.grid-item.w2 {
-    width: 100%;
-}
-.grid-item {
-    width: 33.33%;
-    padding: 10px;
-    margin:0;
-    overflow: hidden;
-    @media #{$medium-only} {
-	width: 50%;
-    }
-    @media #{$small-only} {
-	width: 100%;
-    }
-}
 .contact-form {
     label {
 	font-size: 1.3em;
@@ -353,13 +338,25 @@ hr {
 
 /* clearfix */
 .packery:after {
-  content: ' ';
-  display: block;
-  clear: both;
+    content: ' ';
+    display: block;
+    clear: both;
+}
+.gutter-sizer {
+    width: 2%;
+}
+.grid-sizer {
+    width: 32%;
 }
 .item {
-    width: 31%;
+    width: 32%;
     float: left;
+    @media #{$medium-only} {
+	width: 48%;
+    }
+    @media #{$small-only} {
+	width: 98%;
+    }
 }
 .modal-open {
     overflow: hidden;

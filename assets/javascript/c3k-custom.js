@@ -5,9 +5,10 @@ $('#packery').imagesLoaded()
 
     var $packery = $('#packery').packery({
       itemSelector: '.item',
-      gutter: 20
+      percentPosition: true,
+      gutter: '.gutter-sizer',
+      columnWidth: '.grid-sizer'
     });
-    
     $
   })
 
