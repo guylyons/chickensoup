@@ -55,6 +55,11 @@
 		</figcaption>
 	      </figure>
 	    </a>
+	    
+	  <?php else: ?>
+	    <?php the_field("column_1"); ?>
+	  <?php endif; ?>
+	  
 	</div>
 
 	<div id="modal-<?php echo get_the_ID(); ?>" class="reveal-modal full chicken-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
@@ -68,27 +73,26 @@
 	      <?php the_field("column_2"); ?>
 	    </div>
 	    <div class="medium-2 columns">
-	      
-	      <?php
-	      $next_post = get_previous_post();
-	      if (!empty( $next_post )): ?>
-		<a href="#" data-reveal-id="modal-<?php echo $next_post->ID; ?>">Next</a>
-		<strong><?php echo $next_post->post_title; ?></strong>
-	      <?php endif; ?>
+	      <div class="modal-paging">
+		<?php
+		$next_post = get_previous_post();
+		if (!empty( $next_post )): ?>
+		  <a href="#" data-reveal-id="modal-<?php echo $next_post->ID; ?>">Next</a>
 
-	      <?php
-	      $previous_post = get_next_post();
-	      if (!empty( $previous_post )): ?>
-		<a href="#" data-reveal-id="modal-<?php echo $previous_post->ID; ?>">Previous</a>
-		<strong><?php echo $previous_post->post_title; ?></strong>
-	      <?php endif; ?>
+		<?php endif; ?>
+		
+		<?php
+		$previous_post = get_next_post();
+		if (!empty( $previous_post )): ?>
+		  <br>
+		  <a href="#" data-reveal-id="modal-<?php echo $previous_post->ID; ?>">Previous</a>
+
+		<?php endif; ?>
+	      </div>
+
 	    </div>
-	    
 	  </div>
-	  <a class="close-reveal-modal" aria-label="Close">&#215;</a>
-	  <?php else: ?>
-	  <?php the_field("column_1"); ?>
-	  <?php endif; ?>
+	  <a class="close-reveal-modal" aria-label="Close"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/c3k_x.png" width="70%" height="70%"></a>
 	</div>
       <?php endwhile; wp_reset_query(); ?>
     </div>

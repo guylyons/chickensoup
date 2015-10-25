@@ -207,6 +207,7 @@ blockquote {
 }
 .c3k-tagcloud {
     text-align: justify;
+    margin-bottom: 2em;
 }
 // FOOTER
 .blue-bg {
@@ -228,7 +229,7 @@ blockquote {
 }
 .footer {
     position: relative;
-    height: 20em;
+    height: 18em;
     padding: 2em 0 1em;
     ul {
 	padding: 0;
@@ -360,6 +361,15 @@ hr {
 }
 .modal-open {
     overflow: hidden;
+}
+
+.modal-paging {
+    text-transform: uppercase;
+    @media #{$medium-up} {
+    position: absolute;
+    top: 18em;
+    right: 0;
+    }
 }
 // @media #{$small-up} { }
 // @media #{$small-only} { }

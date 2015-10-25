@@ -17,16 +17,20 @@ get_header(); ?>
   </div>
 </div>
 
-<div class="row">
-  
-  <?php if ( function_exists( 'wp_tag_cloud' ) ) : ?>
+
+<?php if ( function_exists( 'wp_tag_cloud' ) ) : ?>
+  <div class="row">
     <div class="medium-12 columns c3k-tagcloud">
       <strong><?php wp_tag_cloud( 'smallest=14&largest=25' ); ?></strong>
     </div>
-  <?php endif; ?>
+  </div>
+<?php endif; ?>
 
+<div class="row">
   <div class="medium-12 columns">
     <div id="packery">
+      <div class="gutter-sizer"></div>
+      <div class="grid-sizer"></div>
       <?php if ( have_posts() ) : ?>
 
 	<?php do_action( 'foundationpress_before_content' ); ?>
@@ -47,6 +51,11 @@ get_header(); ?>
 		  </figcaption>
 		</figure>
 	      </a>
+
+	    <?php else: ?>
+	      <?php the_field("column_1"); ?>
+	    <?php endif; ?>
+	    
 	  </div>
 
 	  <div id="modal-<?php echo get_the_ID(); ?>" class="reveal-modal full chicken-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
@@ -56,17 +65,30 @@ get_header(); ?>
 		<hr>
 		<?php the_field("column_1"); ?>
 	      </div>
-	      <div class="medium-4 columns">
+	      <div class="medium-6 columns">
 		<?php the_field("column_2"); ?>
 	      </div>
-	      <div class="medium-4 columns">
-		
+	      <div class="medium-2 columns">
+		<div class="modal-paging">
+		  <?php
+		  $next_post = get_previous_post();
+		  if (!empty( $next_post )): ?>
+		    <a href="#" data-reveal-id="modal-<?php echo $next_post->ID; ?>">Next</a>
+
+		  <?php endif; ?>
+		  
+		  <?php
+		  $previous_post = get_next_post();
+		  if (!empty( $previous_post )): ?>
+		    <br>
+		    <a href="#" data-reveal-id="modal-<?php echo $previous_post->ID; ?>">Previous</a>
+
+		  <?php endif; ?>
+		</div>
+
 	      </div>
 	    </div>
-	    <a class="close-reveal-modal" aria-label="Close">&#215;</a>
-	    <?php else: ?>
-	    <?php the_content(); ?>
-	    <?php endif; ?>
+	    <a class="close-reveal-modal" aria-label="Close"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/c3k_x.png" width="70%" height="70%"></a>
 	  </div>
 	<?php endwhile; wp_reset_query(); ?>
     </div>
