@@ -29,7 +29,7 @@ get_header(); ?>
   <!-- Row for main content area -->
 
   <div class="small-12 columns" role="main">
-  <h2 class="orange"><?php single_tag_title(); ?></h2>
+    <h2 class="orange"><?php single_tag_title(); ?></h2>
     <div id="container">
       <?php if ( have_posts() ) : ?>
 
@@ -50,27 +50,15 @@ get_header(); ?>
 		  </figcaption>
 		</figure>
 	      </a>
+
+	    <?php else: ?>
+	      <?php the_field("column_1"); ?>
+	    <?php endif; ?>
+	    
 	  </div>
 	  
-	  <div id="modal-<?php echo get_the_ID(); ?>" class="reveal-modal full chicken-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
-	    <div class="row">
-	      <div class="medium-4 columns">
-		<h3><?php the_title(); ?></h3>
-		<hr>
-		<?php the_field("column_1"); ?>
-	      </div>
-	      <div class="medium-4 columns">
-		<?php the_field("column_2"); ?>
-	      </div>
-	      <div class="medium-4 columns">
-		
-	      </div>
-	    </div>
-	    <a class="close-reveal-modal" aria-label="Close">&#215;</a>
-	    <?php else: ?>
-	    <?php the_content(); ?>
-	    <?php endif; ?>
-	  </div>
+	  <?php get_template_part( 'parts/modal' ); ?>
+	  
 	<?php endwhile; wp_reset_query(); ?>
     </div>
   </div>
