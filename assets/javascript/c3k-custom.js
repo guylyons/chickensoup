@@ -1,17 +1,16 @@
-console.log("I'm LOADED!");
-
-$('#container').imagesLoaded()
+$('#packery').imagesLoaded()
   .always(function(instance) {
     console.log('all images loaded');
-    var $container = $('#container');
     // init
-    $container.packery({
-      itemSelector: '.grid-item',
-      gutter: 0
-    });
 
+    var $packery = $('#packery').packery({
+      itemSelector: '.item',
+      gutter: 20
+    });
+    
     $
   })
+
   .done(function(instance) {
     console.log('all images successfully loaded');
   })
@@ -23,9 +22,9 @@ $('#container').imagesLoaded()
     console.log('image is ' + result + ' for ' + image.img.src);
   });
 
-$('.reveal-modal').on('open.fndtn.reveal', '[data-reveal]', function () {
-    $('body').addClass('modal-open');
+$(document).on('opened.fndtn.reveal', '[data-reveal]', function () {
+    $("body").addClass("modal-open");
 });
-$('.reveal-modal').on('close.fndtn.reveal', '[data-reveal]', function () {
+$(document).on('closed.fndtn.reveal', '[data-reveal]', function () {
     $('body').removeClass('modal-open');
 });

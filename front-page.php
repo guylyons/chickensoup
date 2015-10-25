@@ -15,6 +15,7 @@
 </div>
 
 
+
 <!-- buffer -->
 <div class="show-for-medium-up buffer block">&nbsp;</div>
 
@@ -32,13 +33,13 @@
 
 <div class="row">
   <div class="medium-12 columns">
-    <div id="container">
+    <div id="packery">
 
       <?php do_action( 'foundationpress_before_content' ); ?>
       <!-- begin image grid loop -->
       <?php $loop = new WP_Query( array( 'post_type' => 'c3k_project', 'posts_per_page' => 6 ) ); ?>
       <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
-	<div class="grid-item">
+	<div class="item">
 	  <?php if (has_post_thumbnail( $post->ID ) ): ?>
 	    <a href="#" data-reveal-id="modal-<?php echo get_the_ID(); ?>">
 	      <figure class="text-overlay">
@@ -62,12 +63,26 @@
 	      <hr>
 	      <?php the_field("column_1"); ?>
 	    </div>
-	    <div class="medium-4 columns">
+	    <div class="medium-6 columns">
 	      <?php the_field("column_2"); ?>
 	    </div>
-	    <div class="medium-4 columns">
+	    <div class="medium-2 columns">
 	      
+	      <?php
+	      $next_post = get_previous_post();
+	      if (!empty( $next_post )): ?>
+		<a href="#" data-reveal-id="modal-<?php echo $next_post->ID; ?>">Next</a>
+		<strong><?php echo $next_post->post_title; ?></strong>
+	      <?php endif; ?>
+
+	      <?php
+	      $previous_post = get_next_post();
+	      if (!empty( $previous_post )): ?>
+		<a href="#" data-reveal-id="modal-<?php echo $previous_post->ID; ?>">Previous</a>
+		<strong><?php echo $previous_post->post_title; ?></strong>
+	      <?php endif; ?>
 	    </div>
+	    
 	  </div>
 	  <a class="close-reveal-modal" aria-label="Close">&#215;</a>
 	  <?php else: ?>

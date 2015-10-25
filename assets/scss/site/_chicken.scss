@@ -350,6 +350,20 @@ hr {
 	color: $black;
     }
 }
+
+/* clearfix */
+.packery:after {
+  content: ' ';
+  display: block;
+  clear: both;
+}
+.item {
+    width: 31%;
+    float: left;
+}
+.modal-open {
+    overflow: hidden;
+}
 // @media #{$small-up} { }
 // @media #{$small-only} { }
 //

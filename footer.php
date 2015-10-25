@@ -32,7 +32,8 @@
       <div class="small-3 medium-3 columns">
 	<ul>
 	  <li class="underline">Social Media</li>
-	  <li>Facebook</li>
+	  <li><a href="https://www.facebook.com/chicken3000design
+">Facebook</a></li>
 	  <li>Newsletter</li>
 	</ul>
       </div>

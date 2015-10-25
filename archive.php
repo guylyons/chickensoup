@@ -29,7 +29,7 @@ get_header(); ?>
   <!-- Row for main content area -->
 
   <div class="small-12 columns" role="main">
-  <h1 class="orange"><?php single_tag_title(); ?></h1>
+  <h2 class="orange"><?php single_tag_title(); ?></h2>
     <div id="container">
       <?php if ( have_posts() ) : ?>
 

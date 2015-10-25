@@ -15,7 +15,7 @@
 	<li class="name">
 	  <h1>
 	    <a href="<?php home_url(); ?>">
-	      <img src="<?php the_field("nav_logo"); ?>">
+	      <img src="<?php the_field( "nav_logo" ); ?>">
 	    </a>
 	  </h1>
 	</li>
