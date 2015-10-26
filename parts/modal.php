@@ -35,5 +35,5 @@
 
     </div>
   </div>
-  <a class="close-reveal-modal" aria-label="Close"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/c3k_x.png" width="70%" height="70%"></a>
+  <a class="close-reveal-modal" aria-label="Close"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/c3k_x.png" width="50%" height="50%"></a>
 </div>
