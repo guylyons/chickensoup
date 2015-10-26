@@ -1,6 +1,10 @@
-// chicken presets
+/* Chickensoup Wordpress Theme
+   Author: Guy Lyons
+   Email:  guylyons2@gmail.com
+*/
 
-// APPROPRIATE BOX SIZING FOR ALL
+
+/* Some inital settings */
 * {
     box-sizing: border-box;
 }
@@ -11,6 +15,7 @@ html {
     width: 100%;
 }
 
+/* Make landing page full height */
 .intro {
     display: table;
     width: 100%;
@@ -22,7 +27,7 @@ html {
     vertical-align: middle;
 }
 
-// Typography
+/* Bold headings */
 h1,
 h2,
 h3,
@@ -343,7 +348,8 @@ hr {
     }
 }
 
-/* clearfix */
+
+/* Packery Grid */
 .packery:after {
     content: ' ';
     display: block;
@@ -365,10 +371,14 @@ hr {
 	width: 98%;
     }
 }
+
+// Attaches to jQuery event handler to stop scrolling
+// when modal window opens
 .modal-open {
     overflow: hidden;
 }
 
+// Controls Next/Prev paging inside modal
 .modal-paging {
     text-transform: uppercase;
     @media #{$medium-up} {
@@ -377,6 +387,15 @@ hr {
     right: 0;
     }
 }
+
+
+
+
+
+
+
+
+
 // @media #{$small-up} { }
 // @media #{$small-only} { }
 //

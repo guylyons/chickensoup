@@ -34,13 +34,13 @@
 <div class="row">
   <div class="medium-12 columns">
     <div id="packery">
+      <div class="gutter-sizer"></div>
+      <div class="grid-sizer"></div>
       <?php do_action( 'foundationpress_before_content' ); ?>
       <!-- begin image grid loop -->
       <?php $loop = new WP_Query( array( 'post_type' => 'c3k_project', 'posts_per_page' => 6 ) ); ?>
       <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
 	<div class="item">
-	  <div class="gutter-sizer"></div>
-	  <div class="grid-sizer"></div>
 	  <?php if (has_post_thumbnail( $post->ID ) ): ?>
 	    <a href="#" data-reveal-id="modal-<?php echo get_the_ID(); ?>">
 	      <figure class="text-overlay">
