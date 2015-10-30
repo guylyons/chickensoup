@@ -1,7 +1,5 @@
 <?php get_header(); ?>
 
-
-
 <!-- landing -->
 <div class="intro">
   <div class="row">

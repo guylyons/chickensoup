@@ -18,7 +18,7 @@
   <footer id="footer">
     <div class="row footer">
 
-      <div class="small-8 medium-3 columns">
+      <div class="small-12 medium-3 columns">
 	<ul>
 	  <li class="underline">Contact</li>
 
@@ -31,7 +31,7 @@
 	</ul>
       </div>
 
-      <div class="small-3 medium-3 columns">
+      <div class="small-12 medium-3 columns">
 	<ul>
 	  <li class="underline">Social Media</li>
 	  <li><a href="https://www.facebook.com/chicken3000design
@@ -49,6 +49,7 @@
 
   </footer>
 </div>
+
 <!-- copyright information -->
 <div class="black-bg">
   <div class="row">
@@ -57,6 +58,7 @@
     </div>
   </div>
 </div>
+
 
 <?php if ( ! get_theme_mod( 'wpt_mobile_menu_layout' ) || get_theme_mod( 'wpt_mobile_menu_layout' ) == 'offcanvas' ) : ?>
 
