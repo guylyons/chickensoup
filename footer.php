@@ -17,23 +17,25 @@
 <div id="footer-container" class="blue-bg c3k-spacer">
   <footer id="footer">
     <div class="row footer">
-      
+
       <div class="small-8 medium-3 columns">
 	<ul>
 	  <li class="underline">Contact</li>
+
 	  <li>doug[at]chicken3000.com</li>
 
 	  <li>anna[at]chicken3000.com</li>
 
 	  <li>guylyons2[at]gmail.com</li>
+
 	</ul>
       </div>
-      
+
       <div class="small-3 medium-3 columns">
 	<ul>
 	  <li class="underline">Social Media</li>
 	  <li><a href="https://www.facebook.com/chicken3000design
-">Facebook</a></li>
+		       ">Facebook</a></li>
 	  <li>Newsletter</li>
 	</ul>
       </div>
@@ -43,8 +45,8 @@
       </div>
 
     </div><!-- row end -->
-    
-    
+
+
   </footer>
 </div>
 <!-- copyright information -->
