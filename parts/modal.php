@@ -5,7 +5,8 @@
  * @package WordPress
  */
 ?>
-<div id="modal-<?php echo get_the_ID(); ?>" class="reveal-modal full chicken-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+
+<div id="modal-<?php echo get_the_ID(); ?>" class="reveal-modal full chicken-modal" data-reveal role="dialog">
   <div class="row">
     <div class="medium-4 columns">
       <h3><?php the_title(); ?></h3>
@@ -23,7 +24,7 @@
 	  <a href="#" data-reveal-id="modal-<?php echo $next_post->ID; ?>">Next</a>
 
 	<?php endif; ?>
-	
+
 	<?php
 	$previous_post = get_next_post();
 	if (!empty( $previous_post )): ?>
@@ -35,5 +36,5 @@
 
     </div>
   </div>
-  <a class="close-reveal-modal" aria-label="Close"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/c3k_x.png" width="50%" height="50%"></a>
+  <a class="close-reveal-modal" aria-label="Close"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/c3k_x.png" alt="x icon"></a>
 </div>
