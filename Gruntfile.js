@@ -50,6 +50,7 @@ module.exports = function (grunt) {
 	map: true, // inline sourcemaps
 	processors: [
           require('autoprefixer')({browsers: 'last 2 versions'}), // add vendor prefixes
+	  require('cssnano') ()
 	]
       },
       dist: {
