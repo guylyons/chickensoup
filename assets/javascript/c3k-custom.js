@@ -9,7 +9,7 @@ $('#packery').imagesLoaded()
       gutter: '.gutter-sizer',
       columnWidth: '.grid-sizer'
     });
-    $
+
   })
 
   .done(function(instance) {
@@ -29,3 +29,18 @@ $(document).on('opened.fndtn.reveal', '[data-reveal]', function () {
 $(document).on('closed.fndtn.reveal', '[data-reveal]', function () {
     $('body').removeClass('modal-open');
 });
+
+// scroll easing
+$(function() {
+    $(".page-scroll a").bind("click", function(o) {
+        var a = $(this);
+        $("html, body").stop().animate({
+            scrollTop: $(a.attr("href")).offset().top
+        }, 1500, "easeInOutExpo"), o.preventDefault();
+    });
+});
+
+// adjust navigation after scroll down
+$(window).scroll(function() {
+  $(".navbar").offset().top > 50 ? $(".navbar-fixed-top").addClass("top-nav-collapse") : $(".navbar-fixed-top").removeClass("top-nav-collapse");
+}); 
