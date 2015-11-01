@@ -38,12 +38,22 @@ module.exports = function (grunt) {
       },
 
       dist: {
-	options: {
-	  outputStyle: 'compressed'
-	},
 	files: {
 	  'assets/stylesheets/foundation.css': 'assets/scss/foundation.scss'
 	}
+      }
+
+    },
+
+    postcss: {
+      options: {
+	map: true, // inline sourcemaps
+	processors: [
+          require('autoprefixer')({browsers: 'last 2 versions'}), // add vendor prefixes
+	]
+      },
+      dist: {
+	src: 'assets/stylesheets/foundation.css'
       }
 
     },
@@ -110,7 +120,7 @@ module.exports = function (grunt) {
 	  //'assets/components/foundation/js/foundation/foundation.interchange.js',
 	  //'assets/components/foundation/js/foundation/foundation.joyride.js',
 	  //'assets/components/foundation/js/foundation/foundation.magellan.js',
-	  //'assets/components/foundation/js/foundation/foundation.offcanvas.js',
+	  'assets/components/foundation/js/foundation/foundation.offcanvas.js',
 	  //'assets/components/foundation/js/foundation/foundation.orbit.js',
 	  'assets/components/foundation/js/foundation/foundation.reveal.js',
 	  //'assets/components/foundation/js/foundation/foundation.slider.js',
@@ -165,10 +175,10 @@ module.exports = function (grunt) {
 	  livereload: true
 	}
       }
-
     }
   });
 
+  grunt.loadNpmTasks('grunt-postcss');
   grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-concat');
@@ -177,7 +187,8 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-string-replace');
   grunt.loadNpmTasks('grunt-contrib-compress');
 
+  grunt.registerTask('autoprefixer', ['postcss']);
   grunt.registerTask('package', ['compress:main']);
-  grunt.registerTask('build', ['copy', 'string-replace:fontawesome', 'sass', 'concat', 'uglify']);
+  grunt.registerTask('build', ['copy', 'string-replace:fontawesome', 'sass', 'postcss', 'concat', 'uglify']);
   grunt.registerTask('default', ['watch']);
 };
