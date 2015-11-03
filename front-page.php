@@ -74,7 +74,7 @@
 <?php if(get_field("attention_grabber")): ?>
   <!-- Want to see more? -->
   <div class="row">
-    <h2 class="show-for-large-up text-center block">
+    <h2 class="show-for-large-up text-center">
       <a href="/blahg/"><?php the_field("attention_grabber"); ?></a>
     </h2>
   </div>
@@ -96,15 +96,9 @@
 
 
 <!-- what the heck -->
-<a name="triangle"></a>
 <?php if(get_field( "big_box_1" ) ): ?>
 
-  <div class="row">
-    <div class="small-12 columns">
-      <h1>What the heck is Chicken 3000?</h1>
-    </div>
-  </div>
-  <div class="blue-bg block">
+  <div class="blue-bg block" id="triangle">
     <div class="row">
       <div class="small-12 columns">
 	<?php the_field("big_box_1"); ?>
