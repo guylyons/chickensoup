@@ -3,7 +3,7 @@
 <!-- landing -->
 <div class="intro">
   <div class="row">
-    <div class="show-for-small-only small-12 columns block">
+    <div class="show-for-small-only small-12 columns block intro-body">
       <img src="<?php the_field("small_logo") ?>" alt="Chicken 300 Small Logo">
     </div>
     <div class="show-for-medium-up medium-12 columns text-center block">

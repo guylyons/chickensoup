@@ -36,6 +36,16 @@ $(document).ready(function(){
     speed: 1000,
     offset: -48
   });
-    
+
+  $(window).scroll(function() {    
+    var scroll = $(window).scrollTop();
+
+    if (scroll >= 10) {
+      $(".top-bar").addClass("scroll-toggle");
+    } else {
+      $(".top-bar").removeClass("scroll-toggle");
+    }
+  });
+  
 });
 
