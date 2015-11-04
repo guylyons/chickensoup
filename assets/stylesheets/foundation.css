@@ -7825,10 +7825,6 @@ body.admin-bar.f-topbar-fixed .sticky.fixed {
       margin: 0;
       padding: 0; }
 
-/* Chickensoup Wordpress Theme
-   Author: Guy Lyons
-   Email:  guylyons2@gmail.com
-*/
 /* Some inital settings */
 * {
   box-sizing: border-box; }
@@ -7914,23 +7910,24 @@ blockquote {
   font-size: 1.2em; }
 
 .block {
-  padding-top: 2em;
-  padding-bottom: 3em;
+  min-height: 20em;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.top-block {
+  height: 15em;
+  padding-top: 5.5em;
   margin-bottom: 2em; }
+
+.spacer {
+  display: block;
+  width: 100%;
+  height: 3em; }
 
 ::selection {
   background: #ef4b26;
   color: #FBFBFB; }
-
-.diagonals {
-  background: url("../img/footer-diagonals.svg");
-  background-repeat: no-repeat;
-  top: 16px;
-  z-index: -5;
-  width: 100%;
-  display: block;
-  background-size: cover;
-  height: 100px; }
 
 .buffer {
   background: #ef4b26 url("../img/doug_pattern.png");
@@ -8000,17 +7997,23 @@ blockquote {
 .btn-default:active {
   background: #ea3911; }
 
-.triangle-of-power h2 {
-  color: #515153; }
-
-.triangle-of-power p:first-of-type {
-  color: #ef4b26; }
+.recent-projects {
+  margin-bottom: 8em; }
 
 .triangle-of-power {
+  margin-bottom: 8em; }
+
+.triangle-bios h2 {
+  color: #515153; }
+
+.triangle-bios p:first-of-type {
+  color: #ef4b26; }
+
+.triangle-bios {
   margin: 0 auto;
   max-width: 400px; }
 
-.triangle-of-power p + p {
+.triangle-bios p + p {
   margin-top: 1.2em;
   font-size: 1em;
   font-weight: 400; }
@@ -8145,9 +8148,21 @@ hr {
 
 .gutter-sizer {
   width: 2%; }
+  @media only screen and (min-width: 40.0625em) and (max-width: 64em) {
+    .gutter-sizer {
+      width: 4%; } }
+  @media only screen and (max-width: 40em) {
+    .gutter-sizer {
+      width: 0; } }
 
 .grid-sizer {
   width: 32%; }
+  @media only screen and (min-width: 40.0625em) and (max-width: 64em) {
+    .grid-sizer {
+      width: 48%; } }
+  @media only screen and (max-width: 40em) {
+    .grid-sizer {
+      width: 100%; } }
 
 .item {
   width: 32%;

@@ -1,8 +1,28 @@
-/* Chickensoup Wordpress Theme
-   Author: Guy Lyons
-   Email:  guylyons2@gmail.com
-*/
-
+// Chickensoup Wordpress Theme
+// Author: Guy Lyons
+// Email:  guylyons2@gmail.com
+//
+// :77777777777777777777777??MM777777777777777777777777?MMM77777:7MMMMMMM++777777++
+// :77777777777777777777777??MM777777777777777777777777?MMM77777:7MMMMMM+7777777+MM
+// :77777777777777777777777I?MM$77777777777777777777777?MMM77777:7MMMMM+7777777+MMM
+// :77777,:::::::::::::::::,,MM:::::::::::::::::::+7777?MMM77777:7MMM++777777=+MMMM
+// :77777MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM=7777?MMM77777:7M+7777777+MMMMMMM
+// :77777MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM=7777?MMM77777:~+777777++MMMMMMMM
+// :77777MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM=7777?MMM77777II77777I+MMMMMMMMMM
+// :77777MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM=7777?MMM777777777777=MMMMMMMMMMM
+// :77777MMMMMMMMMMMMMMMMMMMMMMMM,777777777777777777777?MMM777777777+MMMMMMMMMMMMMM
+// :77777MMMMMMMMMMMMMMMMMMMMMMMM:777777777777777777777?MMM77777777+MMMMMMMMMMMMMMM
+// :77777MMMMMMMMMMMMMMMMMMMMMMMM:777777777777777777777?MMM77777777~MMMMMMMMMMMMMMM
+// :77777MMMMMMMMMMMMMMMMMMMMMMMM:777777777777777777777?MMM777777777~MMMMMMMMMMMMMM
+// :77777MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM=7777?MMM77777777777I:MMMMMMMMMMM
+// :77777MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM=7777?MMM7777777777777~MMMMMMMMMM
+// :77777MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM=7777?MMM77777:=?777777~~MMMMMMMM
+// :77777MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM=7777?MMM77777:,.I7777777=MMMMMMM
+// :77777MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM=7777?MMM77777:7MM,??777777:~MMMM
+// :77777777777777777777777??MM777777777777777777777777?MMM77777:7MMM..I7777777~MMM
+// :77777777777777777777777??MM777777777777777777777777?MMM77777:7MMMMM.?7777777:MM
+// :77777777777777777777777??MM777777777777777777777777?MMM77777:7MMMMMM.I?777777~~
+// :77777777777777777777777??MM777777777777777777777777?MMM77777:7MMMMMMM..?7777777
 
 /* Some inital settings */
 * {
@@ -71,6 +91,7 @@ h6 {
     overflow-y: scroll;
     top: 0; // have the modal sit at the top of the screen
 }
+
 .text-overlay {
     position: relative;
     margin: 0;
@@ -78,6 +99,7 @@ h6 {
     width: 100%;
     overflow: hidden;
 }
+
 .text-overlay figcaption {
     position: absolute;
     background: rgba(255, 255, 255, 0.8);
@@ -91,6 +113,7 @@ h6 {
     margin: 0;
     transition: opacity .5s ease;
 }
+
 .text-overlay:hover figcaption {
     opacity: 1;
 }
@@ -99,29 +122,35 @@ blockquote {
     color: $black;
     font-size: 1.2em;
 }
+
 .block {
-    padding-top: 2em;
-    padding-bottom: 3em;
+    min-height: 20em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.top-block {
+    height: 15em;
+    padding-top: 5.5em;
     margin-bottom: 2em;
+}
+
+.spacer {
+    display: block;
+    width: 100%;
+    height: 3em;
 }
 ::selection {
     background: $orange;
     color: $white;
 }
-.diagonals {
-    background: url("../img/footer-diagonals.svg");
-    background-repeat: no-repeat;
-    top: 16px;
-    z-index: -5;
-    width: 100%;
-    display: block;
-    background-size: cover;
-    height: 100px;
-}
+
 .buffer {
     background: $orange url("../img/doug_pattern.png");
     height: 258px;
 }
+
 .buffer-2 {
     background: #00a79d url("../img/buffer-tile-2.png");
     h6 {
@@ -130,6 +159,7 @@ blockquote {
 	padding-right: 3em;
     }
 }
+
 .buffer-2 blockquote {
     color: $white;
     @media #{$large-up} {
@@ -144,6 +174,7 @@ blockquote {
     text-indent: -0.4em;
     margin-left: 1em;
 }
+
 .ifyoudecidetoanimate {
     @keyframes animatedBackground {
 	0% {
@@ -165,13 +196,16 @@ blockquote {
     background-repeat: no-repeat;
     margin-bottom: 2em;
 }
+
 .blue-bg {
     background: $blue;
     color: $white;
 }
+
 blockquote {
     color: $black;
 }
+
 .btn-default {
     color: $white;
     font-size: 14px;
@@ -185,27 +219,48 @@ blockquote {
     background: $orange;
     box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset;
 }
+
 .btn-default:hover {
     background: lighten($orange, 5%);
 }
+
 .btn-default:active {
     background: darken($orange, 5%);
 }
+
+///////////////////////////////////////////////
+//
+//
+//          RECENT PROJECTS
+//
+//
+///////////////////////////////////////////////
+
+.recent-projects {
+    margin-bottom: 8em;
+}
+
 // TRIANGLE-OF-POWER
-.triangle-of-power h2 {
+.triangle-of-power {
+    margin-bottom: 8em;
+}
+
+.triangle-bios h2 {
     // first headline is black
     color: $black;
 }
-.triangle-of-power p:first-of-type {
+
+.triangle-bios p:first-of-type {
     color: $orange;
 }
-.triangle-of-power {
+
+.triangle-bios {
     // container for the text
     margin: 0 auto;
     max-width: 400px;
 }
 
-.triangle-of-power p + p {
+.triangle-bios p + p {
     // style paragraphs
     margin-top: 1.2em;
     font-size: 1em;
@@ -229,9 +284,11 @@ blockquote {
     background: $blue;
     color: $white;
 }
+
 .blue-bg h1 {
     color: $white;
 }
+
 .top-bar-container {
     margin-bottom: 0;
 }
@@ -239,9 +296,11 @@ blockquote {
     background: $black;
     color: $white;
 }
+
 .c3k-spacer {
     margin-top: 8em;
 }
+
 .footer {
     position: relative;
     height: 18em;
@@ -261,17 +320,21 @@ blockquote {
 	list-style-type: none;
     }
 }
+
 .footer ul + li {
     border: 1px solid red;
 }
+
 .underline {
     border-bottom: 1px solid $white;
     width: 7em;
     margin-bottom: 2em;
 }
+
 hr {
     margin: -6px 0 20px;
 }
+
 .copy {
     padding: 1em;
     text-align: right;
@@ -346,6 +409,7 @@ hr {
     border-radius: 3px;
     margin-bottom: 8em;
 }
+
 .orange {
     color: $orange;
 }
@@ -369,9 +433,21 @@ hr {
 }
 .gutter-sizer {
     width: 2%;
+    @media #{$medium-only} {
+	width: 4%;
+    }
+    @media #{$small-only} {
+	width: 0;
+    }   
 }
 .grid-sizer {
     width: 32%;
+    @media #{$medium-only} {
+	width: 48%;
+    }
+    @media #{$small-only} {
+	width: 100%;
+    }
 }
 .item {
     width: 32%;

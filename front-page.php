@@ -15,71 +15,72 @@
 
 
 <!-- buffer -->
-<div class="show-for-medium-up buffer block">&nbsp;</div>
+<div class="show-for-medium-up buffer">&nbsp;</div>
 
 
 
 <!-- recent projects -->
-<a name="projects"></a>
-<div class="row">
-  <div class="small-12 columns text-justify">
-    <?php the_field("recent_projects"); ?>
-  </div>
-</div>
-
-
-
-<div class="row">
-  <div class="medium-12 columns">
-    <div id="packery">
-      <div class="gutter-sizer"></div>
-      <div class="grid-sizer"></div>
-      <?php do_action( 'foundationpress_before_content' ); ?>
-      <!-- begin image grid loop -->
-      <?php $loop = new WP_Query( array( 'post_type' => 'c3k_project', 'posts_per_page' => 6 ) ); ?>
-      <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
-	<div class="item">
-	  <?php if (has_post_thumbnail( $post->ID ) ): ?>
-	    <a href="#" data-reveal-id="modal-<?php echo get_the_ID(); ?>">
-	      <figure class="text-overlay">
-		
-		<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
-		<img src="<?php echo $image[0]; ?>">
-
-		<figcaption>
-		  <h3><?php the_title(); ?></h3>
-		  <?php the_excerpt(); ?>
-		  <!-- insert overlay field here -->
-		</figcaption>
-	      </figure>
-	    </a>
-	    
-	  <?php else: ?>
-	    <?php the_field("column_1"); ?>
-	  <?php endif; ?>
-	  
-	</div>
-
-	<?php get_template_part( 'parts/modal' ); ?>
-	
-      <?php endwhile; wp_reset_query(); ?>
+<div class="recent-projects">
+  <a name="projects"></a>
+  <div class="row">
+    <div class="small-12 columns text-justify">
+      <?php the_field("recent_projects"); ?>
     </div>
   </div>
-  <!-- end image grid loop -->
-  <?php do_action( 'foundationpress_after_content' ); ?>
-</div>
 
 
 
-<?php if(get_field("attention_grabber")): ?>
-  <!-- Want to see more? -->
   <div class="row">
-    <h2 class="show-for-large-up text-center">
-      <a href="/blahg/"><?php the_field("attention_grabber"); ?></a>
-    </h2>
-  </div>
-<?php endif ?>
+    <div class="medium-12 columns">
+      <div id="packery">
+	<div class="gutter-sizer"></div>
+	<div class="grid-sizer"></div>
+	<?php do_action( 'foundationpress_before_content' ); ?>
+	<!-- begin image grid loop -->
+	<?php $loop = new WP_Query( array( 'post_type' => 'c3k_project', 'posts_per_page' => 6 ) ); ?>
+	<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+	  <div class="item">
+	    <?php if (has_post_thumbnail( $post->ID ) ): ?>
+	      <a href="#" data-reveal-id="modal-<?php echo get_the_ID(); ?>">
+		<figure class="text-overlay">
+		  
+		  <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
+		  <img src="<?php echo $image[0]; ?>">
 
+		  <figcaption>
+		    <h3><?php the_title(); ?></h3>
+		    <?php the_excerpt(); ?>
+		    <!-- insert overlay field here -->
+		  </figcaption>
+		</figure>
+	      </a>
+	      
+	    <?php else: ?>
+	      <?php the_field("column_1"); ?>
+	    <?php endif; ?>
+	    
+	  </div>
+
+	  <?php get_template_part( 'parts/modal' ); ?>
+	  
+	<?php endwhile; wp_reset_query(); ?>
+      </div>
+    </div>
+    <!-- end image grid loop -->
+    <?php do_action( 'foundationpress_after_content' ); ?>
+  </div>
+
+
+
+  <?php if(get_field("attention_grabber")): ?>
+    <!-- Want to see more? -->
+    <div class="row">
+      <h2 class="show-for-large-up text-center">
+	<a href="/blahg/"><?php the_field("attention_grabber"); ?></a>
+      </h2>
+    </div>
+  <?php endif ?>
+</div>
 
 
 <?php if(get_field("quote_1")): ?>
@@ -98,9 +99,9 @@
 <!-- what the heck -->
 <?php if(get_field( "big_box_1" ) ): ?>
 
-  <div class="blue-bg block" id="triangle">
+  <div class="blue-bg" id="triangle">
     <div class="row">
-      <div class="small-12 columns">
+      <div class="small-12 columns block">
 	<?php the_field("big_box_1"); ?>
       </div>
     </div>
@@ -131,40 +132,39 @@
 
 
 <!-- triangle of power -->
-<div class="row">
-
-  <div class="medium-12 columns">
-    <h1>The C3K Triangle of Power</h1>
+<div class="triangle-of-power">
+  <div class="row">
+    <div class="medium-12 columns">
+      <h1>The C3K Triangle of Power</h1>
+    </div>
   </div>
-  
+
+  <div class="row">  
+
+    <div class="small-12 medium-4 columns">
+      <div class="text-justify triangle-bios">
+	<img src="<?php the_field("headshot_a"); ?>">
+	<?php the_field("bio_a"); ?>
+      </div>
+    </div>
+
+    <div class="small-12 medium-4 columns">
+      <div class="text-justify triangle-bios">
+	<img src="<?php the_field("headshot_b"); ?>">
+	<?php the_field("bio_b"); ?>
+      </div>
+    </div>
+
+
+    <div class="small-12 medium-4 columns">
+      <div class="text-justify triangle-bios">
+	<img src="<?php the_field("headshot_c"); ?>">
+	<?php the_field("bio_c"); ?>
+      </div>
+    </div>
+
+  </div>
 </div>
-
-<div class="row">  
-
-  <div class="small-12 medium-4 columns">
-    <div class="text-justify triangle-of-power">
-      <img src="<?php the_field("headshot_a"); ?>">
-      <?php the_field("bio_a"); ?>
-    </div>
-  </div>
-
-  <div class="small-12 medium-4 columns">
-    <div class="text-justify triangle-of-power">
-      <img src="<?php the_field("headshot_b"); ?>">
-      <?php the_field("bio_b"); ?>
-    </div>
-  </div>
-
-
-  <div class="small-12 medium-4 columns">
-    <div class="text-justify triangle-of-power">
-      <img src="<?php the_field("headshot_c"); ?>">
-      <?php the_field("bio_c"); ?>
-    </div>
-  </div>
-
-</div>
-
 
 <!-- contact form -->
 <div class="blue-bg contact-form">

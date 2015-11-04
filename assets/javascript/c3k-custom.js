@@ -46,6 +46,6 @@ $(document).ready(function(){
       $(".top-bar").removeClass("scroll-toggle");
     }
   });
-  
+
 });
 

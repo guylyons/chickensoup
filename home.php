@@ -9,7 +9,7 @@
 
 get_header(); ?>
 
-<div class="blue-bg block">
+<div class="blue-bg top-block">
   <div class="row">
     <div class="medium-12 columns">
       <h1>BLAHG</h1>
