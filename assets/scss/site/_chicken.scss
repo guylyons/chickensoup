@@ -64,8 +64,13 @@ h6 {
     transition: all 1s;
 }
 
+.top-bar-menu {
+    font-weight: 400;
+}
+
 .scroll-toggle {    
-    border-bottom: 1px solid #ddd;
+    // border-bottom: 1px solid #ddd;
+    border-bottom: 0 5px 10px 0 rgba(0,0,0,0.15),0 -5px 3px -10px #fff;
     height: 4rem;
     box-shadow: 0 -3px 19px #222;
     background: white;
@@ -125,7 +130,7 @@ blockquote {
 }
 
 .block {
-    min-height: 20em;
+    min-height: 25em;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -325,6 +330,9 @@ blockquote {
 .footer ul + li {
     border: 1px solid red;
 }
+#footer-container {
+    margin-top: 0;
+}
 
 .underline {
     border-bottom: 1px solid $white;
@@ -407,8 +415,6 @@ hr {
 	background: darken($orange, 5%);
     }
     padding: 2em;
-    border-radius: 3px;
-    margin-bottom: 8em;
 }
 
 .orange {

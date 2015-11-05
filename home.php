@@ -36,6 +36,7 @@ get_header(); ?>
 	<?php do_action( 'foundationpress_before_content' ); ?>
 
 	<?php while ( have_posts() ) : the_post(); ?>
+
 	  <div class="item">
 	    <?php if (has_post_thumbnail( $post->ID ) ): ?>
 	      <a href="#" data-reveal-id="modal-<?php echo get_the_ID(); ?>">
@@ -59,7 +60,7 @@ get_header(); ?>
 	  </div>
 
 	  <?php get_template_part( 'parts/modal' ); ?>
-	 
+
 	<?php endwhile; wp_reset_query(); ?>
     </div>
   </div>
@@ -67,6 +68,7 @@ get_header(); ?>
   <!-- end image grid loop -->
 
       <?php else : ?>
+  
   <?php get_template_part( 'content', 'none' ); ?>
 
   <?php do_action( 'foundationpress_before_pagination' ); ?>

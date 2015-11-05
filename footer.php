@@ -14,7 +14,7 @@
 </section>
 
 <!-- footer -->
-<div id="footer-container" class="blue-bg c3k-spacer">
+<div id="footer-container" class="blue-bg">
   <footer id="footer">
     <div class="row footer">
 
