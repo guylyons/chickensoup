@@ -39,7 +39,7 @@ get_header(); ?>
 		<?php if (has_post_thumbnail( $post->ID ) ): ?>
 		  <a href="#" data-reveal-id="modal-<?php echo get_the_ID(); ?>">
 		    <figure class="text-overlay">
-		      
+
 		      <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
 		      <img src="<?php echo $image[0]; ?>">
 
@@ -54,7 +54,7 @@ get_header(); ?>
 		<?php else: ?>
 		  <?php the_field("column_1"); ?>
 		<?php endif; ?>
-		
+
 	      </div>
 
 	      <div id="modal-<?php echo get_the_ID(); ?>" class="reveal-modal full chicken-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
@@ -74,13 +74,13 @@ get_header(); ?>
 
 		  </div>
 		</div>
-		<a class="close-reveal-modal" aria-label="Close"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/c3k_x.png" width="50%" height="50%"></a>
+		<a class="close-reveal-modal" aria-label="Close"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/c3k_x.png"></a>
 	      </div>
-	      
+
 	    <?php endwhile; wp_reset_query(); ?>
 	</div>
       </div>
-      
+
       <!-- end image grid loop -->
 
 	  <?php else : ?>
