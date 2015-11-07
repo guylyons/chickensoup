@@ -20,8 +20,7 @@
 
 
 <!-- recent projects -->
-<div class="recent-projects">
-  <a name="projects"></a>
+<div class="recent-projects" id="recent-projects">
   <div class="row">
     <div class="small-12 columns text-justify">
       <?php the_field("recent_projects"); ?>
@@ -43,7 +42,7 @@
 	    <?php if (has_post_thumbnail( $post->ID ) ): ?>
 	      <a href="#" data-reveal-id="modal-<?php echo get_the_ID(); ?>">
 		<figure class="text-overlay">
-		  
+
 		  <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
 		  <img src="<?php echo $image[0]; ?>">
 
@@ -54,15 +53,15 @@
 		  </figcaption>
 		</figure>
 	      </a>
-	      
+
 	    <?php else: ?>
 	      <?php the_field("column_1"); ?>
 	    <?php endif; ?>
-	    
+
 	  </div>
 
 	  <?php get_template_part( 'parts/modal' ); ?>
-	  
+
 	<?php endwhile; wp_reset_query(); ?>
       </div>
     </div>
@@ -132,14 +131,14 @@
 
 
 <!-- triangle of power -->
-<div class="triangle-of-power">
+<div class="triangle-of-power" id="triangle-of-power">
   <div class="row">
     <div class="medium-12 columns">
       <h1>The C3K Triangle of Power</h1>
     </div>
   </div>
 
-  <div class="row">  
+  <div class="row">
 
     <div class="small-12 medium-4 columns">
       <div class="text-justify triangle-bios">

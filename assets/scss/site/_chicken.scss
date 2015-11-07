@@ -68,7 +68,7 @@ h6 {
     font-weight: 400;
 }
 
-.scroll-toggle {    
+.scroll-toggle {
     // border-bottom: 1px solid #ddd;
     border-bottom: 0 5px 10px 0 rgba(0,0,0,0.15),0 -5px 3px -10px #fff;
     height: 4rem;
@@ -243,6 +243,7 @@ blockquote {
 ///////////////////////////////////////////////
 
 .recent-projects {
+    margin-top: 4em;
     margin-bottom: 8em;
 }
 
@@ -445,7 +446,7 @@ hr {
     }
     @media #{$small-only} {
 	width: 0;
-    }   
+    }
 }
 .grid-sizer {
     width: 32%;
