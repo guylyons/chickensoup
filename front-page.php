@@ -82,8 +82,9 @@
 </div>
 
 
+
 <?php if(get_field("quote_1")): ?>
-  <!-- buffer-2 -->
+  <!-- quote field 1 -->
   <div class="show-for-medium-up buffer-2 block">
     <div class="row">
       <div class="small-12">
@@ -95,9 +96,8 @@
 
 
 
-<!-- what the heck -->
 <?php if(get_field( "big_box_1" ) ): ?>
-
+  <!-- What the heck is Chicken 3000? -->
   <div class="blue-bg" id="triangle">
     <div class="row">
       <div class="small-12 columns block">
@@ -110,6 +110,7 @@
 
 
 <?php if(get_field("big_box_2") ): ?>
+  <!-- What can C3K do for you? -->
   <div class="row what-can-c3k-do-for-you block">
     <div class="large-12 columns">
       <?php the_field("big_box_2"); ?>
@@ -119,10 +120,10 @@
 
 
 
-<!-- c3k quote block -->
 <?php if(get_field("quote_2") ): ?>
-  <div class="row">
-    <div class="show-for-large-up large-12 columns text-center block">
+  <!-- quote field 2 -->
+  <div class="row block">
+    <div class="show-for-large-up large-12 columns text-center">
       <h2><?php the_field("quote_2"); ?></h2>
     </div>
   </div>

@@ -2634,7 +2634,7 @@ fieldset {
     padding: 0 0.1875rem; }
 
 /* Error Handling */
-"[data-abide]" .error small.error, "[data-abide]" .error span.error, "[data-abide]" span.error, "[data-abide]" small.error {
+[data-abide] .error small.error, [data-abide] .error span.error, [data-abide] span.error, [data-abide] small.error {
   display: block;
   font-size: 0.75rem;
   font-style: italic;
@@ -2645,7 +2645,7 @@ fieldset {
   background: #f04124;
   color: #FBFBFB; }
 
-"[data-abide]" span.error, "[data-abide]" small.error {
+[data-abide] span.error, [data-abide] small.error {
   display: none; }
 
 span.error, small.error {
@@ -5656,7 +5656,7 @@ th.hide-for-touch {
     left: -1.8571428571em; }
 
 .fa-border {
-  padding: 0.2em 0.25em 0.15em;
+  padding: .2em .25em .15em;
   border: solid 0.08em #eee;
   border-radius: .1em; }
 
@@ -7855,6 +7855,9 @@ h5,
 h6 {
   font-weight: 700; }
 
+div {
+  border: 1px solid red; }
+
 .top-bar {
   background: transparent;
   transition: all 1s; }
@@ -7903,7 +7906,7 @@ h6 {
   padding: 1em;
   opacity: 0;
   margin: 0;
-  transition: opacity 0.5s ease; }
+  transition: opacity .5s ease; }
 
 .text-overlay:hover figcaption {
   opacity: 1; }
@@ -8001,6 +8004,7 @@ blockquote {
   background: #ea3911; }
 
 .recent-projects {
+  margin-top: 4em;
   margin-bottom: 8em; }
 
 .triangle-of-power {

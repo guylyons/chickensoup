@@ -24,6 +24,7 @@ get_header(); ?>
     </div>
   </div>
 </div>
+
     <div class="row">
       <div class="medium-12 columns">
 	<h2 class="orange"><?php single_tag_title(); ?></h2>

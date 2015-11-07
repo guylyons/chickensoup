@@ -58,7 +58,9 @@ h5,
 h6 {
     font-weight: 700;
 }
-
+div {
+    border: 1px solid red;
+}
 .top-bar {
     background: transparent;
     transition: all 1s;
