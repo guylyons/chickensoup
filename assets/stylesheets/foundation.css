@@ -7855,9 +7855,6 @@ h5,
 h6 {
   font-weight: 700; }
 
-div {
-  border: 1px solid red; }
-
 .top-bar {
   background: transparent;
   transition: all 1s; }
@@ -7920,6 +7917,10 @@ blockquote {
   display: flex;
   align-items: center;
   justify-content: center; }
+
+.quote_3 {
+  padding-top: 4em;
+  padding-bottom: 4em; }
 
 .top-block {
   height: 15em;
@@ -8025,11 +8026,12 @@ blockquote {
   font-size: 1em;
   font-weight: 400; }
 
-.what-can-c3k-do-for-you ul h4 {
-  color: #ef4b26; }
-
-.what-can-c3k-do-for-you ul li {
-  margin-left: 1em; }
+.big_box_2 {
+  padding-top: 4em; }
+  .big_box_2 ul h4 {
+    color: #ef4b26; }
+  .big_box_2 ul li {
+    margin-left: 1em; }
 
 .c3k-tagcloud {
   text-align: justify;
@@ -8123,8 +8125,7 @@ hr {
       border: 2px solid #ef4b26; }
   .contact-form .btn-default {
     color: #FBFBFB;
-    font-size: 14px;
-    line-height: 14px;
+    font-size: 1em;
     height: 40px;
     display: inline-block;
     padding: 11px 13px;

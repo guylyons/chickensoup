@@ -58,9 +58,7 @@ h5,
 h6 {
     font-weight: 700;
 }
-div {
-    border: 1px solid red;
-}
+
 .top-bar {
     background: transparent;
     transition: all 1s;
@@ -136,6 +134,11 @@ blockquote {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.quote_3 {
+    padding-top: 4em;
+    padding-bottom: 4em;
 }
 
 .top-block {
@@ -276,7 +279,8 @@ blockquote {
     font-weight: 400;
 }
 
-.what-can-c3k-do-for-you {
+.big_box_2 {
+    padding-top: 4em;
     ul h4 {
 	color: $orange;
     }
@@ -400,8 +404,7 @@ hr {
     }
     .btn-default {
 	color: $white;
-	font-size: 14px;
-	line-height: 14px;
+	font-size: 1em;
 	height: 40px;
 	display: inline-block;
 	padding: 11px 13px;

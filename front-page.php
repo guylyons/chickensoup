@@ -111,9 +111,16 @@
 
 <?php if(get_field("big_box_2") ): ?>
   <!-- What can C3K do for you? -->
-  <div class="row what-can-c3k-do-for-you block">
-    <div class="large-12 columns">
-      <?php the_field("big_box_2"); ?>
+  <div class="big_box_2">
+    <div class="row">
+      <div class="large-12 columns">
+	<?php the_field("big_box_2"); ?>
+      </div>
+    </div>
+    <div class="row">
+      <div class="medium-4 columns small-12 columns"><?php the_field('big_box_2_a'); ?></div>
+      <div class="medium-4 columns small-12 columns"><?php the_field('big_box_2_b'); ?></div>
+      <div class="medium-4 columns small-12 columns"><?php the_field('big_box_2_c'); ?></div>
     </div>
   </div>
 <?php endif; ?>
@@ -196,9 +203,11 @@
 
 
 <?php if(get_field("quote_3") ): ?>
-  <div class="row">
-    <div class="small-12 columns text-center block">
-      <h2><?php the_field("quote_3"); ?></h2>
+  <div class="quote_3">
+    <div class="row">
+      <div class="small-12 columns text-center block">
+	<h2><?php the_field("quote_3"); ?></h2>
+      </div>
     </div>
   </div>
 <?php endif; ?>
