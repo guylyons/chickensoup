@@ -2,12 +2,12 @@
 
 <!-- landing -->
 <div class="intro">
-  <div class="row">
-    <div class="show-for-small-only small-12 columns block intro-body">
-      <img src="<?php the_field("small_logo") ?>" alt="Chicken 300 Small Logo">
+  <div class="row intro-body">
+    <div class="show-for-small-only small-12 columns block">
+      <img src="<?php the_field("small_logo") ?>" alt="Chicken 3000 Small Logo">
     </div>
-    <div class="show-for-medium-up medium-12 columns text-center block">
-      <img src="<?php the_field("big_logo") ?>" alt="Chicken 300 Big Logo">
+    <div class="show-for-medium-up medium-12 columns block">
+      <img src="<?php the_field("big_logo") ?>" alt="Chicken 3000 Big Logo">
     </div>
   </div>
 </div>
