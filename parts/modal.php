@@ -36,5 +36,5 @@
 
     </div>
   </div>
-  <a class="close-reveal-modal" aria-label="Close"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/c3k_x.png" alt="x icon"></a>
+  <a class="close-reveal-modal" aria-label="Close"><span class="icon-c3k-icon-x"></span></a>
 </div>

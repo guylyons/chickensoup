@@ -2,7 +2,6 @@
 // Author: Guy Lyons
 // Email:  guylyons2@gmail.com
 //
-// TEST
 // :77777777777777777777777??MM777777777777777777777777?MMM77777:7MMMMMMM++777777++
 // :77777777777777777777777??MM777777777777777777777777?MMM77777:7MMMMMM+7777777+MM
 // :77777777777777777777777I?MM$77777777777777777777777?MMM77777:7MMMMM+7777777+MMM
@@ -70,17 +69,30 @@ h6 {
     transition: all 1s;
 }
 
+.top-bar-container {
+    background: transparent;
+    transition: all 1s;
+}
+
 .top-bar-menu {
     font-weight: 400;
+}
+
+.top-bar-section ul li {
+  background: transparent;
 }
 
 .scroll-toggle {
     // border-bottom: 1px solid #ddd;
     border-bottom: 0 5px 10px 0 rgba(0,0,0,0.15),0 -5px 3px -10px #fff;
-    height: 4rem;
+    //height: 4rem;
     box-shadow: 0 -3px 19px #222;
     background: white;
-    padding-top: .4em;
+    //padding-top: .4em;
+}
+
+.top-bar-image {
+  padding-left: 2em;
 }
 
 .chicken-links ul li {

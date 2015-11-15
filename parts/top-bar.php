@@ -8,27 +8,18 @@
  */
 
 ?>
-<div class="fixed">
-  <nav class="top-bar" data-topbar data-options="scrolltop:false" role="navigation">
-    <ul class="title-area top-bar-<?php echo apply_filters( 'filter_mobile_nav_position', 'mobile_nav_position' ); ?>">
-      <?php if(get_field("nav_logo")): ?>
-	<li class="name">
-	  <h1>
-	    <a href="<?php home_url(); ?>">
-	      <img src="<?php the_field( "nav_logo" ); ?>" alt="tiny logo">
-	    </a>
-	  </h1>
-	</li>
-      <?php else: ?>
-	<li class="name">
-          <h1><a href="<?php echo home_url(); ?>">Home</a></h1>
-	</li>
-      <?php endif; ?>
-	<li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
-    </ul>
-    <section class="chicken-links">
-      <?php foundationpress_top_bar_l(); ?>
-      <?php foundationpress_top_bar_r(); ?>
-    </section>
-  </nav>
+
+<div class="top-bar-container fixed show-for-small-up">
+    <nav class="top-bar" data-topbar role="navigation" data-options="scrolltop: false">
+        <ul class="title-area">
+            <li class="name">
+                <a href="<?php echo home_url(); ?>"><span class="icon-c3k-abbrev top-bar-image"></span></a>
+            </li>
+            <li class="toggle-topbar menu-icon"><a href=""><span>Menu</span></a></li>
+        </ul>
+        <section class="top-bar-section">
+            <?php foundationPress_top_bar_l(); ?>
+            <?php foundationPress_top_bar_r(); ?>
+        </section>
+    </nav>
 </div>

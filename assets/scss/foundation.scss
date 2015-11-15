@@ -27,7 +27,7 @@
 @import "../components/foundation/scss/foundation/components/forms";
 //@import "../components/foundation/scss/foundation/components/icon-bar";
 @import "../components/foundation/scss/foundation/components/inline-lists";
-@import "../components/foundation/scss/foundation/components/joyride";
+//@import "../components/foundation/scss/foundation/components/joyride";
 //@import "../components/foundation/scss/foundation/components/keystrokes";
 //@import "../components/foundation/scss/foundation/components/labels";
 @import "../components/foundation/scss/foundation/components/magellan";
@@ -58,7 +58,6 @@
 
 @import "../components/fontawesome/scss/font-awesome.scss";
 
-
 /*
   My custom styles:
   Add your scss files below to structure your project styles
@@ -72,3 +71,4 @@
 @import "site/footer";
 
 @import "site/chicken";
+@import "site/c3k-fontset";
