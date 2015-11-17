@@ -129,11 +129,11 @@
 
 <?php if(get_field("quote_2") ): ?>
   <!-- quote field 2 -->
-  <div class="row block">
-    <div class="show-for-large-up large-12 columns text-center">
+    <div class="row show-for-large-up text-center">
+      <div class="small-12 columns block">
       <h2><?php the_field("quote_2"); ?></h2>
     </div>
-  </div>
+    </div>
 <?php endif; ?>
 
 

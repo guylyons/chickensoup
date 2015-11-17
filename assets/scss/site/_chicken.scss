@@ -60,38 +60,42 @@ h5,
 h6 {
   font-weight: 700;
 }
-
 @media #{$large-up} {
-
   .top-bar {
     background: transparent;
     transition: all 1s;
   }
-
   .top-bar-container {
     background: transparent;
     transition: all 1s;
   }
-
   .scroll-toggle {
     border-bottom: 0 5px 10px 0 rgba(0,0,0,0.15),0 -5px 3px -10px #fff;
     box-shadow: 0 -3px 19px #222;
-    background: white;
+    background: $white;
   }
 }
-
 .divider {
   display: none; // hide those ugly top-bar dividers
 }
-
 .top-bar-menu {
   font-weight: 400;
 }
-
-.top-bar-section ul li {
-  background: transparent;
+@media #{$large-up} {
+  .top-bar-section ul li {
+    background: transparent;
+  }
 }
-
+@media #{$small-only} {
+  .top-bar-section ul li {
+    background: #fff;
+  }
+}
+@media #{$medium-only} {
+  .top-bar-section ul li {
+    background: #fff;
+  }
+}
 .top-bar-image {
   padding-left: 1em;
 }
@@ -101,10 +105,6 @@ h6 {
   display: inline-block;
   margin-top: 0.6em;
   padding-right: 1em;
-}
-.chicken-links ul {
-
-  //word-spacing: .5em;
 }
 .chicken-links a:hover {
   border-bottom: 3px solid $orange;
@@ -247,9 +247,11 @@ blockquote {
 //
 //
 ///////////////////////////////////////////////
-.recent-projects {
-  margin-top: 4em;
-  margin-bottom: 8em;
+@media #{$large-up} {
+  .recent-projects {
+    margin-top: 4em;
+    margin-bottom: 8em;
+  }
 }
 
 // TRIANGLE-OF-POWER
