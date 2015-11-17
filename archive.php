@@ -75,7 +75,7 @@ get_header(); ?>
 
 		  </div>
 		</div>
-		<a class="close-reveal-modal" aria-label="Close"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/c3k_x.png"></a>
+		<a class="close-reveal-modal" aria-label="Close"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/c3k/c3k_x.png"></a>
 	      </div>
 
 	    <?php endwhile; wp_reset_query(); ?>
