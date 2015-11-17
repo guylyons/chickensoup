@@ -1,7 +1,16 @@
 <?php get_header(); ?>
 
+<!-- back to top -->
+<div class="back-to-top">
+  <a href="#top">
+    <span class="icon-c3k-abbrev top-bar-image">
+    </span>
+  </a>
+</div><!-- end back to top -->
+
+</div>
 <!-- landing -->
-<div class="intro">
+<div class="intro" id="top">
   <div class="row intro-body">
     <div class="show-for-small-only small-12 columns block">
       <img src="<?php the_field("small_logo") ?>" alt="Chicken 3000 Small Logo">

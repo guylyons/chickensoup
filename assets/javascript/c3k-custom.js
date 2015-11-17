@@ -37,6 +37,7 @@ $(document).ready(function(){
     offset: -48
   });
 
+  // topbar event handler
   $(window).scroll(function() {
     var scroll = $(window).scrollTop();
 
@@ -44,6 +45,17 @@ $(document).ready(function(){
       $(".top-bar-container").addClass("scroll-toggle");
     } else {
       $(".top-bar-container").removeClass("scroll-toggle");
+    }
+  });
+
+  // back to top event handler
+  $(window).scroll(function() {
+    var scroll = $(window).scrollTop();
+
+    if (scroll >= 600) {
+      $(".back-to-top").addClass("back-to-top-toggle");
+    } else {
+      $(".back-to-top").removeClass("back-to-top-toggle");
     }
   });
 

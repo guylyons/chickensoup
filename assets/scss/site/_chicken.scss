@@ -33,6 +33,23 @@ html {
   width: 100%;
 }
 
+.back-to-top {
+  position: fixed;
+  right: 1em;
+  bottom: 1em;
+  opacity: 0;
+  transform: rotate(0deg);
+  transition: all 1s;
+}
+
+@media #{$large-up} {
+    .back-to-top-toggle {
+    opacity: 1;
+    bottom: 1.5em;
+    transform: rotate(90deg);
+  }
+}
+
 /* Make landing page full height */
 .intro {
   display: table;
