@@ -59,5 +59,13 @@
 
     <?php get_template_part( 'parts/top-bar' ); ?>
 
+    <!-- back to top -->
+    <div class="back-to-top">
+      <a href="#top">
+        <span class="icon-c3k-abbrev top-bar-image">
+        </span>
+      </a>
+    </div><!-- end back to top -->
+    
     <section class="container" role="document">
       <?php do_action( 'foundationpress_after_header' ); ?>

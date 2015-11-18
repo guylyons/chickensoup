@@ -1,14 +1,5 @@
 <?php get_header(); ?>
 
-<!-- back to top -->
-<div class="back-to-top">
-  <a href="#top">
-    <span class="icon-c3k-abbrev top-bar-image">
-    </span>
-  </a>
-</div><!-- end back to top -->
-
-</div>
 <!-- landing -->
 <div class="intro" id="top">
   <div class="row intro-body">
