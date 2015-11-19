@@ -44,7 +44,7 @@
 		<figure class="text-overlay">
 
 		  <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
-		  <img class="lazy" src="<?php echo $image[0]; ?>">
+		  <img src="<?php echo $image[0]; ?>">
 
 		  <figcaption>
 		    <h3><?php the_title(); ?></h3>

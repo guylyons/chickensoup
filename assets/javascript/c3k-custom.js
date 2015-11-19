@@ -59,7 +59,4 @@ $(document).ready(function(){
     }
   });
 
-  // lazyload for image loading when scrolling
-  $("img.lazy").lazyload();
-
 });

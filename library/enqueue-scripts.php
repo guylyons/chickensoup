@@ -29,7 +29,7 @@ if ( ! function_exists( 'foundationpress_scripts' ) ) :
 
 	// If you'd like to cherry-pick the foundation components you need in your project, head over to Gruntfile.js and see lines 67-88.
 	// It's a good idea to do this, performance-wise. No need to load everything if you're just going to use the grid anyway, you know :)
-	wp_enqueue_script( 'foundation', get_template_directory_uri() . '/assets/javascript/foundation.js', array('jquery'), '5.5.2', true );
+	wp_enqueue_script( 'foundation', get_template_directory_uri() . '/assets/javascript/foundation.js', array('jquery'), '5.5.2', true );	
 
 	// Add the comment-reply library on pages where it is necessary
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -38,10 +38,9 @@ if ( ! function_exists( 'foundationpress_scripts' ) ) :
 
 	wp_enqueue_script( 'packery', get_template_directory_uri() . '/assets/javascript/vendor/packery.pkgd.js', array('jquery'), '1.4.3', false );
 	wp_enqueue_script( 'imagesloaded', get_template_directory_uri() . '/assets/javascript/vendor/imagesloaded.pkgd.min.js', array('jquery'), '3.1.8', false );
-	wp_enqueue_script( 'lazyload', get_template_directory_uri() . '/assets/javascript/vendor/jquery.lazyload.js', array('jquery'), '1.9.7', false );
 	wp_enqueue_script( 'jquery-smooth-scroll', get_template_directory_uri() . '/assets/javascript/vendor/jquery.smooth-scroll.js', array('jquery'), '1.5.6', true);
 	wp_enqueue_script( 'c3k-custom', get_template_directory_uri() . '/assets/javascript/c3k-custom.js', array('jquery'), '1.0', true );
-}
+    }
 
 add_action( 'wp_enqueue_scripts', 'foundationpress_scripts' );
 endif;
