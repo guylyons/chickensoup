@@ -1,0 +1,55 @@
+@font-face {
+	font-family: 'c3k-set';
+	src:url('../fonts/c3k-set.eot?1zn8xt');
+	src:url('../fonts/c3k-set.eot?1zn8xt#iefix') format('embedded-opentype'),
+		url('../fonts/c3k-set.ttf?1zn8xt') format('truetype'),
+		url('../fonts/c3k-set.woff?1zn8xt') format('woff'),
+		url('../fonts/c3k-set.svg?1zn8xt#c3k-set') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'c3k-set';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-c3k-abbrev:before {
+	content: "\e901";
+}
+.icon-c3k-icon-x:before {
+	content: "\e900";
+}
+.icon-mail4:before {
+	content: "\e902";
+}
+.icon-facebook:before {
+	content: "\e903";
+}
+.icon-twitter:before {
+	content: "\e904";
+}
+.icon-github:before {
+	content: "\e905";
+}
+.icon-wordpress:before {
+	content: "\e906";
+}
+.icon-apple:before {
+	content: "\e907";
+}
+.icon-linkedin:before {
+	content: "\e908";
+}
+.icon-html5:before {
+	content: "\e909";
+}
