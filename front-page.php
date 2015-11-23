@@ -15,61 +15,38 @@
 
 
 <!-- buffer -->
-<div class="show-for-medium-up buffer">&nbsp;</div>
+<div class="show-for-medium-up buffer">&nbsp;</div><!-- buffer end -->
+
+
+
 
 
 
 <!-- recent projects -->
 <div class="recent-projects" id="recent-projects">
-  <div class="row">
-    <div class="small-12 columns text-justify">
-      <?php the_field("recent_projects"); ?>
-    </div>
+
+  <div class="row text-justify">
+    <?php the_field("recent_projects"); ?>
   </div>
 
-
-
   <div class="row">
-    <div class="medium-12 columns">
-      <div id="packery">
-	<div class="gutter-sizer"></div>
-	<div class="grid-sizer"></div>
-	<?php do_action( 'foundationpress_before_content' ); ?>
-	<!-- begin image grid loop -->
-	<?php $loop = new WP_Query( array( 'post_type' => 'c3k_project', 'posts_per_page' => 6 ) ); ?>
-	<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
-	  <div class="item">
-	    <?php if (has_post_thumbnail( $post->ID ) ): ?>
-	      <a href="#" data-reveal-id="modal-<?php echo get_the_ID(); ?>">
-		<figure class="text-overlay">
+    <div id="packery">
+      <div class="gutter-sizer"></div>
+      <div class="grid-sizer"></div>
 
-		  <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
-		  <img src="<?php echo $image[0]; ?>">
+      <!-- start the loop -->
+      <?php do_action( 'foundationpress_before_content' ); ?>
+      <?php $loop = new WP_Query( array( 'post_type' => 'c3k_project', 'posts_per_page' => 6 ) ); ?>
+      <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
-		  <figcaption>
-		    <h3><?php the_title(); ?></h3>
-		    <?php the_excerpt(); ?>
-		    <!-- insert overlay field here -->
-		  </figcaption>
-		</figure>
-	      </a>
+	<!-- get packery items -->
+	<?php get_template_part( 'parts/packery' ); ?>
 
-	    <?php else: ?>
-	      <?php the_field("column_1"); ?>
-	    <?php endif; ?>
+      <?php endwhile; wp_reset_query(); ?><!-- loop end -->
 
-	  </div>
-
-	  <?php get_template_part( 'parts/modal' ); ?>
-
-	<?php endwhile; wp_reset_query(); ?>
-      </div>
-    </div>
-    <!-- end image grid loop -->
-    <?php do_action( 'foundationpress_after_content' ); ?>
-  </div>
-
-
+    </div><!-- packery end -->
+  </div><!-- row end -->
+  
 
   <?php if(get_field("attention_grabber")): ?>
     <!-- Want to see more? -->
@@ -79,8 +56,8 @@
       </h2>
     </div>
   <?php endif ?>
-</div>
 
+</div><!-- recent projects end -->
 
 
 <?php if(get_field("quote_1")): ?>
@@ -129,11 +106,11 @@
 
 <?php if(get_field("quote_2") ): ?>
   <!-- quote field 2 -->
-    <div class="row show-for-large-up text-center">
-      <div class="small-12 columns block">
+  <div class="row show-for-large-up text-center">
+    <div class="small-12 columns block">
       <h2><?php the_field("quote_2"); ?></h2>
     </div>
-    </div>
+  </div>
 <?php endif; ?>
 
 
@@ -203,6 +180,7 @@
 
 
 <?php if(get_field("quote_3") ): ?>
+  <!-- quote field 3 -->
   <div class="quote_3">
     <div class="row">
       <div class="small-12 columns text-center block">
