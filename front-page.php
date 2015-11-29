@@ -19,9 +19,6 @@
 
 
 
-
-
-
 <!-- recent projects -->
 <div class="recent-projects" id="recent-projects">
 
@@ -46,7 +43,7 @@
 
     </div><!-- packery end -->
   </div><!-- row end -->
-  
+
 
   <?php if(get_field("attention_grabber")): ?>
     <!-- Want to see more? -->
