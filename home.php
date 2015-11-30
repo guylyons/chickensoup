@@ -24,6 +24,7 @@ get_header(); ?>
   </div>
 <?php endif; ?>
 
+
 <div class="row">
   <div id="packery">
     <div class="gutter-sizer"></div>

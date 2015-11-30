@@ -206,6 +206,6 @@ module.exports = function(grunt) {
   grunt.registerTask('autoprefixer', ['postcss']);
   grunt.registerTask('package', ['compress:main']);
   grunt.registerTask('build', ['copy', 'string-replace:fontawesome', 'sass', 'postcss', 'concat', 'uglify']);
-  grunt.registerTask('default', ['watch']);
+  grunt.registerTask('default', ['browserSync', 'watch']);
   grunt.registerTask('browser-sync', ['browserSync']);
 };
