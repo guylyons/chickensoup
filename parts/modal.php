@@ -24,7 +24,7 @@
       if (!empty($next_post)): ?>
 
 	<a href="#" data-reveal-id="modal-<?php echo $next_post->ID; ?>">Next</a>
-	<p><?php echo $next_post->ID; ?></p>
+	<!-- <p><?php echo $next_post->ID; ?></p> -->
 
       <?php endif; ?>
 
@@ -33,7 +33,7 @@
       if (!empty($previous_post)): ?>
 	<br>
 	<a href="#" data-reveal-id="modal-<?php echo $previous_post->ID; ?>">Previous</a>
-	<p><?php echo $previous_post->ID; ?></p>
+	<!-- <p><?php echo $previous_post->ID; ?></p> -->
 
       <?php endif; ?>
     </div>
