@@ -1,4 +1,4 @@
-module.exports = function (grunt) {
+module.exports = function(grunt) {
   // time
   require('time-grunt')(grunt);
 
@@ -8,53 +8,55 @@ module.exports = function (grunt) {
     // Compress and zip only the files required for deployment to the server. Exclude all dev dependencies.
     compress: {
       main: {
-	options: {
-	  archive: 'packaged/<%= pkg.name %>.zip'
-	},
-	expand: true,
-	cwd: '.',
-	src: [
-	  '**/*',
-	  '!**/node_modules/**',
-	  '!**/components/**',
-	  '!**/scss/**',
-	  '!**/bower.json',
-	  '!**/Gruntfile.js',
-	  '!**/package.json',
-	  '!**/composer.json',
-	  '!**/composer.lock',
-	  '!**/codesniffer.ruleset.xml'
-	],
-	dest: '<%= pkg.name %>'
+        options: {
+          archive: 'packaged/<%= pkg.name %>.zip'
+        },
+        expand: true,
+        cwd: '.',
+        src: [
+          '**/*',
+          '!**/node_modules/**',
+          '!**/components/**',
+          '!**/scss/**',
+          '!**/bower.json',
+          '!**/Gruntfile.js',
+          '!**/package.json',
+          '!**/composer.json',
+          '!**/composer.lock',
+          '!**/codesniffer.ruleset.xml'
+        ],
+        dest: '<%= pkg.name %>'
       }
     },
     sass: {
 
       options: {
-	// If you can't get source maps to work, run the following command in your terminal:
-	// $ sass scss/foundation.scss:css/foundation.css --sourcemap
-	// (see this link for details: http://thesassway.com/intermediate/using-source-maps-with-sass )
-	sourceMap: true
+        // If you can't get source maps to work, run the following command in your terminal:
+        // $ sass scss/foundation.scss:css/foundation.css --sourcemap
+        // (see this link for details: http://thesassway.com/intermediate/using-source-maps-with-sass )
+        sourceMap: true
       },
 
       dist: {
-	files: {
-	  'assets/stylesheets/foundation.css': 'assets/scss/foundation.scss'
-	}
+        files: {
+          'assets/stylesheets/foundation.css': 'assets/scss/foundation.scss'
+        }
       }
 
     },
 
     postcss: {
       options: {
-	map: true, // inline sourcemaps
-	processors: [
-          require('autoprefixer')({browsers: 'last 2 versions'}), // add vendor prefixes
-	  require('cssnano') ()
-	]
+        map: true, // inline sourcemaps
+        processors: [
+          require('autoprefixer')({
+            browsers: 'last 2 versions'
+          }), // add vendor prefixes
+          require('cssnano')()
+        ]
       },
       dist: {
-	src: 'assets/stylesheets/foundation.css'
+        src: 'assets/stylesheets/foundation.css'
       }
 
     },
@@ -62,18 +64,18 @@ module.exports = function (grunt) {
     copy: {
 
       scripts: {
-	expand: true,
-	cwd: 'assets/components/foundation/js/vendor/',
-	src: '**',
-	flatten: 'true',
-	dest: 'assets/javascript/vendor/'
+        expand: true,
+        cwd: 'assets/components/foundation/js/vendor/',
+        src: '**',
+        flatten: 'true',
+        dest: 'assets/javascript/vendor/'
       },
 
       iconfonts: {
-	expand: true,
-	cwd: 'assets/components/fontawesome/fonts',
-	src: ['**'],
-	dest: 'assets/fonts/'
+        expand: true,
+        cwd: 'assets/components/fontawesome/fonts',
+        src: ['**'],
+        dest: 'assets/fonts/'
       }
 
     },
@@ -81,18 +83,16 @@ module.exports = function (grunt) {
     'string-replace': {
 
       fontawesome: {
-	files: {
-	  'assets/fontawesome/scss/_variables.scss': 'assets/fontawesome/scss/_variables.scss'
-	},
+        files: {
+          'assets/fontawesome/scss/_variables.scss': 'assets/fontawesome/scss/_variables.scss'
+        },
 
-	options: {
-	  replacements: [
-	    {
-	      pattern: '../fonts',
-	      replacement: '../assets/fonts'
-	    }
-	  ]
-	}
+        options: {
+          replacements: [{
+            pattern: '../fonts',
+            replacement: '../assets/fonts'
+          }]
+        }
 
       }
 
@@ -101,40 +101,40 @@ module.exports = function (grunt) {
     concat: {
 
       options: {
-	separator: ';'
+        separator: ';'
       },
 
       dist: {
 
-	src: [
+        src: [
 
-	  // Foundation core
-	  'assets/components/foundation/js/foundation/foundation.js',
+          // Foundation core
+          'assets/components/foundation/js/foundation/foundation.js',
 
-	  // Pick the componenets you need in your project
-	  //'assets/components/foundation/js/foundation/foundation.abide.js',
-	  //'assets/components/foundation/js/foundation/foundation.accordion.js',
-	  //'assets/components/foundation/js/foundation/foundation.alert.js',
-	  'assets/components/foundation/js/foundation/foundation.clearing.js',
-	  'assets/components/foundation/js/foundation/foundation.dropdown.js',
-	  //'assets/components/foundation/js/foundation/foundation.equalizer.js',
-	  //'assets/components/foundation/js/foundation/foundation.interchange.js',
-	  //'assets/components/foundation/js/foundation/foundation.joyride.js',
-	  //'assets/components/foundation/js/foundation/foundation.magellan.js',
-	  //'assets/components/foundation/js/foundation/foundation.offcanvas.js',
-	  //'assets/components/foundation/js/foundation/foundation.orbit.js',
-	  'assets/components/foundation/js/foundation/foundation.reveal.js',
-	  //'assets/components/foundation/js/foundation/foundation.slider.js',
-	  //'assets/components/foundation/js/foundation/foundation.tab.js',
-	  //'assets/components/foundation/js/foundation/foundation.tooltip.js',
-	  'assets/components/foundation/js/foundation/foundation.topbar.js',
-	  // Include your own custom scripts (located in the custom folder)
-	  'assets/javascript/custom/*.js'
+          // Pick the componenets you need in your project
+          //'assets/components/foundation/js/foundation/foundation.abide.js',
+          //'assets/components/foundation/js/foundation/foundation.accordion.js',
+          //'assets/components/foundation/js/foundation/foundation.alert.js',
+          'assets/components/foundation/js/foundation/foundation.clearing.js',
+          'assets/components/foundation/js/foundation/foundation.dropdown.js',
+          //'assets/components/foundation/js/foundation/foundation.equalizer.js',
+          //'assets/components/foundation/js/foundation/foundation.interchange.js',
+          //'assets/components/foundation/js/foundation/foundation.joyride.js',
+          //'assets/components/foundation/js/foundation/foundation.magellan.js',
+          //'assets/components/foundation/js/foundation/foundation.offcanvas.js',
+          //'assets/components/foundation/js/foundation/foundation.orbit.js',
+          'assets/components/foundation/js/foundation/foundation.reveal.js',
+          //'assets/components/foundation/js/foundation/foundation.slider.js',
+          //'assets/components/foundation/js/foundation/foundation.tab.js',
+          //'assets/components/foundation/js/foundation/foundation.tooltip.js',
+          'assets/components/foundation/js/foundation/foundation.topbar.js',
+          // Include your own custom scripts (located in the custom folder)
+          'assets/javascript/custom/*.js'
 
-	],
+        ],
 
-	// Finally, concatinate all the files above into one single file
-	dest: 'assets/javascript/foundation.js'
+        // Finally, concatinate all the files above into one single file
+        dest: 'assets/javascript/foundation.js'
 
       }
 
@@ -143,40 +143,54 @@ module.exports = function (grunt) {
     uglify: {
 
       dist: {
-	files: {
-	  // Shrink the file size by removing spaces
-	  'assets/javascript/foundation.js': ['assets/javascript/foundation.js']
-	}
+        files: {
+          // Shrink the file size by removing spaces
+          'assets/javascript/foundation.js': ['assets/javascript/foundation.js']
+        }
       }
 
     },
 
     watch: {
-      grunt: {files: ['Gruntfile.js']},
+      grunt: {
+        files: ['Gruntfile.js']
+      },
 
       sass: {
-	files: 'assets/scss/**/*.scss',
-	tasks: ['sass'],
-	options: {
-	  livereload: true
-	}
+        files: 'assets/scss/**/*.scss',
+        tasks: ['sass'],
+        options: {
+          livereload: true
+        }
       },
 
       js: {
-	files: 'assets/javascript/custom/**/*.js',
-	tasks: ['concat', 'uglify'],
-	options: {
-	  livereload: true
-	}
+        files: 'assets/javascript/custom/**/*.js',
+        tasks: ['concat', 'uglify'],
+        options: {
+          livereload: true
+        }
       },
 
       all: {
-	files: '**/*.php',
-	options: {
-	  livereload: true
-	}
+        files: '**/*.php',
+        options: {
+          livereload: true
+        }
+      }
+    },
+
+    browserSync: {
+      dev: {
+        bsFiles: {
+          src : 'assets/scss/**/*.scss'
+        },
+        options: {
+          proxy: "localhost:8080/wordpress/"
+        }
       }
     }
+    
   });
 
   grunt.loadNpmTasks('grunt-postcss');
@@ -187,9 +201,11 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-string-replace');
   grunt.loadNpmTasks('grunt-contrib-compress');
+  grunt.loadNpmTasks('grunt-browser-sync');
 
   grunt.registerTask('autoprefixer', ['postcss']);
   grunt.registerTask('package', ['compress:main']);
   grunt.registerTask('build', ['copy', 'string-replace:fontawesome', 'sass', 'postcss', 'concat', 'uglify']);
   grunt.registerTask('default', ['watch']);
+  grunt.registerTask('browser-sync', ['browserSync']);
 };

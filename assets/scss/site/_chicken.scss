@@ -1,6 +1,13 @@
+<<<<<<< HEAD
 // Chickensoup Wordpress Theme
 // Author: Guy Lyons
 // Email:  guylyons2@gmail.com
+=======
+/* Chickensoup Wordpress Theme
+   Author: Guy Lyons
+   Email:  guylyons2@gmail.com
+*/
+>>>>>>> master
 
 /* Some inital settings */
 * {
@@ -22,7 +29,7 @@ html {
 }
 
 @media #{$large-up} {
-    .back-to-top-toggle {
+  .back-to-top-toggle {
     opacity: 1;
     bottom: 1.5em;
     transform: rotate(90deg);
@@ -30,13 +37,15 @@ html {
 }
 
 /* Make landing page full height */
-.intro {
-  display: table;
-  width: 100%;
-  height: 100vh;
-  margin: 0;
-  padding: 0;
-  position: relative;
+@media #{$large-up} {
+  .intro {
+    display: table;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    position: relative;
+  }
 }
 .intro-body {
   display: table-cell;
@@ -158,7 +167,7 @@ blockquote {
   width: 100%;
   height: 3em;
 }
- ::selection {
+::selection {
   background: $orange;
   color: $white;
 }
