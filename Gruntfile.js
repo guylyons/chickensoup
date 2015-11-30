@@ -178,7 +178,19 @@ module.exports = function(grunt) {
           livereload: true
         }
       }
+    },
+
+    browserSync: {
+      dev: {
+        bsFiles: {
+          src : 'assets/scss/**/*.scss'
+        },
+        options: {
+          proxy: "localhost:8080/wordpress/"
+        }
+      }
     }
+    
   });
 
   grunt.loadNpmTasks('grunt-postcss');
@@ -195,4 +207,5 @@ module.exports = function(grunt) {
   grunt.registerTask('package', ['compress:main']);
   grunt.registerTask('build', ['copy', 'string-replace:fontawesome', 'sass', 'postcss', 'concat', 'uglify']);
   grunt.registerTask('default', ['watch']);
+  grunt.registerTask('browser-sync', ['browserSync']);
 };
