@@ -51,13 +51,15 @@ html {
 }
 
 /* Make landing page full height */
-.intro {
-  display: table;
-  width: 100%;
-  height: 100vh;
-  margin: 0;
-  padding: 0;
-  position: relative;
+@media #{$large-up} {
+  .intro {
+    display: table;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    position: relative;
+  }
 }
 .intro-body {
   display: table-cell;
