@@ -73,10 +73,12 @@
 <?php if(get_field( "big_box_1" ) ): ?>
   <!-- What the heck is Chicken 3000? -->
   <div class="tilted-container" id="triangle">
+    <div class="diagonal-blue-lines"></div>
     <div class="tilted-background"></div>
       <article class="row tilted-contents">
         <?php the_field('big_box_1'); ?>
       </article>
+      <div class="diagonal-blue-lines-bottom"></div>
   </div>
 <?php endif; ?>
 
