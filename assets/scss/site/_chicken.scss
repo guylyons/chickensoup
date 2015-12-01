@@ -1,13 +1,6 @@
-<<<<<<< HEAD
 // Chickensoup Wordpress Theme
 // Author: Guy Lyons
 // Email:  guylyons2@gmail.com
-=======
-/* Chickensoup Wordpress Theme
-   Author: Guy Lyons
-   Email:  guylyons2@gmail.com
-*/
->>>>>>> master
 
 /* Some inital settings */
 * {
@@ -209,6 +202,27 @@ blockquote {
   animation: animatedBackground 8s linear infinite;
 }
 
+/////////////////////////
+//  Tilted Containers
+/////////////////////////
+.tilted-container {
+  position: relative;
+}
+.tilted-background {
+  position: absolute;
+  z-index: -9999;
+  background: #00ABC5;
+  width: 100%;
+  height: 100%;
+  transform: skew(0, -2deg);
+
+}
+.tilted-contents {
+  padding: 2em;
+  color: $white!important;
+  h1,h2,h3,h4,h5,h6 { color: $white; }
+}
+
 // LOGO
 .chicken-logo {
   background-image: url(../images/c3k/chicken-logo-small.png);
@@ -245,21 +259,25 @@ blockquote {
   background: darken($orange, 5%);
 }
 
-///////////////////////////////////////////////
+////////////////////////////////////
 //
 //
 //          RECENT PROJECTS
 //
 //
-///////////////////////////////////////////////
+///////////////////////////////////
 @media #{$large-up} {
   .recent-projects {
     margin-top: 4em;
     margin-bottom: 8em;
   }
 }
-
+/////////////////////////
+//
 // TRIANGLE-OF-POWER
+//
+/////////////////////////
+
 .triangle-of-power {
   margin-bottom: 8em;
 }
@@ -272,7 +290,6 @@ blockquote {
   color: $orange;
 }
 .triangle-bios {
-
   // container for the text
   margin: 0 auto;
   max-width: 400px;
@@ -298,7 +315,11 @@ blockquote {
   margin-bottom: 2em;
 }
 
-// FOOTER
+//////////////////////////////////////
+//
+//           FOOTER
+//
+//////////////////////////////////////
 .blue-bg {
   background: $blue;
   color: $white;

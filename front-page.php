@@ -72,12 +72,11 @@
 
 <?php if(get_field( "big_box_1" ) ): ?>
   <!-- What the heck is Chicken 3000? -->
-  <div class="blue-bg" id="triangle">
-    <div class="row">
-      <div class="small-12 columns block">
-	<?php the_field("big_box_1"); ?>
-      </div>
-    </div>
+  <div class="tilted-container" id="triangle">
+    <div class="tilted-background"></div>
+      <article class="row tilted-contents">
+        <?php the_field('big_box_1'); ?>
+      </article>
   </div>
 <?php endif; ?>
 
