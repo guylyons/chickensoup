@@ -7867,7 +7867,7 @@ blockquote {
   transform: skew(0, -2deg); }
 
 .tilted-contents {
-  padding: 2em;
+  padding: 2em 0 2em 0;
   color: #FBFBFB !important; }
   .tilted-contents h1, .tilted-contents h2, .tilted-contents h3, .tilted-contents h4, .tilted-contents h5, .tilted-contents h6 {
     color: #FBFBFB; }
