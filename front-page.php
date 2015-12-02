@@ -23,7 +23,9 @@
 <div class="recent-projects" id="recent-projects">
 
   <div class="row text-justify">
-    <?php the_field("recent_projects"); ?>
+    <div class="medium-12 columns">
+      <?php the_field("recent_projects"); ?>      
+    </div>
   </div>
 
   <div class="row">
