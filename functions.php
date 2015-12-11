@@ -49,6 +49,9 @@ require_once( 'library/custom-nav.php' );
 /** Add protocol relative theme assets */
 require_once( 'library/protocol-relative-theme-assets.php' );
 
+/** Add Chicken 3000 custom php file */
+require_once( 'library/chicken.php' );
+
 
 /** Remove standard custom fields */
 add_action('admin_init','remove_custom_meta_boxes');

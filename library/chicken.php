@@ -1,5 +1,23 @@
 <?php
 
+function my_login_logo() { ?>
+    <style type="text/css">
+        .login h1 a {
+            background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/c3k/chicken-logo-small.png);
+            display: block;
+            width: 267px;
+            height: 361px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            padding-bottom: 30px;
+        }
+        body {
+          border-top: 5px solid #ef4b26;
+        }
+    </style>
+<?php }
+add_action( 'login_enqueue_scripts', 'my_login_logo' );
+
 //Custom Theme Settings
 add_action('admin_menu', 'add_gcf_interface');
 
@@ -16,7 +34,7 @@ function editglobalcustomfields() {
 
       <p><strong>My Name:</strong><br />
 	<input type="text" name="myname" size="45" value="<?php echo get_option('myname'); ?>" /></p>
-	
+
 	<p><strong>Amazon ID:</strong><br />
 	  <input type="text" name="amazonid" size="45" value="<?php echo get_option('amazonid'); ?>" /></p>
 
