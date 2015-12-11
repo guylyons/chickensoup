@@ -18,6 +18,16 @@ function my_login_logo() { ?>
 <?php }
 add_action( 'login_enqueue_scripts', 'my_login_logo' );
 
+function my_login_logo_url() {
+    return "http://www.chicken3000.com";
+}
+add_filter( 'login_headerurl', 'my_login_logo_url' );
+
+function my_login_logo_url_title() {
+    return 'Chicken 3000';
+}
+add_filter( 'login_headertitle', 'my_login_logo_url_title' );
+
 //Custom Theme Settings
 add_action('admin_menu', 'add_gcf_interface');
 
