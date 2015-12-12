@@ -15,10 +15,10 @@ html {
 .back-to-top {
   position: fixed;
   right: 1em;
-  bottom: 1em;
+  bottom: -5em;
   opacity: 0;
   transform: rotate(0deg);
-  transition: all 1s;
+  transition: all 1s ease-in;
 }
 
 @media #{$large-up} {
@@ -71,6 +71,8 @@ h6 {
     border-bottom: 0 5px 10px 0 rgba(0,0,0,0.15),0 -5px 3px -10px #fff;
     box-shadow: 0 -3px 19px #222;
     background: $white;
+    padding-top: .3em;
+    padding-bottom: .3em;
   }
 }
 .divider {
@@ -525,6 +527,11 @@ hr {
     top: 18em;
     right: 0;
   }
+}
+
+.parallax-window {
+    min-height: 400px;
+    background: transparent;
 }
 
 // @media #{$small-up} { }

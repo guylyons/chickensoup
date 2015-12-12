@@ -1,19 +1,19 @@
-$(document).ready(function(){
+$(document).ready(function() {
   $('#packery').imagesLoaded()
     .always(function(instance) {
       console.log('all images loaded');
       // init
 
       var $packery = $('#packery').packery({
-	itemSelector: '.item',
-	percentPosition: true,
-	gutter: '.gutter-sizer',
-	columnWidth: '.grid-sizer'
+        itemSelector: '.item',
+        percentPosition: true,
+        gutter: '.gutter-sizer',
+        columnWidth: '.grid-sizer'
       });
 
     })
 
-    .done(function(instance) {
+  .done(function(instance) {
       console.log('all images successfully loaded');
     })
     .fail(function() {
@@ -24,10 +24,10 @@ $(document).ready(function(){
       console.log('image is ' + result + ' for ' + image.img.src);
     });
 
-  $(document).on('opened.fndtn.reveal', '[data-reveal]', function () {
+  $(document).on('opened.fndtn.reveal', '[data-reveal]', function() {
     $("body").addClass("modal-open");
   });
-  $(document).on('closed.fndtn.reveal', '[data-reveal]', function () {
+  $(document).on('closed.fndtn.reveal', '[data-reveal]', function() {
     $('body').removeClass('modal-open');
   });
 

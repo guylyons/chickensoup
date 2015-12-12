@@ -6,16 +6,12 @@ function my_login_logo()
     <style type="text/css">
         .login h1 a {
             background-image: url(<?php echo get_stylesheet_directory_uri();
-    ?>/assets/images/c3k/chicken-logo-small.png);
-            display: block;
-            width: 267px;
-            height: 361px;
-            background-size: cover;
-            background-repeat: no-repeat;
+    ?>/assets/images/c3k/c3k-chicken.svg);
             padding-bottom: 30px;
         }
         body {
           border-top: 5px solid #ef4b26;
+          background-color: #FBFBFB !important;
         }
     </style>
 <?php
