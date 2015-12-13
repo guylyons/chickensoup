@@ -16,8 +16,9 @@
 <!-- buffer -->
 <!-- <div class="show-for-medium-up buffer">&nbsp;</div><!-- buffer end -->
 
-<div class="show-for-medium-up parallax-window" data-parallax="scroll" data-image-src="<?php the_field("buffer1-image"); ?>">&nbsp;</div><!-- buffer end -->
-
+<?php if(get_field("attention_grabber")): ?>
+  <div class="show-for-medium-up parallax-window" data-parallax="scroll" data-image-src="<?php the_field("buffer1-image"); ?>">&nbsp;</div><!-- buffer end -->
+<?php endif; ?>
 
 <!-- recent projects -->
 <div class="recent-projects" id="recent-projects">
