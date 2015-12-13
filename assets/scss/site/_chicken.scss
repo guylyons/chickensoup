@@ -166,6 +166,7 @@ blockquote {
   background: $orange;
   color: $white;
 }
+// consider removing this if we stick with parallax
 .buffer {
   background: $orange url(../images/c3k/doug_pattern.png);
   height: 258px;
@@ -530,8 +531,8 @@ hr {
 }
 
 .parallax-window {
-    min-height: 400px;
-    background: transparent;
+  min-height: 258px;
+  background: transparent;
 }
 
 // @media #{$small-up} { }

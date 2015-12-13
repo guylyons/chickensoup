@@ -13,9 +13,10 @@
 </div>
 
 
-
 <!-- buffer -->
-<div class="show-for-medium-up parallax-window" data-parallax="scroll" data-image-src="http://cdn.twitrcovers.com/wp-content/uploads/2014/06/Nebula-l.jpg">&nbsp;</div><!-- buffer end -->
+<!-- <div class="show-for-medium-up buffer">&nbsp;</div><!-- buffer end -->
+
+<div class="show-for-medium-up parallax-window" data-parallax="scroll" data-image-src="<?php the_field("buffer1-image"); ?>">&nbsp;</div><!-- buffer end -->
 
 
 <!-- recent projects -->
