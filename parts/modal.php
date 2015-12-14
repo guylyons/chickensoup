@@ -23,7 +23,7 @@
       $next_post = get_previous_post();
       if (!empty($next_post)): ?>
 
-	<a href="#" data-reveal-id="modal-<?php echo $next_post->ID; ?>">Next</a>
+	<!-- <a href="#" data-reveal-id="modal-<?php echo $next_post->ID; ?>">Next</a> -->
 	<!-- <p><?php echo $next_post->ID; ?></p> -->
 
       <?php endif; ?>
@@ -32,7 +32,7 @@
       $previous_post = get_next_post();
       if (!empty($previous_post)): ?>
 	<br>
-	<a href="#" data-reveal-id="modal-<?php echo $previous_post->ID; ?>">Previous</a>
+	<!-- <a href="#" data-reveal-id="modal-<?php echo $previous_post->ID; ?>">Previous</a> -->
 	<!-- <p><?php echo $previous_post->ID; ?></p> -->
 
       <?php endif; ?>
