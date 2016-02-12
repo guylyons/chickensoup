@@ -3,6 +3,11 @@
 // Email:  guylyons2@gmail.com
 
 /* Some inital settings */
+
+.remove-padding {
+  padding: 0;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -508,8 +513,11 @@ hr {
     width: 48%;
   }
   @media #{$small-only} {
-    width: 98%;
+    width: 100%;
   }
+}
+.item img {
+  width: 100%;
 }
 
 // Attaches to jQuery event handler to stop scrolling
@@ -531,6 +539,20 @@ hr {
 .parallax-window {
   min-height: 258px;
   background: transparent;
+}
+
+.close-reveal-modal:hover {
+    color: $orange;
+}
+
+.close-reveal-modal {
+    @media #{$small-only} {
+      font-size: 1.5rem !important;
+    }
+}
+
+.chicken-container {
+  margin-top: 1.5em !important;
 }
 
 // @media #{$small-up} { }

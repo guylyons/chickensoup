@@ -19,7 +19,7 @@
 	  <?php the_excerpt(); ?>
 	  <!-- insert overlay field here -->
 	</figcaption>
-	
+
       </figure></a>
 
   <?php else: ?>

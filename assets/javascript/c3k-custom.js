@@ -1,4 +1,5 @@
 $(document).ready(function() {
+
   $('#packery').imagesLoaded()
     .always(function(instance) {
       console.log('all images loaded');
@@ -24,6 +25,7 @@ $(document).ready(function() {
       console.log('image is ' + result + ' for ' + image.img.src);
     });
 
+  // lock content after modal opens
   $(document).on('opened.fndtn.reveal', '[data-reveal]', function() {
     $("body").addClass("modal-open");
   });
