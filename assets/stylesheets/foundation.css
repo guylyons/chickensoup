@@ -6244,11 +6244,11 @@ blockquote {
   color: #FBFBFB; }
 
 .buffer {
-  background: #ef4b26 url(../images/c3k/doug_pattern.png);
+  background: #ef4b26 url("../images/c3k/doug_pattern.png");
   height: 258px; }
 
 .buffer-2 {
-  background: #00a79d url(../images/c3k/buffer-tile-2.png); }
+  background: #00a79d url("../images/c3k/buffer-tile-2.png"); }
   .buffer-2 h6 {
     color: #FBFBFB;
     text-align: right;
@@ -6289,9 +6289,14 @@ blockquote {
   transform: skew(0, -2deg); }
 
 .tilted-contents {
-  padding: 2em 0 2em 0;
+  padding: 2em 0;
   color: #FBFBFB !important; }
-  .tilted-contents h1, .tilted-contents h2, .tilted-contents h3, .tilted-contents h4, .tilted-contents h5, .tilted-contents h6 {
+  .tilted-contents h1,
+  .tilted-contents h2,
+  .tilted-contents h3,
+  .tilted-contents h4,
+  .tilted-contents h5,
+  .tilted-contents h6 {
     color: #FBFBFB; }
 
 .diagonal-blue-lines {
@@ -6315,7 +6320,7 @@ blockquote {
   height: 100px; }
 
 .chicken-logo {
-  background-image: url(../images/c3k/chicken-logo-small.png);
+  background-image: url("../images/c3k/chicken-logo-small.png");
   width: 100%;
   min-height: 371px;
   background-position: center;
@@ -6348,10 +6353,12 @@ blockquote {
 .btn-default:active {
   background: #ea3911; }
 
-@media only screen and (min-width: 64.0625em) {
-  .recent-projects {
-    margin-top: 4em;
-    margin-bottom: 8em; } }
+.recent-projects {
+  margin-bottom: 3em; }
+  @media only screen and (min-width: 64.0625em) {
+    .recent-projects {
+      margin-top: 4em;
+      margin-bottom: 8em; } }
 
 .triangle-of-power {
   margin-bottom: 8em; }
@@ -6433,7 +6440,7 @@ hr {
   text-align: right; }
 
 .feet {
-  background: url(../images/c3k/feets.png);
+  background: url("../images/c3k/feets.png");
   background-repeat: no-repeat;
   min-height: 271px;
   min-width: 549px;

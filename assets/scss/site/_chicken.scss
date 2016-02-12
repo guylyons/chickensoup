@@ -1,13 +1,10 @@
 // Chickensoup Wordpress Theme
 // Author: Guy Lyons
 // Email:  guylyons2@gmail.com
-
 /* Some inital settings */
-
 .remove-padding {
   padding: 0;
 }
-
 * {
   box-sizing: border-box;
 }
@@ -16,7 +13,6 @@ html {
   height: 100%;
   width: 100%;
 }
-
 .back-to-top {
   position: fixed;
   right: 1em;
@@ -25,7 +21,6 @@ html {
   transform: rotate(0deg);
   transition: all 1s ease-in;
 }
-
 @media #{$large-up} {
   .back-to-top-toggle {
     opacity: 1;
@@ -33,7 +28,6 @@ html {
     transform: rotate(90deg);
   }
 }
-
 /* Make landing page full height */
 @media #{$large-up} {
   .intro {
@@ -53,7 +47,6 @@ html {
 .tab-bar {
   margin: 0;
 }
-
 /* Bold headings */
 h1,
 h2,
@@ -165,17 +158,17 @@ blockquote {
   width: 100%;
   height: 3em;
 }
-::selection {
+ ::selection {
   background: $orange;
   color: $white;
 }
 // consider removing this if we stick with parallax
 .buffer {
-  background: $orange url(../images/c3k/doug_pattern.png);
+  background: $orange url("../images/c3k/doug_pattern.png");
   height: 258px;
 }
 .buffer-2 {
-  background: #00a79d url(../images/c3k/buffer-tile-2.png);
+  background: #00a79d url("../images/c3k/buffer-tile-2.png");
   h6 {
     color: $white;
     text-align: right;
@@ -207,7 +200,6 @@ blockquote {
   }
   animation: animatedBackground 8s linear infinite;
 }
-
 /////////////////////////
 //  Tilted Containers
 /////////////////////////
@@ -221,12 +213,18 @@ blockquote {
   width: 100%;
   height: 100%;
   transform: skew(0, -2deg);
-
 }
 .tilted-contents {
-  padding: 2em 0 2em 0;
+  padding: 2em 0;
   color: $white!important;
-  h1,h2,h3,h4,h5,h6 { color: $white; }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $white;
+  }
 }
 .diagonal-blue-lines {
   background: url('../images/c3k/diagonal-blue-lines.svg');
@@ -248,10 +246,9 @@ blockquote {
   width: 100%;
   height: 100px;
 }
-
 // LOGO
 .chicken-logo {
-  background-image: url(../images/c3k/chicken-logo-small.png);
+  background-image: url("../images/c3k/chicken-logo-small.png");
   width: 100%;
   min-height: 371px; // height of the original image
   background-position: center;
@@ -284,7 +281,6 @@ blockquote {
 .btn-default:active {
   background: darken($orange, 5%);
 }
-
 ////////////////////////////////////
 //
 //
@@ -292,11 +288,12 @@ blockquote {
 //
 //
 ///////////////////////////////////
-@media #{$large-up} {
-  .recent-projects {
+.recent-projects {
+  @media #{$large-up} {
     margin-top: 4em;
     margin-bottom: 8em;
   }
+  margin-bottom: 3em;
 }
 /////////////////////////
 //
@@ -307,8 +304,8 @@ blockquote {
 .triangle-of-power {
   margin-bottom: 8em;
 }
-.triangle-bios h2 {
 
+.triangle-bios h2 {
   // first headline is black
   color: $black;
 }
@@ -321,7 +318,6 @@ blockquote {
   max-width: 400px;
 }
 .triangle-bios p + p {
-
   // style paragraphs
   margin-top: 1.2em;
   font-size: 1em;
@@ -340,7 +336,6 @@ blockquote {
   text-align: justify;
   margin-bottom: 2em;
 }
-
 //////////////////////////////////////
 //
 //           FOOTER
@@ -401,7 +396,7 @@ hr {
   text-align: right;
 }
 .feet {
-  background: url(../images/c3k/feets.png);
+  background: url("../images/c3k/feets.png");
   background-repeat: no-repeat;
   min-height: 271px;
   min-width: 549px;
@@ -481,7 +476,6 @@ hr {
     color: $black;
   }
 }
-
 /* Packery Grid */
 .packery:after {
   content: ' ';
@@ -519,13 +513,11 @@ hr {
 .item img {
   width: 100%;
 }
-
 // Attaches to jQuery event handler to stop scrolling
 // when modal window opens
 .modal-open {
   overflow: hidden;
 }
-
 // Controls Next/Prev paging inside modal
 .modal-paging {
   text-transform: uppercase;
@@ -535,26 +527,21 @@ hr {
     right: 0;
   }
 }
-
 .parallax-window {
   min-height: 258px;
   background: transparent;
 }
-
 .close-reveal-modal:hover {
-    color: $orange;
+  color: $orange;
 }
-
 .close-reveal-modal {
-    @media #{$small-only} {
-      font-size: 1.5rem !important;
-    }
+  @media #{$small-only} {
+    font-size: 1.5rem !important;
+  }
 }
-
 .chicken-container {
   margin-top: 1.5em !important;
 }
-
 // @media #{$small-up} { }
 // @media #{$small-only} { }
 //
