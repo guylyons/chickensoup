@@ -26,7 +26,11 @@ get_header(); ?>
 </div>
 
 <div class="row">
-  <h2 class="orange"><?php single_tag_title(); ?></h2>
+
+  <div class="medium-12 columns">
+    <h2 class="orange"><?php single_tag_title(); ?></h2>
+  </div>
+
   <div id="packery" class="medium-12 columns">
     <div class="gutter-sizer"></div>
     <div class="grid-sizer"></div>
