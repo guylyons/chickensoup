@@ -27,13 +27,14 @@
 <div class="recent-projects" id="recent-projects">
 
   <div class="row text-justify">
-    <div class="medium-12 columns remove-padding">
+    <div class="medium-12 columns">
       <?php the_field('recent_projects'); ?>
     </div>
   </div>
 
   <div class="row">
-    <div id="packery">
+    <div id="packery" class="medium-12 columns">
+      test
       <div class="gutter-sizer"></div>
       <div class="grid-sizer"></div>
 
