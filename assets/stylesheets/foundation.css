@@ -6091,9 +6091,6 @@ body.admin-bar.f-topbar-fixed .sticky.fixed {
       padding: 0; }
 
 /* Some inital settings */
-* {
-  border: 1px solid pink; }
-
 .remove-padding {
   padding: 0; }
 
