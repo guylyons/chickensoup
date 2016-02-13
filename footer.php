@@ -34,9 +34,11 @@
       <div class="small-12 medium-12 large-3 columns">
 	<ul>
 	  <li class="underline">Social Media</li>
-	  <li><a href="https://www.facebook.com/chicken3000design
-		       ">Facebook</a></li>
-	  <li>Newsletter</li>
+
+    <li><a href="https://www.facebook.com/chicken3000design">
+      <i class="fa fa-facebook-official"></i> Facebook</a></li>
+
+    <li><i class="fa fa-newspaper-o"></i> Newsletter</li>
 	</ul>
       </div>
 
