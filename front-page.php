@@ -55,7 +55,7 @@
     <!-- Want to see more? -->
     <div class="row">
       <h2 class="show-for-large-up text-center">
-	<a href="/blahg/"><?php the_field('attention_grabber'); ?></a>
+	       <a href="/blahg/"><?php the_field('attention_grabber'); ?></a>
       </h2>
     </div>
   <?php endif ?>
@@ -68,7 +68,7 @@
   <div class="show-for-medium-up buffer-2 block">
     <div class="row">
       <div class="small-12">
-	<blockquote>"<?php the_field('quote_1'); ?>"</blockquote>
+	       <blockquote>"<?php the_field('quote_1'); ?>"</blockquote>
       </div>
     </div>
   </div>
@@ -131,23 +131,23 @@
 
     <div class="small-12 medium-4 columns">
       <div class="text-justify triangle-bios">
-	<img src="<?php the_field('headshot_a'); ?>">
-	<?php the_field('bio_a'); ?>
+      	<img alt="bio image" src="<?php the_field('headshot_a'); ?>">
+      	<?php the_field('bio_a'); ?>
       </div>
     </div>
 
     <div class="small-12 medium-4 columns">
       <div class="text-justify triangle-bios">
-	<img src="<?php the_field('headshot_b'); ?>">
-	<?php the_field('bio_b'); ?>
+      	<img alt="bio image" src="<?php the_field('headshot_b'); ?>">
+      	<?php the_field('bio_b'); ?>
       </div>
     </div>
 
 
     <div class="small-12 medium-4 columns">
       <div class="text-justify triangle-bios">
-	<img src="<?php the_field('headshot_c'); ?>">
-	<?php the_field('bio_c'); ?>
+      	<img alt="bio image" src="<?php the_field('headshot_c'); ?>">
+      	<?php the_field('bio_c'); ?>
       </div>
     </div>
 
