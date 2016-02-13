@@ -11,7 +11,9 @@ get_header(); ?>
 
 <div class="blue-bg top-block">
   <div class="row">
-    <h1>BLAHG</h1>
+    <div class="medium-12 columns">
+      <h1>BLAHG</h1>
+    </div>
   </div>
 </div>
 
@@ -26,11 +28,11 @@ get_header(); ?>
 
 
 <div class="row">
-  <div id="packery">
+  <div id="packery" class="medium-12 columns">
     <div class="gutter-sizer"></div>
     <div class="grid-sizer"></div>
     <?php if ( have_posts() ) : ?>
-      
+
       <?php do_action( 'foundationpress_before_content' ); ?>
 
       <?php while ( have_posts() ) : the_post(); ?>

@@ -27,11 +27,11 @@ get_header(); ?>
 
 <div class="row">
   <h2 class="orange"><?php single_tag_title(); ?></h2>
-  <div id="packery">
+  <div id="packery" class="medium-12 columns">
     <div class="gutter-sizer"></div>
     <div class="grid-sizer"></div>
     <?php if ( have_posts() ) : ?>
-      
+
       <?php do_action( 'foundationpress_before_content' ); ?>
 
       <?php while ( have_posts() ) : the_post(); ?>
