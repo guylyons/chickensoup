@@ -10,7 +10,7 @@
 ?>
 
 <div class="top-bar-container fixed show-for-small-up">
-    <nav class="top-bar" data-topbar role="navigation" data-options="scrolltop: false">
+    <nav class="top-bar" data-topbar data-options="scrolltop: false">
         <ul class="title-area">
             <li class="name">
                 <a href="<?php echo home_url(); ?>"><span class="icon-c3k-abbrev top-bar-image"></span></a>
