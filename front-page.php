@@ -34,7 +34,6 @@
 
   <div class="row">
     <div id="packery" class="medium-12 columns">
-      test
       <div class="gutter-sizer"></div>
       <div class="grid-sizer"></div>
 
