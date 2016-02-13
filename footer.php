@@ -11,7 +11,7 @@
 
 ?>
 
-</section>
+</section> <!-- end doc container -->
 
 <!-- footer -->
 <div id="footer-container" class="blue-bg">
@@ -19,27 +19,27 @@
     <div class="row footer">
 
       <div class="small-12 medium-3 columns">
-	<ul>
-	  <li class="underline">Contact</li>
+      	<ul>
+      	  <li class="underline">Contact</li>
 
-	  <li>doug[at]chicken3000.com</li>
+      	  <li>doug[at]chicken3000.com</li>
 
-	  <li>anna[at]chicken3000.com</li>
+      	  <li>anna[at]chicken3000.com</li>
 
-	  <li>guylyons2[at]gmail.com</li>
+      	  <li>guylyons2[at]gmail.com</li>
 
-	</ul>
+      	</ul>
       </div>
 
       <div class="small-12 medium-12 large-3 columns">
-	<ul>
-	  <li class="underline">Social Media</li>
+      	<ul>
+      	  <li class="underline">Social Media</li>
 
-    <li><a href="https://www.facebook.com/chicken3000design">
-      <i class="fa fa-facebook-official"></i> Facebook</a></li>
+          <li><a href="https://www.facebook.com/chicken3000design">
+            <i class="fa fa-facebook-official"></i> Facebook</a></li>
 
-    <li><i class="fa fa-newspaper-o"></i> Newsletter</li>
-	</ul>
+          <li><i class="fa fa-newspaper-o"></i> Newsletter</li>
+      	</ul>
       </div>
 
       <div class="hide-for-small-only medium-6 columns feet">
