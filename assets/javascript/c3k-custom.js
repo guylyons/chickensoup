@@ -25,9 +25,14 @@ $(document).ready(function() {
       console.log('image is ' + result + ' for ' + image.img.src);
     });
 
+    if ($("body").scroll) {
+      console.log(window.scrollY);
+    }
+
   // lock content after modal opens
   $(document).on('opened.fndtn.reveal', '[data-reveal]', function() {
     $("body").addClass("modal-open");
+    $("body").scroll(console.log(window.scrollY));
   });
   $(document).on('closed.fndtn.reveal', '[data-reveal]', function() {
     $('body').removeClass('modal-open');

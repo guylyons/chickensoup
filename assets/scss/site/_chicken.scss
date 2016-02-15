@@ -530,6 +530,7 @@ hr {
 .modal-open {
   overflow: hidden;
 }
+
 // Controls Next/Prev paging inside modal
 .modal-paging {
   text-transform: uppercase;
@@ -554,6 +555,15 @@ hr {
 
 .chicken-container {
   margin-top: 1.5em !important;
+}
+
+.c3k-lists {
+  ul li {
+    margin: 0;
+  }
+  h4:first-of-type {
+    color: $orange;
+  }
 }
 
 // @media #{$small-up} { }

@@ -93,12 +93,14 @@
 <?php if (get_field('big_box_2')): ?>
   <!-- What can C3K do for you? -->
   <div class="big_box_2">
+
     <div class="row">
       <div class="large-12 columns">
-	<?php the_field('big_box_2'); ?>
+	       <?php the_field('big_box_2'); ?>
       </div>
     </div>
-    <div class="row">
+
+    <div class="row c3k-lists">
       <div class="medium-4 columns small-12 columns"><?php the_field('big_box_2_a'); ?></div>
       <div class="medium-4 columns small-12 columns"><?php the_field('big_box_2_b'); ?></div>
       <div class="medium-4 columns small-12 columns"><?php the_field('big_box_2_c'); ?></div>
