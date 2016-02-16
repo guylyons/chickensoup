@@ -6463,10 +6463,10 @@ hr {
     text-align: justify; } }
 
 .contact-form {
-  max-width: 500px !important;
-  min-width: 0 !important;
   padding: 2em; }
   .contact-form label {
+    max-width: 500px !important;
+    min-width: 0 !important;
     font-size: 1.3em;
     color: #FBFBFB;
     font-weight: 500; }

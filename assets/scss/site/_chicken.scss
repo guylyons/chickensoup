@@ -429,9 +429,9 @@ hr {
   }
 }
 .contact-form {
-  max-width: 500px !important;
-  min-width: 0 !important;
   label {
+    max-width: 500px !important;
+    min-width: 0 !important;
     font-size: 1.3em;
     color: $white;
     font-weight: 500;
