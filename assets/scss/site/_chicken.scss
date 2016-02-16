@@ -429,29 +429,40 @@ hr {
   }
 }
 .contact-form {
+
   label {
     font-size: 1.3em;
     color: $white;
     font-weight: 500;
+    min-width: 500px !important;
   }
+
   textarea {
     padding: 1.5em;
     font-size: 1em;
     border: 2px solid $white;
     height: 250px;
+    min-width: 500px !important;
+
     &:focus {
       border: 2px solid $orange;
       background: $white;
     }
+
   }
+
   input {
+    min-width: 500px !important;
     padding: 1.5em;
     font-size: 1em;
     border: 2px solid $white;
+
     &:focus {
       border: 2px solid $orange;
     }
+
   }
+
   .btn-default {
     color: $white;
     font-size: 1em;
@@ -464,14 +475,19 @@ hr {
     background: $orange;
     box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset;
   }
+
   .btn-default:hover {
     background: lighten($orange, 5%);
   }
+
   .btn-default:active {
     background: darken($orange, 5%);
   }
+
   padding: 2em;
+
 }
+
 .orange {
   color: $orange;
 }
