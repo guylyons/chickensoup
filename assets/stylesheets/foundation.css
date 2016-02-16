@@ -6463,7 +6463,8 @@ hr {
     text-align: justify; } }
 
 .contact-form {
-  min-width: 400px !important;
+  max-width: 500px !important;
+  min-width: 0 !important;
   padding: 2em; }
   .contact-form label {
     font-size: 1.3em;
@@ -6474,12 +6475,14 @@ hr {
     font-size: 1em;
     border: 2px solid #FBFBFB;
     height: 250px;
-    min-width: 400px !important; }
+    max-width: 500px !important;
+    min-width: 0 !important; }
     .contact-form textarea:focus {
       border: 2px solid #ef4b26;
       background: #FBFBFB; }
   .contact-form input {
-    min-width: 400px !important;
+    max-width: 500px !important;
+    min-width: 0 !important;
     padding: 1.5em;
     font-size: 1em;
     border: 2px solid #FBFBFB; }
