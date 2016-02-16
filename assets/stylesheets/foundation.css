@@ -6574,6 +6574,12 @@ hr {
 .chicken-container {
   margin-top: 1.5em !important; }
 
+.c3k-lists h4:first-of-type {
+  color: #ef4b26; }
+
+.c3k-lists ul li {
+  margin: 0; }
+
 @font-face {
   font-family: 'c3k-set';
   src: url("../fonts/c3k-set.eot?1zn8xt");

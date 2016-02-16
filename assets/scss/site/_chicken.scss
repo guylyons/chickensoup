@@ -557,6 +557,15 @@ hr {
   margin-top: 1.5em !important;
 }
 
+.c3k-lists {
+  h4:first-of-type {
+    color: $orange;
+  }
+  ul li {
+    margin: 0;
+  }
+}
+
 // @media #{$small-up} { }
 // @media #{$small-only} { }
 //
