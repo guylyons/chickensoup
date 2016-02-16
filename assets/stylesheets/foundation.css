@@ -6519,7 +6519,7 @@ hr {
   clear: both; }
 
 .gutter-sizer {
-  width: 2%; }
+  width: 3%; }
   @media only screen and (min-width: 40.0625em) and (max-width: 64em) {
     .gutter-sizer {
       width: 4%; } }
@@ -6528,16 +6528,17 @@ hr {
       width: 0; } }
 
 .grid-sizer {
-  width: 32%; }
+  width: 31.33%; }
   @media only screen and (min-width: 40.0625em) and (max-width: 64em) {
     .grid-sizer {
       width: 48%; } }
   @media only screen and (max-width: 40em) {
     .grid-sizer {
-      width: 100%; } }
+      width: 93%; } }
 
 .item {
-  width: 32%;
+  border: 1px solid pink;
+  width: 31.33%;
   float: left; }
   @media only screen and (min-width: 40.0625em) and (max-width: 64em) {
     .item {
@@ -6573,12 +6574,6 @@ hr {
 
 .chicken-container {
   margin-top: 1.5em !important; }
-
-.c3k-lists ul li {
-  margin: 0; }
-
-.c3k-lists h4:first-of-type {
-  color: #ef4b26; }
 
 @font-face {
   font-family: 'c3k-set';

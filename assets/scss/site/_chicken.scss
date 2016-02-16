@@ -495,7 +495,7 @@ hr {
   clear: both;
 }
 .gutter-sizer {
-  width: 2%;
+  width: 3%;
   @media #{$medium-only} {
     width: 4%;
   }
@@ -504,16 +504,17 @@ hr {
   }
 }
 .grid-sizer {
-  width: 32%;
+  width: 31.33%;
   @media #{$medium-only} {
     width: 48%;
   }
   @media #{$small-only} {
-    width: 100%;
+    width: 93%;
   }
 }
 .item {
-  width: 32%;
+  border: 1px solid pink; // remove me
+  width: 31.33%;
   float: left;
   @media #{$medium-only} {
     width: 48%;
@@ -525,12 +526,12 @@ hr {
 .item img {
   width: 100%;
 }
+
 // Attaches to jQuery event handler to stop scrolling
 // when modal window opens
 .modal-open {
   overflow: hidden;
 }
-
 // Controls Next/Prev paging inside modal
 .modal-paging {
   text-transform: uppercase;
@@ -555,15 +556,6 @@ hr {
 
 .chicken-container {
   margin-top: 1.5em !important;
-}
-
-.c3k-lists {
-  ul li {
-    margin: 0;
-  }
-  h4:first-of-type {
-    color: $orange;
-  }
 }
 
 // @media #{$small-up} { }

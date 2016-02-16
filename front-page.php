@@ -33,21 +33,25 @@
   </div>
 
   <div class="row">
-    <div id="packery" class="medium-12 columns">
-      <div class="gutter-sizer"></div>
-      <div class="grid-sizer"></div>
+    <div class="medium-12 columns">
 
-      <!-- start the loop -->
-      <?php do_action('foundationpress_before_content'); ?>
-      <?php $loop = new WP_Query(array('post_type' => 'c3k_project', 'posts_per_page' => 6)); ?>
-      <?php while ($loop->have_posts()) : $loop->the_post(); ?>
+      <div id="packery">
+        <div class="gutter-sizer"></div>
+        <div class="grid-sizer"></div>
 
-    	<!-- get packery items -->
-    	<?php get_template_part('parts/packery'); ?>
+        <!-- start the loop -->
+        <?php do_action('foundationpress_before_content'); ?>
+        <?php $loop = new WP_Query(array('post_type' => 'c3k_project', 'posts_per_page' => 6)); ?>
+        <?php while ($loop->have_posts()) : $loop->the_post(); ?>
 
-      <?php endwhile; wp_reset_query(); ?><!-- loop end -->
+      	<!-- get packery items -->
+      	<?php get_template_part('parts/packery'); ?>
 
-    </div><!-- packery end -->
+        <?php endwhile; wp_reset_query(); ?><!-- loop end -->
+
+      </div><!-- packery end -->
+      
+    </div>
   </div><!-- row end -->
 
 

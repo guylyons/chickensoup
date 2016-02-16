@@ -2,8 +2,6 @@ $(document).ready(function() {
 
   $('#packery').imagesLoaded()
     .always(function(instance) {
-      console.log('all images loaded');
-      // init
 
       var $packery = $('#packery').packery({
         itemSelector: '.item',
