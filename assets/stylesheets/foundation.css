@@ -6580,6 +6580,9 @@ hr {
 .c3k-lists ul li {
   margin: 0; }
 
+#infinite-footer {
+  display: none; }
+
 @font-face {
   font-family: 'c3k-set';
   src: url("../fonts/c3k-set.eot?1zn8xt");
