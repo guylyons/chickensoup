@@ -429,13 +429,11 @@ hr {
   }
 }
 .contact-form {
-
+  min-width: 400px !important;
   label {
     font-size: 1.3em;
     color: $white;
     font-weight: 500;
-    min-width: 300;
-    max-width: 500px;
   }
 
   textarea {
@@ -443,8 +441,7 @@ hr {
     font-size: 1em;
     border: 2px solid $white;
     height: 250px;
-    min-width: 300;
-    max-width: 500px;
+    min-width: 400px !important;
 
     &:focus {
       border: 2px solid $orange;
@@ -454,7 +451,7 @@ hr {
   }
 
   input {
-    max-width: 500px;
+    min-width: 400px !important;
     padding: 1.5em;
     font-size: 1em;
     border: 2px solid $white;
@@ -468,8 +465,8 @@ hr {
   .btn-default {
     color: $white;
     font-size: 1em;
-    height: 40px;
     display: inline-block;
+    height: 40px;
     padding: 11px 13px;
     border-radius: 3px;
     border: #e04c3d solid 1px;

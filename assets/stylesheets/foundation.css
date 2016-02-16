@@ -6463,25 +6463,23 @@ hr {
     text-align: justify; } }
 
 .contact-form {
+  min-width: 400px !important;
   padding: 2em; }
   .contact-form label {
     font-size: 1.3em;
     color: #FBFBFB;
-    font-weight: 500;
-    min-width: 300;
-    max-width: 500px; }
+    font-weight: 500; }
   .contact-form textarea {
     padding: 1.5em;
     font-size: 1em;
     border: 2px solid #FBFBFB;
     height: 250px;
-    min-width: 300;
-    max-width: 500px; }
+    min-width: 400px !important; }
     .contact-form textarea:focus {
       border: 2px solid #ef4b26;
       background: #FBFBFB; }
   .contact-form input {
-    max-width: 500px;
+    min-width: 400px !important;
     padding: 1.5em;
     font-size: 1em;
     border: 2px solid #FBFBFB; }
@@ -6490,8 +6488,8 @@ hr {
   .contact-form .btn-default {
     color: #FBFBFB;
     font-size: 1em;
-    height: 40px;
     display: inline-block;
+    height: 40px;
     padding: 11px 13px;
     border-radius: 3px;
     border: #e04c3d solid 1px;
