@@ -31,21 +31,24 @@ get_header(); ?>
     <h2 class="orange"><?php single_tag_title(); ?></h2>
   </div>
 
-  <div id="packery" class="medium-12 columns">
-    <div class="gutter-sizer"></div>
-    <div class="grid-sizer"></div>
-    <?php if ( have_posts() ) : ?>
+  <div class="medium-12 columns">
+    <div id="packery">
+      <div class="gutter-sizer"></div>
+      <div class="grid-sizer"></div>
+      <?php if ( have_posts() ) : ?>
 
-      <?php do_action( 'foundationpress_before_content' ); ?>
+        <?php do_action( 'foundationpress_before_content' ); ?>
 
-      <?php while ( have_posts() ) : the_post(); ?>
+        <?php while ( have_posts() ) : the_post(); ?>
 
-	<!-- get packery items -->
-	<?php get_template_part( 'parts/packery' ); ?>
+  	<!-- get packery items -->
+  	<?php get_template_part( 'parts/packery' ); ?>
 
-      <?php endwhile; wp_reset_query(); ?>
+        <?php endwhile; wp_reset_query(); ?>
+    </div>
   </div>
-</div>
+
+</div><!-- end row -->
 
     <?php else : ?>
 
