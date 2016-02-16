@@ -434,7 +434,7 @@ hr {
     font-size: 1.3em;
     color: $white;
     font-weight: 500;
-    min-width: 500px !important;
+    min-width: 0;
   }
 
   textarea {
@@ -442,7 +442,7 @@ hr {
     font-size: 1em;
     border: 2px solid $white;
     height: 250px;
-    min-width: 500px !important;
+    min-width: 0;
 
     &:focus {
       border: 2px solid $orange;
@@ -452,7 +452,7 @@ hr {
   }
 
   input {
-    min-width: 500px !important;
+    min-width: 0;
     padding: 1.5em;
     font-size: 1em;
     border: 2px solid $white;
