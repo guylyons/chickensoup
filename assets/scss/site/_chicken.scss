@@ -121,7 +121,7 @@ h6 {
   border: 0;
   border-radius: 0;
   overflow-y: scroll;
-  top: 0; // have the modal sit at the top of the screen
+  top: 0 !important; // have the modal sit at the top of the screen
 }
 .text-overlay {
   position: relative;
@@ -548,6 +548,14 @@ hr {
 // when modal window opens
 .modal-open {
   overflow: hidden;
+  position: fixed;
+  top: 0;
+}
+.reveal-modal {
+  top: 0;
+  overflow-y: auto;
+   height: 100%;
+   position: fixed;
 }
 // Controls Next/Prev paging inside modal
 .modal-paging {
