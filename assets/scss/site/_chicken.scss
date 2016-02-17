@@ -428,10 +428,10 @@ hr {
     text-align: justify;
   }
 }
+
 .contact-form {
+
   label {
-    max-width: 500px !important;
-    min-width: 0 !important;
     font-size: 1.3em;
     color: $white;
     font-weight: 500;
@@ -442,8 +442,7 @@ hr {
     font-size: 1em;
     border: 2px solid $white;
     height: 250px;
-    max-width: 500px !important;
-    min-width: 0 !important;
+    width: 100%;
 
 
     &:focus {
@@ -454,8 +453,7 @@ hr {
   }
 
   input {
-    max-width: 500px !important;
-    min-width: 0 !important;
+    width: 100% !important;
     padding: 1.5em;
     font-size: 1em;
     border: 2px solid $white;
