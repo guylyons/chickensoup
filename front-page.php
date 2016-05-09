@@ -32,6 +32,7 @@
     </div>
   </div>
 
+  <!-- packery -->
   <div class="row">
     <div class="medium-12 columns">
 
@@ -44,8 +45,8 @@
         <?php $loop = new WP_Query(array('post_type' => 'c3k_project', 'posts_per_page' => 6)); ?>
         <?php while ($loop->have_posts()) : $loop->the_post(); ?>
 
-      	<!-- get packery items -->
-      	<?php get_template_part('parts/packery'); ?>
+      	  <!-- get packery items -->
+      	  <?php get_template_part('parts/packery'); ?>
 
         <?php endwhile; wp_reset_query(); ?><!-- loop end -->
 
@@ -59,7 +60,7 @@
     <!-- Want to see more? -->
     <div class="row">
       <h2 class="show-for-large-up text-center">
-	       <a href="/blahg/"><?php the_field('attention_grabber'); ?></a>
+	<a href="/blahg/"><?php the_field('attention_grabber'); ?></a>
       </h2>
     </div>
   <?php endif ?>
@@ -72,7 +73,7 @@
   <div class="show-for-medium-up buffer-2 block">
     <div class="row">
       <div class="small-12">
-	       <blockquote>"<?php the_field('quote_1'); ?>"</blockquote>
+	<blockquote>"<?php the_field('quote_1'); ?>"</blockquote>
       </div>
     </div>
   </div>
@@ -85,10 +86,10 @@
   <div class="tilted-container" id="triangle">
     <div class="diagonal-blue-lines"></div>
     <div class="tilted-background"></div>
-      <article class="row tilted-contents">
-        <?php the_field('big_box_1'); ?>
-      </article>
-      <div class="diagonal-blue-lines-bottom"></div>
+    <article class="row tilted-contents">
+      <?php the_field('big_box_1'); ?>
+    </article>
+    <div class="diagonal-blue-lines-bottom"></div>
   </div>
 <?php endif; ?>
 
@@ -100,7 +101,7 @@
 
     <div class="row">
       <div class="large-12 columns">
-	       <?php the_field('big_box_2'); ?>
+	<?php the_field('big_box_2'); ?>
       </div>
     </div>
 
