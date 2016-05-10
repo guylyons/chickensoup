@@ -1,4 +1,8 @@
-<?php get_header(); ?>
+<?php
+
+$parallax_pattern = get_field( 'buffer1-image' );
+
+get_header(); ?>
 
 <!-- landing -->
 <div class="intro" id="top">
@@ -15,12 +19,9 @@
   </div>
 </div>
 
-
-<!-- buffer -->
-<!-- <div class="show-for-medium-up buffer">&nbsp;</div><!-- buffer end -->
-
+<!-- parallax scroll -->
 <?php if (get_field('attention_grabber')): ?>
-  <div class="show-for-medium-up parallax-window" data-parallax="scroll" data-image-src="<?php the_field('buffer1-image'); ?>">&nbsp;</div><!-- buffer end -->
+  <div class="show-for-medium-up parallax" data-parallax="scroll" style="background-image: url('<?php echo $parallax_pattern; ?>'); height: 300px">&nbsp;</div><!-- buffer end -->
 <?php endif; ?>
 
 <!-- recent projects -->
@@ -51,7 +52,7 @@
         <?php endwhile; wp_reset_query(); ?><!-- loop end -->
 
       </div><!-- packery end -->
-      
+
     </div>
   </div><!-- row end -->
 
