@@ -2,6 +2,6 @@
 *.sass-cache*
 *.log
 node_modules/
-assets/javascript/custom/
 assets/components/
 packaged/
+stylesheets/
