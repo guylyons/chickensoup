@@ -88,7 +88,7 @@ get_header(); ?>
         <!-- Want to see more? -->
         <div class="row">
             <h2 class="show-for-large-up text-center">
-                <a href="/blahg/"><?php the_field('attention_grabber'); ?></a>
+                <a href="/projects/"><?php the_field('attention_grabber'); ?></a>
             </h2>
         </div>
     <?php endif ?>
