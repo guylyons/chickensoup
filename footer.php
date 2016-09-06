@@ -39,7 +39,7 @@
                         <i class="fa fa-facebook-official"></i> Facebook</a>
                     </li>
 
-                    <li><a href="https://www.instagram.com/chicken3000">
+                    <li><a href="https://www.instagram.com/chicken3000designs/">
                         <i class="fa fa-instagram"></i> Instagram</a>
                     </li>
 
