@@ -20,8 +20,8 @@ get_header(); ?>
 <div class="blue-bg top-block">
     <div class="row">
         <div class="medium-12 columns">
-            <?php if( is_page( 'projects' ) ): ?>
-                <h1>Projects</h1>
+            <?php if( is_archive() ): ?>
+                <h1><?php the_archive_title(); ?></h1>
             <?php else: ?>
                 <h1>TAGS</h1>
             <?php endif; ?>
