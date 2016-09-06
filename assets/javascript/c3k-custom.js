@@ -1,5 +1,31 @@
 $(document).ready(function() {
 
+    // jQuery stuff
+    $(document).ready(function () {
+
+        // topbar event handler
+        $(window).scroll(function () {
+            var scroll = $(window).scrollTop();
+
+            if (scroll >= 90) {
+                $(".test").addClass("scroll-toggle");
+            } else {
+                $(".test").removeClass("scroll-toggle");
+            }
+        });
+
+        // back to top event handler
+        $(window).scroll(function () {
+            var scroll = $(window).scrollTop();
+
+            if (scroll >= 600) {
+                $(".back-to-top").addClass("back-to-top-toggle");
+            } else {
+                $(".back-to-top").removeClass("back-to-top-toggle");
+            }
+        });
+    });
+
   $('#packery').imagesLoaded()
     .always(function(instance) {
 
@@ -23,14 +49,9 @@ $(document).ready(function() {
       console.log('image is ' + result + ' for ' + image.img.src);
     });
 
-    if ($("body").scroll) {
-      console.log(window.scrollY);
-    }
-
   // lock content after modal opens
   $(document).on('opened.fndtn.reveal', '[data-reveal]', function() {
     $("body").addClass("modal-open");
-    $("body").scroll(console.log(window.scrollY));
   });
   $(document).on('closed.fndtn.reveal', '[data-reveal]', function() {
     $('body').removeClass('modal-open');
@@ -64,22 +85,22 @@ $(document).ready(function() {
     }
   });
 
-      (function(){
+  (function(){
 
-      var parallax = document.querySelectorAll(".parallax"),
-          speed = 0.5;
+  var parallax = document.querySelectorAll(".parallax"),
+      speed = 0.5;
 
-      window.onscroll = function(){
-        [].slice.call(parallax).forEach(function(el,i){
+  window.onscroll = function(){
+    [].slice.call(parallax).forEach(function(el,i){
 
-          var windowYOffset = window.pageYOffset,
-              elBackgrounPos = "50% " + (windowYOffset * speed) + "px";
+      var windowYOffset = window.pageYOffset,
+          elBackgrounPos = "50% " + (windowYOffset * speed) + "px";
 
-          el.style.backgroundPosition = elBackgrounPos;
+      el.style.backgroundPosition = elBackgrounPos;
 
-        });
-      };
+    });
+  };
 
-    })();
+})();
 
 });

@@ -6366,7 +6366,8 @@ blockquote {
   color: #FBFBFB; }
 
 blockquote {
-  color: #515153; }
+  color: #515153;
+  border-left: 2px solid #ef4b26; }
 
 .btn-default {
   color: #FBFBFB;
@@ -6391,7 +6392,6 @@ blockquote {
   margin-bottom: 3em; }
   @media only screen and (min-width: 64.0625em) {
     .recent-projects {
-      margin-top: 4em;
       margin-bottom: 8em; } }
 
 .triangle-of-power {
@@ -6459,6 +6459,7 @@ blockquote {
   border: 1px solid red; }
 
 #footer-container {
+  overflow: hidden;
   margin-top: 0; }
 
 .underline {
@@ -6504,6 +6505,8 @@ hr {
     .contact-form textarea:focus {
       border: 2px solid #ef4b26;
       background: #FBFBFB; }
+  .contact-form p {
+    margin-bottom: .5em; }
   .contact-form input {
     width: 100% !important;
     max-width: 100% !important;
@@ -6512,7 +6515,7 @@ hr {
     border: 2px solid #FBFBFB; }
     .contact-form input:focus {
       border: 2px solid #ef4b26; }
-  .contact-form .btn-default {
+  .contact-form .wpcf7-submit {
     color: #FBFBFB;
     font-size: 1em;
     display: inline-block;
@@ -6581,7 +6584,6 @@ hr {
 
 .modal-open {
   overflow: hidden;
-  position: fixed;
   top: 0; }
 
 .reveal-modal {
@@ -6602,6 +6604,16 @@ hr {
   min-height: 258px;
   background: transparent; }
 
+.parallax {
+  position: relative; }
+  .parallax .parallax__content {
+    background: #FBFBFB;
+    background: rgba(255, 255, 255, 0.9);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 40px; }
+
 .close-reveal-modal:hover {
   color: #ef4b26; }
 
@@ -6620,6 +6632,16 @@ hr {
 
 #infinite-footer {
   display: none; }
+
+/*=====================================
+    Randomizer 3000
+=====================================*/
+.randomizer {
+  padding-top: 6em;
+  margin-bottom: 6em; }
+  .randomizer .randomizer__content {
+    text-align: center;
+    margin: 0; }
 
 @font-face {
   font-family: 'c3k-set';

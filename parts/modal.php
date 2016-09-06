@@ -14,11 +14,11 @@
       <?php the_field('column_1'); ?>
     </div>
 
-    <div class="medium-4 columns remove-padding">
+    <div class="medium-8 columns remove-padding">
       <?php the_field('column_2'); ?>
     </div>
 
-    <div class="medium-4 columns modal-paging">
+    <div class="medium-12 columns modal-paging">
 
       <?php
       $next_post = get_previous_post();

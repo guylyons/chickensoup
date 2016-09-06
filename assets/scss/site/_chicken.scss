@@ -271,6 +271,7 @@ blockquote {
 }
 blockquote {
   color: $black;
+  border-left: 2px solid $primary-color;
 }
 .btn-default {
   color: $white;
@@ -300,7 +301,7 @@ blockquote {
 ///////////////////////////////////
 .recent-projects {
   @media #{$large-up} {
-    margin-top: 4em;
+    // margin-top: 4em;
     margin-bottom: 8em;
   }
   margin-bottom: 3em;
@@ -391,6 +392,7 @@ blockquote {
   border: 1px solid red;
 }
 #footer-container {
+  overflow: hidden;
   margin-top: 0;
 }
 .underline {
@@ -450,7 +452,11 @@ hr {
 
   }
 
-  input {
+  p {
+      margin-bottom: .5em;
+  }
+
+    input {
     width: 100% !important;
     max-width: 100% !important;
     padding: 1.5em;
@@ -463,7 +469,7 @@ hr {
 
   }
 
-  .btn-default {
+  .wpcf7-submit {
     color: $white;
     font-size: 1em;
     display: inline-block;
@@ -546,7 +552,6 @@ hr {
 // when modal window opens
 .modal-open {
   overflow: hidden;
-  position: fixed;
   top: 0;
 }
 .reveal-modal {
@@ -568,6 +573,17 @@ hr {
   min-height: 258px;
   background: transparent;
 }
+.parallax {
+    position: relative;
+    .parallax__content {
+        background: $white;
+        background: rgba(255,255,255,0.9);
+        position: absolute;
+        left: 0; right: 0;
+        top: 40px;
+    }
+}
+
 .close-reveal-modal:hover {
   color: $orange;
 }
@@ -592,6 +608,21 @@ hr {
 
 #infinite-footer {
   display: none;
+}
+
+/*=====================================
+    Randomizer 3000
+=====================================*/
+
+.randomizer {
+    // background-color: $secondary-color;
+    padding-top: 6em;
+    margin-bottom: 6em;
+    .randomizer__content {
+        // color: $white;
+        text-align: center;
+        margin: 0;
+    }
 }
 
 // @media #{$small-up} { }

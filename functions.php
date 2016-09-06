@@ -80,6 +80,18 @@ function create_post_type() {
 		'supports' => array( 'title', 'editor', 'excerpt', 'custom-fields', 'thumbnail' ),
 	)
     );
+    register_post_type( 'c3k_service',
+        array(
+            'labels' => array(
+                'name' => __( 'Services', 'c3kwordpress' ),
+                    'singular_name' => __( 'Service', 'c3kwordpress' )
+	    ),
+		'public' => true,
+		'has_archive' => true,
+		'rewrite' => array('slug' => 'services'),
+		'supports' => array( 'title', 'editor', 'excerpt', 'custom-fields', 'thumbnail' ),
+	)
+    );
 }
 
 /* allow svg*/
