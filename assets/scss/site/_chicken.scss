@@ -327,6 +327,9 @@ blockquote {
   // container for the text
   margin: 0 auto;
   max-width: 400px;
+  @media (max-width: 640px) {
+      padding-bottom: 3em;
+  }
 }
 .triangle-bios p + p {
   // style paragraphs

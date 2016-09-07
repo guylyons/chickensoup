@@ -166,14 +166,26 @@ get_header(); ?>
 
         <div class="small-12 medium-4 columns">
             <div class="text-justify triangle-bios">
+                <h2 class="show-for-small-only">
+                    <?php the_field( 'name_a' ); ?>
+                </h2>
                 <img alt="bio image" src="<?php the_field('headshot_a'); ?>">
+                <h2 class="show-for-medium-up">
+                    <?php the_field( 'name_a' ); ?>
+                </h2>
                 <?php the_field('bio_a'); ?>
             </div>
         </div>
 
         <div class="small-12 medium-4 columns">
             <div class="text-justify triangle-bios">
+                <h2 class="show-for-small-only">
+                    <?php the_field( 'name_b' ); ?>
+                </h2>
                 <img alt="bio image" src="<?php the_field('headshot_b'); ?>">
+                <h2 class="show-for-medium-up">
+                    <?php the_field( 'name_b' ); ?>
+                </h2>
                 <?php the_field('bio_b'); ?>
             </div>
         </div>
@@ -181,7 +193,13 @@ get_header(); ?>
 
         <div class="small-12 medium-4 columns">
             <div class="text-justify triangle-bios">
+                <h2 class="show-for-small-only">
+                    <?php the_field( 'name_c' ); ?>
+                </h2>
                 <img alt="bio image" src="<?php the_field('headshot_c'); ?>">
+                <h2 class="show-for-medium-up">
+                    <?php the_field( 'name_c' ); ?>
+                </h2>
                 <?php the_field('bio_c'); ?>
             </div>
         </div>
