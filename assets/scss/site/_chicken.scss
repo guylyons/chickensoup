@@ -301,7 +301,7 @@ blockquote {
 ///////////////////////////////////
 .recent-projects {
   @media #{$large-up} {
-    // margin-top: 4em;
+    margin-top: 4em;
     margin-bottom: 8em;
   }
   margin-bottom: 3em;
@@ -572,18 +572,22 @@ hr {
     right: 0;
   }
 }
-.parallax-window {
-  min-height: 258px;
-  background: transparent;
-}
+
 .parallax {
     position: relative;
+    padding-top: 2em;
+    height: 350px;
     .parallax__content {
         background: $white;
-        background: rgba(255,255,255,0.9);
+        background: rgba(255,255,255,0.8);
         position: absolute;
         left: 0; right: 0;
-        top: 40px;
+        top: 0; bottom: 0;
+        width: 100%;
+        h2 {
+            text-align: center;
+            padding-top: 1em;
+        }
     }
 }
 
@@ -611,6 +615,10 @@ hr {
 
 #infinite-footer {
   display: none;
+}
+
+.attention-grabber {
+    padding-top: 3em;
 }
 
 /*=====================================

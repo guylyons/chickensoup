@@ -20,12 +20,14 @@ get_header(); ?>
 </div>
 
 <!-- parallax scroll -->
-<?php if (get_field('attention_grabber')): ?>
-    <div class="show-for-medium-up parallax" data-parallax="scroll" style="background-image: url('<?php echo $parallax_pattern; ?>'); height: 300px">
+<?php if (get_field('quote_3')): ?>
+    <div class="show-for-medium-up parallax" data-parallax="scroll" style="background-image: url('<?php echo $parallax_pattern; ?>');">
 
-        <div class="row text-justify parallax__content">
-            <div class="medium-12 columns">
-                <?php the_field('recent_projects'); ?>
+        <div class="parallax__content">
+            <div class="row text-justify">
+                <div class="medium-12 columns">
+                    <h2><?php the_field('quote_3'); ?></h2>
+                </div>
             </div>
         </div>
 
@@ -35,17 +37,9 @@ get_header(); ?>
 <!-- recent projects -->
 <div class="recent-projects" id="recent-projects">
 
-    <?php
-    $randomizer  = get_field( 'randomizer' );
-    $rand_length = count( $randomizer ) - 1;
-    $rand_range  = rand( 0, $rand_length );
-    $random_content = $randomizer[$rand_range]['anything'];
-    ?>
-    <div class="randomizer">
-        <div class="row">
-            <div class="medium-12 columns">
-                <h2 class="randomizer__content"><?php echo $random_content; ?></h2>
-            </div>
+    <div class="row">
+        <div class="medium-12 columns">
+            <?php the_field( 'recent_projects' ); ?>
         </div>
     </div>
 
@@ -87,7 +81,7 @@ get_header(); ?>
     <?php if (get_field('attention_grabber')): ?>
         <!-- Want to see more? -->
         <div class="row">
-            <h2 class="show-for-large-up text-center">
+            <h2 class="show-for-large-up text-center attention-grabber">
                 <a href="/projects/"><?php the_field('attention_grabber'); ?></a>
             </h2>
         </div>
@@ -211,43 +205,24 @@ get_header(); ?>
 <div class="blue-bg contact-form" id="contact">
     <div class="row" id="email">
         <div class="small-12 medium-6  medium-offset-3 columns">
-
-            <h1>
-                email us
-            </h1>
-            <!-- <form method="post" action="<?php echo get_stylesheet_directory_uri(); ?>/assets/php/contact.php">
-
-            <label>name</label>
-            <input name="name" placeholder="Mr./Mrs. Client">
-            <label>email</label>
-            <input name="email" type="email" placeholder="awesomeclient@moneytoburn.com">
-
-            <label>message</label>
-            <textarea name="comments" placeholder="I must hire Chicken 3000 for my next project! Name your price!"></textarea>
-
-            <input id="submit" name="submit" type="submit" value="Submit" class="btn-default">
-
-        </form> -->
-        <?php  echo do_shortcode( '[contact-form-7 id="2288" title="Landing Contact Form"]' ); ?>
-
-    </div>
-
-</div>
-</div>
-
-
-
-<?php if (get_field('quote_3')): ?>
-    <!-- quote field 3 -->
-    <div class="quote_3">
-        <div class="row">
-            <div class="small-12 columns text-center block">
-                <h2><?php the_field('quote_3'); ?></h2>
-            </div>
+            <h1>email us</h1>
+            <?php  echo do_shortcode( '[contact-form-7 id="2288" title="Landing Contact Form"]' ); ?>
         </div>
     </div>
-<?php endif; ?>
+</div>
 
-
+<?php
+$randomizer  = get_field( 'randomizer' );
+$rand_length = count( $randomizer ) - 1;
+$rand_range  = rand( 0, $rand_length );
+$random_content = $randomizer[$rand_range]['anything'];
+?>
+<div class="randomizer">
+    <div class="row">
+        <div class="medium-12 columns">
+            <h2 class="randomizer__content"><?php echo $random_content; ?></h2>
+        </div>
+    </div>
+</div>
 
 <?php get_footer(); ?>
