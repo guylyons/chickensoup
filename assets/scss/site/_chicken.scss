@@ -440,6 +440,14 @@ hr {
     font-weight: 500;
   }
 
+  select {
+      font-size: 1em;
+      padding: 20px;
+      height: 60px;
+      margin-bottom: 13px !important;
+      color: #666 !important;
+  }
+
   textarea {
     padding: 1.5em;
     font-size: 1em;
@@ -621,6 +629,11 @@ hr {
     padding-top: 3em;
 }
 
+ul.pagination {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
 /*=====================================
     Randomizer 3000
 =====================================*/
@@ -635,6 +648,54 @@ hr {
         margin: 0;
     }
 }
+
+/*=====================================
+    Contact Form (Ninja Forms)
+=====================================*/
+.wpcf7-response-output {
+    padding: 2em;
+    font-size: 1.2em;
+    text-align: center;
+    color: $white;
+}
+
+div.wpcf7-validation-errors {
+    border: 2px solid $white;
+}
+
+div.wpcf7-mail-sent-ok {
+    border: 2px solid $primary-color;
+    background: $primary-color;
+}
+
+div.wpcf7-response-output {
+    padding: 2em;
+    border-radius: 5px;
+}
+
+.wpcf7-not-valid-tip {
+    color: $white !important;
+    font-weight: bold;
+}
+
+/*=====================================
+    z-index wrap
+=====================================*/
+.z-index-wrap {
+    z-index: 50; // make this higher than the foot image
+    background: $white;
+}
+
+.z-index-wrap__image {
+    font-size: 1.2em;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+    border: 5px solid red;
+    color: $white;
+}
+
 
 // @media #{$small-up} { }
 // @media #{$small-only} { }
