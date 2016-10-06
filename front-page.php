@@ -56,20 +56,16 @@ get_header(); ?>
                 <?php
                 $args = array(
                     'post_type'      =>  'c3k_project',
-                    'posts_per_page' =>  '6'
+                    'posts_per_page' =>  '-1'
                 );
 
                 $project_query = new WP_Query( $args );
                 ?>
                 <?php while ($project_query->have_posts()) : $project_query->the_post(); ?>
-
-                    <?php if( is_front_page() ): ?>
-                        <?php $project_bool = get_field( 'recent_project' ); ?>
-                        <?php if( $project_bool == true ): ?>
-                            <?php get_template_part('parts/packery'); ?>
-                        <?php endif; ?>
+                    <?php $project_bool = get_field( 'recent_project' ); ?>
+                    <?php if( $project_bool == true ): ?>
+                        <?php get_template_part('parts/packery'); ?>
                     <?php endif; ?>
-
                 <?php endwhile; wp_reset_query(); ?><!-- loop end -->
 
             </div><!-- packery end -->
