@@ -3,6 +3,16 @@ $(document).ready(function() {
     // jQuery stuff
     $(document).ready(function () {
 
+        var myAnimation = anime({
+          targets: ['.intro__big-logo'],
+          rotate: 960,
+          duration: 3000,
+          direction: 'alternate',
+          loop: true,
+          easing: 'easeInOutExpo'
+        });
+        console.log("test");
+
         // topbar event handler
         $(window).scroll(function () {
             var scroll = $(window).scrollTop();
@@ -39,14 +49,14 @@ $(document).ready(function() {
     })
 
   .done(function(instance) {
-      console.log('all images successfully loaded');
+    //   console.log('all images successfully loaded');
     })
     .fail(function() {
-      console.log('all images loaded, at least one is broken');
+    //   console.log('all images loaded, at least one is broken');
     })
     .progress(function(instance, image) {
       var result = image.isLoaded ? 'loaded' : 'broken';
-      console.log('image is ' + result + ' for ' + image.img.src);
+    //   console.log('image is ' + result + ' for ' + image.img.src);
     });
 
   // lock content after modal opens

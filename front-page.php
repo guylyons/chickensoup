@@ -12,7 +12,7 @@ get_header(); ?>
             <img src="<?php the_field('small_logo') ?>" alt="Chicken 3000 Small Logo">
         </div>
 
-        <div class="show-for-medium-up">
+        <div class="show-for-medium-up intro__big-logo">
             <img src="<?php the_field('big_logo') ?>" alt="Chicken 3000 Big Logo">
         </div>
 

@@ -186,7 +186,7 @@ module.exports = function(grunt) {
           src : 'assets/scss/**/*.scss'
         },
         options: {
-          proxy: "localhost:8080/wordpress/"
+          proxy: "http://chicken3000.dev:8888"
         }
       }
     }
