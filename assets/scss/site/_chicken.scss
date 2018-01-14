@@ -1,300 +1,345 @@
 // Chickensoup Wordpress Theme
+
 /* Some inital settings */
 
-
 .remove-padding {
-  padding: 0;
+    padding: 0;
 }
+
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
+
 body,
 html {
-  height: 100%;
-  width: 100%;
+    height: 100%;
+    width: 100%;
 }
+
 .back-to-top {
-  position: fixed;
-  right: 1em;
-  bottom: -5em;
-  opacity: 0;
-  transform: rotate(0deg);
-  transition: all 1s ease-in;
+    position: fixed;
+    right: 1em;
+    bottom: -5em;
+    opacity: 0;
+    transform: rotate(0deg);
+    transition: all 1s ease-in;
 }
+
 .back-to-top a:hover {
-  color: #000;
+    color: #000;
 }
+
 @media #{$large-up} {
-  .back-to-top-toggle {
-    opacity: 1;
-    bottom: 1.5em;
-    transform: rotate(90deg);
-  }
+    .back-to-top-toggle {
+        opacity: 1;
+        bottom: 1.5em;
+        transform: rotate(90deg);
+    }
 }
+
+
 /* Make landing page full height */
+
 .intro {
     overflow: hidden;
     @media #{$large-up} {
-      height: calc(100vh - 50px);
-      display: flex;
-      justify-content:  center;
-      align-items: center;
+        height: calc(100vh - 50px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
-
     .intro__big-logo {
         text-align: center;
         img {
-            width: 10%;
+            width: 100%;
         }
     }
 }
 
 .intro-body {
-  align-items: center;
+    align-items: center;
 }
 
 .intro-body img {
-  width: 100%;
+    width: 100%;
 }
 
 .tab-bar {
-  margin: 0;
+    margin: 0;
 }
+
+
 /* Bold headings */
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-weight: 700;
+    font-weight: 700;
 }
+
 @media #{$large-up} {
-  .top-bar {
-    background: transparent;
-    transition: all 1s;
-  }
-  .top-bar-container {
-    background: transparent;
-    transition: all 1s;
-  }
-  .scroll-toggle {
-    border-bottom: 0 5px 10px 0 rgba(0,0,0,0.15),0 -5px 3px -10px #fff;
-    box-shadow: 0 -3px 19px #222;
-    background: rgba(255, 255, 255, 0.9);
-  }
+    .top-bar {
+        background: transparent;
+        transition: all 1s;
+    }
+    .top-bar-container {
+        background: transparent;
+        transition: all 1s;
+    }
+    .scroll-toggle {
+        border-bottom: 0 5px 10px 0 rgba(0, 0, 0, 0.15), 0 -5px 3px -10px #fff;
+        box-shadow: 0 -3px 19px #222;
+        background: rgba(255, 255, 255, 0.9);
+    }
 }
+
 .divider {
-  display: none; // hide those ugly top-bar dividers
+    display: none; // hide those ugly top-bar dividers
 }
+
 .top-bar-menu {
-  font-weight: 400;
+    font-weight: 400;
 }
+
 @media #{$large-up} {
-  .top-bar-section ul li {
-    background: transparent;
-  }
+    .top-bar-section ul li {
+        background: transparent;
+    }
 }
+
 @media #{$small-only} {
-  .top-bar-section ul li {
-    background: #fff;
-  }
+    .top-bar-section ul li {
+        background: #fff;
+    }
 }
+
 @media #{$medium-only} {
-  .top-bar-section ul li {
-    background: #fff;
-  }
+    .top-bar-section ul li {
+        background: #fff;
+    }
 }
+
 .top-bar-image {
-  padding-left: 1em;
+    padding-left: 1em;
 }
+
 .chicken-links ul li {
-  list-style-type: none;
-  text-transform: uppercase;
-  display: inline-block;
-  margin-top: 0.6em;
-  padding-right: 1em;
+    list-style-type: none;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-top: 0.6em;
+    padding-right: 1em;
 }
+
 .chicken-links a:hover {
-  border-bottom: 3px solid $orange;
+    border-bottom: 3px solid $orange;
 }
+
 .chicken-modal {
-  border: 0;
-  border-radius: 0;
-  overflow-y: scroll;
-  top: 0 !important; // have the modal sit at the top of the screen
+    border: 0;
+    border-radius: 0;
+    overflow-y: scroll;
+    top: 0 !important; // have the modal sit at the top of the screen
 }
+
 .text-overlay {
-  position: relative;
-  margin: 0;
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
+    position: relative;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
 }
+
 .text-overlay figcaption {
-  position: absolute;
-  background: rgba(255, 255, 255, 0.8);
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  overflow: auto;
-  padding: 1em;
-  opacity: 0;
-  margin: 0;
-  transition: opacity 0.5s ease;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.8);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: auto;
+    padding: 1em;
+    opacity: 0;
+    margin: 0;
+    transition: opacity 0.5s ease;
 }
+
 .text-overlay:hover figcaption {
-  opacity: 1;
+    opacity: 1;
 }
+
 blockquote {
-  color: $black;
-  font-size: 1.2em;
+    color: $black;
+    font-size: 1.2em;
 }
+
 .block {
-  min-height: 25em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    min-height: 25em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
 .quote_3 {
-  padding-top: 4em;
-  padding-bottom: 4em;
+    padding-top: 4em;
+    padding-bottom: 4em;
 }
+
 .top-block {
-  height: 15em;
-  padding-top: 5.5em;
-  margin-bottom: 2em;
+    height: 15em;
+    padding-top: 5.5em;
+    margin-bottom: 2em;
 }
+
 .spacer {
-  display: block;
-  width: 100%;
-  height: 3em;
+    display: block;
+    width: 100%;
+    height: 3em;
 }
- ::selection {
-  background: $orange;
-  color: $white;
+
+::selection {
+    background: $orange;
+    color: $white;
 }
+
 // consider removing this if we stick with parallax
 .buffer {
-  background: $orange url("../images/c3k/doug_pattern.png");
-  height: 258px;
+    background: $orange url("../images/c3k/doug_pattern.png");
+    height: 258px;
 }
+
 .buffer-2 {
-  background: #00a79d url("../images/c3k/buffer-tile-2.png");
-  h6 {
-    color: $white;
-    text-align: right;
-    padding-right: 3em;
-  }
+    background: #00a79d url("../images/c3k/buffer-tile-2.png");
+    h6 {
+        color: $white;
+        text-align: right;
+        padding-right: 3em;
+    }
 }
+
 .buffer-2 blockquote {
-  color: $white;
-  @media #{$large-up} {
-    font-size: 4em;
-  }
-  @media #{$medium-only} {
-    font-size: 2em;
-  }
-  font-style: italic;
-  display: block;
-  border: 0;
-  text-indent: -0.4em;
-  margin-left: 1em;
+    color: $white;
+    @media #{$large-up} {
+        font-size: 4em;
+    }
+    @media #{$medium-only} {
+        font-size: 2em;
+    }
+    font-style: italic;
+    display: block;
+    border: 0;
+    text-indent: -0.4em;
+    margin-left: 1em;
 }
+
 .ifyoudecidetoanimate {
-  @keyframes animatedBackground {
-    0% {
-      background-position: 0 0;
+    @keyframes animatedBackground {
+        0% {
+            background-position: 0 0;
+        }
+        100% {
+            background-position: -239px 0;
+        }
     }
-    100% {
-      background-position: -239px 0;
-    }
-  }
-  animation: animatedBackground 8s linear infinite;
+    animation: animatedBackground 8s linear infinite;
 }
+
 /////////////////////////
 //  Tilted Containers
 /////////////////////////
 .tilted-container {
-  position: relative;
+    position: relative;
 }
+
 .tilted-background {
-  position: absolute;
-  z-index: -2;
-  background: #00ABC5;
-  width: 100%;
-  height: 100%;
-  transform: skew(0, -2deg);
+    position: absolute;
+    z-index: -2;
+    background: #00abc5;
+    width: 100%;
+    height: 100%;
+    transform: skew(0, -2deg);
 }
+
 .tilted-contents {
-  padding: 2em 0;
-  color: $white!important;
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    color: $white;
-  }
+    padding: 2em 0;
+    color: $white !important;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: $white;
+    }
 }
+
 .diagonal-blue-lines {
-  background: url('../images/c3k/diagonal-blue-lines.svg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: absolute;
-  top: -1em;
-  z-index: -9999;
-  width: 100%;
-  height: 100px;
+    background: url("../images/c3k/diagonal-blue-lines.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: -1em;
+    z-index: -9999;
+    width: 100%;
+    height: 100px;
 }
+
 .diagonal-blue-lines-bottom {
-  background: url('../images/c3k/diagonal-blue-lines.svg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: absolute;
-  bottom: -2em;
-  z-index: -9999;
-  width: 100%;
-  height: 100px;
+    background: url("../images/c3k/diagonal-blue-lines.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    bottom: -2em;
+    z-index: -9999;
+    width: 100%;
+    height: 100px;
 }
+
 // LOGO
 .chicken-logo {
-  background-image: url("../images/c3k/chicken-logo-small.png");
-  width: 100%;
-  min-height: 371px; // height of the original image
-  background-position: center;
-  background-repeat: no-repeat;
-  margin-bottom: 2em;
+    background-image: url("../images/c3k/chicken-logo-small.png");
+    width: 100%;
+    min-height: 371px; // height of the original image
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 2em;
 }
+
 .blue-bg {
-  background: $blue;
-  color: $white;
+    background: $blue;
+    color: $white;
 }
+
 blockquote {
-  color: $black;
-  border-left: 2px solid $primary-color;
+    color: $black;
+    border-left: 2px solid $primary-color;
 }
+
 .btn-default {
-  color: $white;
-  font-size: 14px;
-  line-height: 14px;
-  height: 40px;
-  display: inline-block;
-  padding: 11px 13px;
-  border-radius: 3px;
-  border: #e04c3d solid 1px;
-  text-shadow: #e04c3d 0 1px 0;
-  background: $orange;
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset;
+    color: $white;
+    font-size: 14px;
+    line-height: 14px;
+    height: 40px;
+    display: inline-block;
+    padding: 11px 13px;
+    border-radius: 3px;
+    border: #e04c3d solid 1px;
+    text-shadow: #e04c3d 0 1px 0;
+    background: $orange;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset;
 }
+
 .btn-default:hover {
-  background: lighten($orange, 5%);
+    background: lighten($orange, 5%);
 }
+
 .btn-default:active {
-  background: darken($orange, 5%);
+    background: darken($orange, 5%);
 }
+
 ////////////////////////////////////
 //
 //
@@ -303,285 +348,296 @@ blockquote {
 //
 ///////////////////////////////////
 .recent-projects {
-  @media #{$large-up} {
-    margin-top: 4em;
-    margin-bottom: 8em;
-  }
-  margin-bottom: 3em;
+    @media #{$large-up} {
+        margin-top: 4em;
+        margin-bottom: 8em;
+    }
+    margin-bottom: 3em;
 }
+
 /////////////////////////
 //
 // TRIANGLE-OF-POWER
 //
 /////////////////////////
-
 .triangle-of-power {
-  margin-bottom: 8em;
+    margin-bottom: 8em;
 }
 
 .triangle-bios h2 {
-  // first headline is black
-  color: $black;
+    // first headline is black
+    color: $black;
 }
+
 .triangle-bios p:first-of-type {
-  color: $orange;
-}
-.triangle-bios {
-  // container for the text
-  margin: 0 auto;
-  max-width: 400px;
-  @media (max-width: 640px) {
-      padding-bottom: 3em;
-  }
-}
-.triangle-bios p + p {
-  // style paragraphs
-  margin-top: 1.2em;
-  font-size: 1em;
-  font-weight: 400;
-}
-.big_box_2 {
-  padding-top: 4em;
-  ul h4 {
     color: $orange;
-  }
-  ul li {
-    margin-left: 1em;
-  }
 }
+
+.triangle-bios {
+    // container for the text
+    margin: 0 auto;
+    max-width: 400px;
+    @media (max-width: 640px) {
+        padding-bottom: 3em;
+    }
+}
+
+.triangle-bios p+p {
+    // style paragraphs
+    margin-top: 1.2em;
+    font-size: 1em;
+    font-weight: 400;
+}
+
+.big_box_2 {
+    padding-top: 4em;
+    ul h4 {
+        color: $orange;
+    }
+    ul li {
+        margin-left: 1em;
+    }
+}
+
 .c3k-tagcloud {
-  text-align: justify;
-  margin-bottom: 2em;
+    text-align: justify;
+    margin-bottom: 2em;
 }
+
 //////////////////////////////////////
 //
 //           FOOTER
 //
 //////////////////////////////////////
 .blue-bg {
-  background: $blue;
-  color: $white;
+    background: $blue;
+    color: $white;
 }
+
 .blue-bg h1 {
-  color: $white;
+    color: $white;
 }
+
 .top-bar-container {
-  margin-bottom: 0;
+    margin-bottom: 0;
 }
+
 .black-bg {
-  background: $black;
-  color: $white;
+    background: $black;
+    color: $white;
 }
+
 .c3k-spacer {
-  margin-top: 8em;
+    margin-top: 8em;
 }
+
 .footer {
-  position: relative;
-  height: 18em;
-  padding: 2em 0 1em;
-  a:link {
-    color: $white;
-  }
-  a:visited {
-    color: $white;
-  }
-  a:hover {
-    border-bottom: 1px solid $white;
-  }
-  ul {
-    padding: 0;
-    margin: 0;
-    list-style-type: none;
-  }
+    position: relative;
+    height: 18em;
+    padding: 2em 0 1em;
+    a:link {
+        color: $white;
+    }
+    a:visited {
+        color: $white;
+    }
+    a:hover {
+        border-bottom: 1px solid $white;
+    }
+    ul {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+    }
 }
-.footer ul + li {
-  border: 1px solid red;
+
+.footer ul+li {
+    border: 1px solid red;
 }
+
 #footer-container {
-  overflow: hidden;
-  margin-top: 0;
+    overflow: hidden;
+    margin-top: 0;
 }
+
 .underline {
-  border-bottom: 1px solid $white;
-  width: 7em;
-  margin-bottom: 2em;
+    border-bottom: 1px solid $white;
+    width: 7em;
+    margin-bottom: 2em;
 }
+
 hr {
-  margin: -6px 0 20px;
+    margin: -6px 0 20px;
 }
+
 .copy {
-  padding: 1em;
-  text-align: right;
+    padding: 1em;
+    text-align: right;
 }
+
 .feet {
-  background: url("../images/c3k/feets.png");
-  background-repeat: no-repeat;
-  min-height: 271px;
-  min-width: 549px;
-  position: absolute;
-  right: -5em;
-  bottom: 48px;
-  @media #{$medium-only} {
-    right: 0;
-  }
+    background: url("../images/c3k/feets.png");
+    background-repeat: no-repeat;
+    min-height: 271px;
+    min-width: 549px;
+    position: absolute;
+    right: -5em;
+    bottom: 48px;
+    @media #{$medium-only} {
+        right: 0;
+    }
 }
 
 // MEDIA QUERIES
 @media #{$small-only} {
-
-  // only justify for smaller paragraphs for small screens
-  p {
-    text-align: justify;
-  }
+    // only justify for smaller paragraphs for small screens
+    p {
+        text-align: justify;
+    }
 }
 
 .contact-form {
-
-  label {
-    font-size: 1.3em;
-    color: $white;
-    font-weight: 500;
-  }
-
-  select {
-      font-size: 1em;
-      padding: 20px;
-      height: 60px;
-      margin-bottom: 13px !important;
-      color: #666 !important;
-  }
-
-  textarea {
-    padding: 1.5em;
-    font-size: 1em;
-    border: 2px solid $white;
-    height: 250px;
-    width: 100% !important;
-
-
-    &:focus {
-      border: 2px solid $orange;
-      background: $white;
+    label {
+        font-size: 1.3em;
+        color: $white;
+        font-weight: 500;
     }
-
-  }
-
-  p {
-      margin-bottom: .5em;
-  }
-
+    select {
+        font-size: 1em;
+        padding: 20px;
+        height: 60px;
+        margin-bottom: 13px !important;
+        color: #666 !important;
+    }
+    textarea {
+        padding: 1.5em;
+        font-size: 1em;
+        border: 2px solid $white;
+        height: 250px;
+        width: 100% !important;
+        &:focus {
+            border: 2px solid $orange;
+            background: $white;
+        }
+    }
+    p {
+        margin-bottom: 0.5em;
+    }
     input {
-    width: 100% !important;
-    max-width: 100% !important;
-    padding: 1.5em;
-    font-size: 1em;
-    border: 2px solid $white;
-
-    &:focus {
-      border: 2px solid $orange;
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 1.5em;
+        font-size: 1em;
+        border: 2px solid $white;
+        &:focus {
+            border: 2px solid $orange;
+        }
     }
-
-  }
-
-  .wpcf7-submit {
-    color: $white;
-    font-size: 1em;
-    display: inline-block;
-    height: 40px;
-    padding: 11px 13px;
-    border-radius: 3px;
-    border: #e04c3d solid 1px;
-    text-shadow: #e04c3d 0 1px 0;
-    background: $orange;
-    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset;
-  }
-
-  .btn-default:hover {
-    background: lighten($orange, 5%);
-  }
-
-  .btn-default:active {
-    background: darken($orange, 5%);
-  }
-
-  padding: 2em;
-
+    .wpcf7-submit {
+        color: $white;
+        font-size: 1em;
+        display: inline-block;
+        height: 40px;
+        padding: 11px 13px;
+        border-radius: 3px;
+        border: #e04c3d solid 1px;
+        text-shadow: #e04c3d 0 1px 0;
+        background: $orange;
+        box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset;
+    }
+    .btn-default:hover {
+        background: lighten($orange, 5%);
+    }
+    .btn-default:active {
+        background: darken($orange, 5%);
+    }
+    padding: 2em;
 }
 
 .orange {
-  color: $orange;
+    color: $orange;
 }
+
 .c3k-modal-styles {
-  h1,
-  h2,
-  h3,
-  h4,
-  h5 {
-    border-bottom: 1px solid #eee;
-    color: $blue;
-  }
-  h1 + h2 {
-    color: $black;
-  }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        border-bottom: 1px solid #eee;
+        color: $blue;
+    }
+    h1+h2 {
+        color: $black;
+    }
 }
+
+
 /* Packery Grid */
+
 .packery:after {
-  content: ' ';
-  display: block;
-  clear: both;
+    content: " ";
+    display: block;
+    clear: both;
 }
+
 .gutter-sizer {
-  width: 3%;
-  @media #{$medium-only} {
-    width: 4%;
-  }
-  @media #{$small-only} {
-    width: 0;
-  }
+    width: 3%;
+    @media #{$medium-only} {
+        width: 4%;
+    }
+    @media #{$small-only} {
+        width: 0;
+    }
 }
+
 .grid-sizer {
-  width: 31.33%;
-  @media #{$medium-only} {
-    width: 48%;
-  }
-  @media #{$small-only} {
-    width: 93%;
-  }
+    width: 31.33%;
+    @media #{$medium-only} {
+        width: 48%;
+    }
+    @media #{$small-only} {
+        width: 93%;
+    }
 }
+
 .item {
-  width: 31.33%;
-  float: left;
-  @media #{$medium-only} {
-    width: 48%;
-  }
-  @media #{$small-only} {
-    width: 93%;
-  }
+    width: 31.33%;
+    float: left;
+    @media #{$medium-only} {
+        width: 48%;
+    }
+    @media #{$small-only} {
+        width: 93%;
+    }
 }
+
 .item img {
-  width: 100%;
+    width: 100%;
 }
 
 // Attaches to jQuery event handler to stop scrolling
 // when modal window opens
 .modal-open {
-  overflow: hidden;
-  top: 0;
+    overflow: hidden;
+    top: 0;
 }
+
 .reveal-modal {
-  top: 0;
-  overflow-y: auto;
-   height: 100%;
-   position: fixed;
+    top: 0;
+    overflow-y: auto;
+    height: 100%;
+    position: fixed;
 }
+
 // Controls Next/Prev paging inside modal
 .modal-paging {
-  text-transform: uppercase;
-  @media #{$medium-up} {
-    position: absolute;
-    top: 18em;
-    right: 0;
-  }
+    text-transform: uppercase;
+    @media #{$medium-up} {
+        position: absolute;
+        top: 18em;
+        right: 0;
+    }
 }
 
 .parallax {
@@ -590,10 +646,12 @@ hr {
     height: 350px;
     .parallax__content {
         background: $white;
-        background: rgba(255,255,255,0.8);
+        background: rgba(255, 255, 255, 0.8);
         position: absolute;
-        left: 0; right: 0;
-        top: 0; bottom: 0;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
         width: 100%;
         h2 {
             text-align: center;
@@ -603,29 +661,30 @@ hr {
 }
 
 .close-reveal-modal:hover {
-  color: $orange;
+    color: $orange;
 }
+
 .close-reveal-modal {
-  @media #{$small-only} {
-    font-size: 1.5rem !important;
-  }
+    @media #{$small-only} {
+        font-size: 1.5rem !important;
+    }
 }
 
 .chicken-container {
-  margin-top: 1.5em !important;
+    margin-top: 1.5em !important;
 }
 
 .c3k-lists {
-  h4:first-of-type {
-    color: $orange;
-  }
-  ul li {
-    margin: 0;
-  }
+    h4:first-of-type {
+        color: $orange;
+    }
+    ul li {
+        margin: 0;
+    }
 }
 
 #infinite-footer {
-  display: none;
+    display: none;
 }
 
 .attention-grabber {
@@ -636,6 +695,7 @@ ul.pagination {
     margin-top: 2em;
     margin-bottom: 2em;
 }
+
 
 /*=====================================
     Randomizer 3000
@@ -652,9 +712,11 @@ ul.pagination {
     }
 }
 
+
 /*=====================================
     Contact Form (Ninja Forms)
 =====================================*/
+
 .wpcf7-response-output {
     padding: 2em;
     font-size: 1.2em;
@@ -681,9 +743,11 @@ div.wpcf7-response-output {
     font-weight: bold;
 }
 
+
 /*=====================================
     z-index wrap
 =====================================*/
+
 .z-index-wrap {
     z-index: 50; // make this higher than the foot image
     background: $white;
@@ -699,7 +763,6 @@ div.wpcf7-response-output {
     color: $white;
 }
 
-
 // @media #{$small-up} { }
 // @media #{$small-only} { }
 //
@@ -714,3 +777,16 @@ div.wpcf7-response-output {
 //
 // @media #{$xxlarge-up} { }
 // @media #{$xxlarge-only} { }
+img {}
+
+.animated {
+    opacity: 0;
+    transition: all ease-in 1s;
+    position: relative;
+    right: -3em;
+}
+
+.fadeIn {
+    opacity: 1;
+    right: 0;
+}

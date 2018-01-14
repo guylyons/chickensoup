@@ -14,7 +14,7 @@
       <?php the_field('column_1'); ?>
     </div>
 
-    <div class="medium-8 columns remove-padding">
+    <div class="medium-8 columns remove-padding lazy-load">
       <?php the_field('column_2'); ?>
     </div>
 

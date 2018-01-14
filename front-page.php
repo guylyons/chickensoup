@@ -52,7 +52,6 @@ get_header(); ?>
                 <div class="grid-sizer"></div>
 
                 <!-- start the loop -->
-                <?php do_action('foundationpress_before_content'); ?>
                 <?php
                 $args = array(
                     'post_type'      =>  'c3k_project',
@@ -202,7 +201,7 @@ get_header(); ?>
     <div class="row" id="email">
         <div class="small-12 medium-6  medium-offset-3 columns">
             <h1>email us</h1>
-            <?php  echo do_shortcode( '[contact-form-7 id="2288" title="Landing Contact Form"]' ); ?>
+            <?php  /* echo do_shortcode( '[contact-form-7 id="2288" title="Landing Contact Form"]' ); */ ?>
         </div>
     </div>
 </div>

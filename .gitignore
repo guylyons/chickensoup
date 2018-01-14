@@ -1,7 +1,7 @@
 .DS_Store
 *.sass-cache*
 *.log
-node_modules/
-assets/components/
-packaged/
-assets/stylesheets/
+node_modules
+assets/components
+assets/stylesheets
+packaged
