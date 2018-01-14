@@ -1,14 +1,4 @@
 $(document).ready(function() {
-  // topbar event handler
-  $(window).scroll(function() {
-    var scroll = $(window).scrollTop();
-
-    if (scroll >= 90) {
-      $(".test").addClass("scroll-toggle");
-    } else {
-      $(".test").removeClass("scroll-toggle");
-    }
-  });
 
   // back to top event handler
   $(window).scroll(function() {
@@ -80,19 +70,6 @@ $(document).ready(function() {
 
   // modal stuff
 
-  var lazyImages = document.querySelectorAll(".lazy-load img");
-  for (var i = 0; i < lazyImages.length; i++) {
-    var src = lazyImages[i].src;
-
-    // move to data src
-    lazyImages[i].setAttribute("data-src", src);
-
-    // then remove from src
-    lazyImages[i].setAttribute("src", "");
-
-    lazyImages[i].classList.add("animated");
-  }
-
   $project = $(".project a");
 
   $project.click(function(event) {
@@ -111,4 +88,21 @@ $(document).ready(function() {
       });
     }, 1000);
   });
+
+  (function() {
+
+    var parallax = document.querySelectorAll(".parallax");
+    var speed = 0.5;
+
+    window.onscroll = function() {
+      [].slice.call(parallax).forEach(function(el,i) {
+
+        var windowYOffset = window.pageYOffset;
+        var elBackgrounPos = "50% " + (windowYOffset * speed) + "px";
+
+        el.style.backgroundPosition = elBackgrounPos;
+
+      });
+    };
+  })();
 });

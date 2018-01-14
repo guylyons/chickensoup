@@ -20,7 +20,7 @@ if ( ! function_exists( 'foundationpress_scripts' ) ) :
 	wp_deregister_script( 'jquery' );
 
 	// Modernizr is used for polyfills and feature detection. Must be placed in header. (Not required).
-	wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/assets/javascript/vendor/modernizr.js', array(), '2.8.3', false );
+	// wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/assets/javascript/vendor/modernizr.js', array(), '2.8.3', false );
 
 	wp_enqueue_script( 'jquery', '//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js', array(), '2.1.0', false );
 
@@ -32,11 +32,11 @@ if ( ! function_exists( 'foundationpress_scripts' ) ) :
 
     wp_enqueue_script( 'jquery-smooth-scroll', get_template_directory_uri() . '/assets/javascript/vendor/jquery.smooth-scroll.js', array('jquery'), '1.5.6', true);
 
-    wp_enqueue_script( 'lazyload', get_template_directory_uri() . '/assets/javascript/vendor/jquery.lazyload.js', array('jquery'), '1.0', false );
-
     wp_enqueue_script( 'parallax', get_template_directory_uri() . '/assets/javascript/vendor/parallax.min.js', array('jquery'), '2.1.3', true);
 
-    wp_enqueue_script( 'anime', get_template_directory_uri() . '/assets/javascript/vendor/anime.min.js', array('jquery'), '1.0', true );
+    // wp_enqueue_script( 'anime', get_template_directory_uri() . '/assets/javascript/vendor/anime.min.js', array('jquery'), '1.0', true );
+
+    wp_enqueue_script( 'lazy', get_template_directory_uri() . '/assets/javascript/lazy.js', array('jquery'), '1.0', false );
 
     wp_enqueue_script( 'c3k-custom', get_template_directory_uri() . '/assets/javascript/c3k-custom.js', array('jquery'), '1.0', true );
     }
